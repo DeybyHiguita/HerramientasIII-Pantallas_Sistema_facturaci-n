@@ -127,7 +127,7 @@ namespace Pantallas_Sistema_facturación
             btnValidar.Enabled = false;
             btnValidar.Text = "Validando...";
             
-            Timer progressTimer = new Timer { Interval = 100 };
+            Timer progressTimer = new Timer { Interval = 100 }; 
             int progress = 0;
             progressTimer.Tick += (s, args) =>
             {
