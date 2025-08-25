@@ -56,23 +56,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Clientes\frmClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Clientes\frmClientes.Designer.cs">
-      <DependentUpon>frmClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Clientes\frmListaClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Clientes\frmListaClientes.Designer.cs">
-      <DependentUpon>frmListaClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Clientes\UserControls\ucCliente.cs">
+    <Compile Include="Forms\Facturacion\UserControls\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Clientes\UserControls\ucCliente.Designer.cs">
+    <Compile Include="Forms\Facturacion\UserControls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\UserControls\ucCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\UserControls\ucCliente.Designer.cs">
       <DependentUpon>ucCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\UserControls\ucProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\UserControls\ucProducto.Designer.cs">
+      <DependentUpon>ucProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -103,8 +103,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Clientes\UserControls\ucCliente.resx">
+    <EmbeddedResource Include="Forms\Tablas\UserControls\ucCliente.resx">
       <DependentUpon>ucCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\UserControls\ucProducto.resx">
+      <DependentUpon>ucProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

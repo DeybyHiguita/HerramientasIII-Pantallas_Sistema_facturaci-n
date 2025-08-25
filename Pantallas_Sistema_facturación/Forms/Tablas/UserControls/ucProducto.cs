@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pantallas_Sistema_facturación.Forms.Clientes
+namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
 {
-    public partial class frmClientes : Form
+    public partial class ucProducto : UserControl
     {
-        public frmClientes()
+        public ucProducto()
         {
             InitializeComponent();
         }
