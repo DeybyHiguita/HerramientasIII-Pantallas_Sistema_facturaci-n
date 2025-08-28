@@ -20,7 +20,12 @@ namespace Pantallas_Sistema_facturación
         private MaterialButton btnTablas;
         private MaterialButton btnFacturacion;
         private MaterialButton btnSeguridad;
-        private MaterialButton btnClientes;
+        
+        // Nuevos botones para el panel izquierdo
+        private MaterialLabel lblModuloTablas;
+        private MaterialButton btnProductosLeft;
+        private MaterialButton btnClientesLeft;
+        private MaterialButton btnCategoriasLeft;
         
         private PictureBox pictureBoxLogo;
         private MaterialButton btnSalir;
@@ -49,13 +54,16 @@ namespace Pantallas_Sistema_facturación
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelTop = new System.Windows.Forms.Panel();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.btnClientes = new MaterialSkin.Controls.MaterialButton();
             this.btnSeguridad = new MaterialSkin.Controls.MaterialButton();
             this.btnFacturacion = new MaterialSkin.Controls.MaterialButton();
             this.btnTablas = new MaterialSkin.Controls.MaterialButton();
             this.btnPrincipal = new MaterialSkin.Controls.MaterialButton();
             this.lblSistemaFacturacion = new MaterialSkin.Controls.MaterialLabel();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.lblModuloTablas = new MaterialSkin.Controls.MaterialLabel();
+            this.btnProductosLeft = new MaterialSkin.Controls.MaterialButton();
+            this.btnClientesLeft = new MaterialSkin.Controls.MaterialButton();
+            this.btnCategoriasLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelContent = new System.Windows.Forms.Panel();
@@ -68,7 +76,6 @@ namespace Pantallas_Sistema_facturación
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
             this.panelTop.Controls.Add(this.materialButton1);
-            this.panelTop.Controls.Add(this.btnClientes);
             this.panelTop.Controls.Add(this.btnSeguridad);
             this.panelTop.Controls.Add(this.btnFacturacion);
             this.panelTop.Controls.Add(this.btnTablas);
@@ -98,26 +105,6 @@ namespace Pantallas_Sistema_facturación
             this.materialButton1.Text = "Ayuda";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.materialButton1.UseAccentColor = false;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.AutoSize = false;
-            this.btnClientes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClientes.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnClientes.Depth = 0;
-            this.btnClientes.HighEmphasis = false;
-            this.btnClientes.Icon = null;
-            this.btnClientes.Location = new System.Drawing.Point(710, 15);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnClientes.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnClientes.Size = new System.Drawing.Size(100, 30);
-            this.btnClientes.TabIndex = 5;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.btnClientes.UseAccentColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.menuAyuda_Click);
             // 
             // btnSeguridad
             // 
@@ -215,6 +202,10 @@ namespace Pantallas_Sistema_facturación
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.panelLeft.Controls.Add(this.lblModuloTablas);
+            this.panelLeft.Controls.Add(this.btnProductosLeft);
+            this.panelLeft.Controls.Add(this.btnClientesLeft);
+            this.panelLeft.Controls.Add(this.btnCategoriasLeft);
             this.panelLeft.Controls.Add(this.btnSalir);
             this.panelLeft.Controls.Add(this.pictureBoxLogo);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -222,6 +213,82 @@ namespace Pantallas_Sistema_facturación
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(200, 640);
             this.panelLeft.TabIndex = 1;
+            // 
+            // lblModuloTablas
+            // 
+            this.lblModuloTablas.AutoSize = true;
+            this.lblModuloTablas.Depth = 0;
+            this.lblModuloTablas.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblModuloTablas.Location = new System.Drawing.Point(20, 160);
+            this.lblModuloTablas.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblModuloTablas.Name = "lblModuloTablas";
+            this.lblModuloTablas.Size = new System.Drawing.Size(129, 19);
+            this.lblModuloTablas.TabIndex = 6;
+            this.lblModuloTablas.Text = "Módulo de Tablas";
+            this.lblModuloTablas.Visible = false;
+            // 
+            // btnProductosLeft
+            // 
+            this.btnProductosLeft.AutoSize = false;
+            this.btnProductosLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnProductosLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnProductosLeft.Depth = 0;
+            this.btnProductosLeft.HighEmphasis = true;
+            this.btnProductosLeft.Icon = null;
+            this.btnProductosLeft.Location = new System.Drawing.Point(20, 190);
+            this.btnProductosLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnProductosLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnProductosLeft.Name = "btnProductosLeft";
+            this.btnProductosLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnProductosLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnProductosLeft.TabIndex = 2;
+            this.btnProductosLeft.Text = "PRODUCTOS";
+            this.btnProductosLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnProductosLeft.UseAccentColor = false;
+            this.btnProductosLeft.Visible = false;
+            this.btnProductosLeft.Click += new System.EventHandler(this.btnProductosLeft_Click);
+            // 
+            // btnClientesLeft
+            // 
+            this.btnClientesLeft.AutoSize = false;
+            this.btnClientesLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnClientesLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnClientesLeft.Depth = 0;
+            this.btnClientesLeft.HighEmphasis = true;
+            this.btnClientesLeft.Icon = null;
+            this.btnClientesLeft.Location = new System.Drawing.Point(20, 240);
+            this.btnClientesLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnClientesLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnClientesLeft.Name = "btnClientesLeft";
+            this.btnClientesLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnClientesLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnClientesLeft.TabIndex = 3;
+            this.btnClientesLeft.Text = "CLIENTES";
+            this.btnClientesLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnClientesLeft.UseAccentColor = false;
+            this.btnClientesLeft.Visible = false;
+            this.btnClientesLeft.Click += new System.EventHandler(this.btnClientesLeft_Click);
+            // 
+            // btnCategoriasLeft
+            // 
+            this.btnCategoriasLeft.AutoSize = false;
+            this.btnCategoriasLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCategoriasLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCategoriasLeft.Depth = 0;
+            this.btnCategoriasLeft.HighEmphasis = true;
+            this.btnCategoriasLeft.Icon = null;
+            this.btnCategoriasLeft.Location = new System.Drawing.Point(20, 290);
+            this.btnCategoriasLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCategoriasLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCategoriasLeft.Name = "btnCategoriasLeft";
+            this.btnCategoriasLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCategoriasLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnCategoriasLeft.TabIndex = 4;
+            this.btnCategoriasLeft.Text = "CATEGORÍAS";
+            this.btnCategoriasLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCategoriasLeft.UseAccentColor = false;
+            this.btnCategoriasLeft.Visible = false;
+            this.btnCategoriasLeft.Click += new System.EventHandler(this.btnCategoriasLeft_Click);
             // 
             // btnSalir
             // 
@@ -231,7 +298,7 @@ namespace Pantallas_Sistema_facturación
             this.btnSalir.Depth = 0;
             this.btnSalir.HighEmphasis = true;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(20, 480);
+            this.btnSalir.Location = new System.Drawing.Point(20, 485);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
@@ -258,6 +325,7 @@ namespace Pantallas_Sistema_facturación
             // 
             // panelContent
             // 
+            this.panelContent.AutoScroll = true;
             this.panelContent.BackColor = System.Drawing.Color.White;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(203, 124);
@@ -284,6 +352,7 @@ namespace Pantallas_Sistema_facturación
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelLeft.ResumeLayout(false);
+            this.panelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 

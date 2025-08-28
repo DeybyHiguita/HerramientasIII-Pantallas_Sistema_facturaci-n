@@ -21,7 +21,6 @@ namespace Pantallas_Sistema_facturación
             MaterialSkinManager manager = MaterialSkinManager.Instance;
             manager.AddFormToManage(this);
             manager.Theme = MaterialSkinManager.Themes.LIGHT;
-            // Paleta de morados elegante - consistente con toda la aplicación
             manager.ColorScheme = new ColorScheme(
                 Primary.Purple600, // #A587C3 - Color principal
                 Primary.Purple700, // #8E6BA8 - Color más oscuro para hover
