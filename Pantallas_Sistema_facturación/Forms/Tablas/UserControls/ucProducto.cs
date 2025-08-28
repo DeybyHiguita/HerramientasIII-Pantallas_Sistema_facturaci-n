@@ -2,41 +2,39 @@
 using System.Drawing;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using Pantallas_Sistema_facturación.Models;
 
 namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
 {
     public partial class ucProducto : UserControl
     {
-        private OpenFileDialog openFileDialog;
+        private OpenFileDialog DialogoSeleccionArchivo;
 
         public ucProducto()
         {
             InitializeComponent();
-            ConfigureFormContent();
+            ConfigurarContenidoFormulario();
         }
 
         private void ucProducto_Load(object sender, EventArgs e)
         {
-            InitializeCategories();
-            ConfigureValidation();
+            InicializarCategorias();
+            ConfigurarValidacion();
         }
 
-        private void ConfigureFormContent()
+        private void ConfigurarContenidoFormulario()
         {
-            // Configuración específica para el formulario de productos
             this.BackColor = Color.White;
             this.AutoScroll = true;
             this.AutoScrollMargin = new Size(20, 20);
             
-            // Configurar el diálogo de archivos
-            openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif|Todos los archivos|*.*";
-            openFileDialog.Title = "Seleccionar imagen del producto";
+            DialogoSeleccionArchivo = new OpenFileDialog();
+            DialogoSeleccionArchivo.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif|Todos los archivos|*.*";
+            DialogoSeleccionArchivo.Title = "Seleccionar imagen del producto";
         }
 
-        private void InitializeCategories()
+        private void InicializarCategorias()
         {
-            // Llenar el ComboBox con categorías de ejemplo
             cmbCategoria.Items.Clear();
             cmbCategoria.Items.Add("Electrónicos");
             cmbCategoria.Items.Add("Ropa y Accesorios");
@@ -47,59 +45,51 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             cmbCategoria.Items.Add("Alimentación");
             cmbCategoria.Items.Add("Belleza y Cuidado Personal");
             
-            // Seleccionar el primer elemento por defecto
             if (cmbCategoria.Items.Count > 0)
             {
                 cmbCategoria.SelectedIndex = 0;
             }
         }
 
-        private void ConfigureValidation()
+        private void ConfigurarValidacion()
         {
-            // Configurar eventos de validación
-            txtPrecioCompra.KeyPress += NumericTextBox_KeyPress;
-            txtPrecioVenta.KeyPress += NumericTextBox_KeyPress;
-            txtCantidadStock.KeyPress += IntegerTextBox_KeyPress;
-            txtCodigoReferencia.KeyPress += AlphanumericTextBox_KeyPress;
+            txtPrecioCompra.KeyPress += ValidarTextoNumerico_KeyPress;
+            txtPrecioVenta.KeyPress += ValidarTextoNumerico_KeyPress;
+            txtCantidadStock.KeyPress += ValidarTextoEntero_KeyPress;
+            txtCodigoReferencia.KeyPress += ValidarTextoAlfanumerico_KeyPress;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (ValidateFields())
+            if (ValidarCampos())
             {
-                // Lógica para guardar/actualizar producto
                 MessageBox.Show("Producto guardado exitosamente", "Éxito", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                // Limpiar campos después de guardar si se desea
-                // ClearFields();
             }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("¿Está seguro que desea salir sin guardar?", 
+            var Resultado = MessageBox.Show("¿Está seguro que desea salir sin guardar?", 
                 "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 
-            if (result == DialogResult.Yes)
+            if (Resultado == DialogResult.Yes)
             {
-                // Limpiar campos y cerrar/ocultar el control
-                ClearFields();
+                LimpiarCampos();
                 this.Visible = false;
             }
         }
 
         private void btnSeleccionarImagen_Click(object sender, EventArgs e)
         {
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (DialogoSeleccionArchivo.ShowDialog() == DialogResult.OK)
             {
-                txtRutaImagen.Text = openFileDialog.FileName;
+                txtRutaImagen.Text = DialogoSeleccionArchivo.FileName;
             }
         }
 
-        private bool ValidateFields()
+        private bool ValidarCampos()
         {
-            // Validar nombre del producto
             if (string.IsNullOrWhiteSpace(txtNombreProducto.Text))
             {
                 MessageBox.Show("El nombre del producto es requerido", "Validación", 
@@ -108,7 +98,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            // Validar código de referencia
             if (string.IsNullOrWhiteSpace(txtCodigoReferencia.Text))
             {
                 MessageBox.Show("El código de referencia es requerido", "Validación", 
@@ -117,7 +106,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            // Validar precio de compra
             if (string.IsNullOrWhiteSpace(txtPrecioCompra.Text))
             {
                 MessageBox.Show("El precio de compra es requerido", "Validación", 
@@ -126,7 +114,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            if (!decimal.TryParse(txtPrecioCompra.Text, out decimal precioCompra) || precioCompra < 0)
+            if (!decimal.TryParse(txtPrecioCompra.Text, out decimal PrecioCompra) || PrecioCompra < 0)
             {
                 MessageBox.Show("El precio de compra debe ser un número válido mayor o igual a 0", "Validación", 
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -134,7 +122,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            // Validar precio de venta
             if (string.IsNullOrWhiteSpace(txtPrecioVenta.Text))
             {
                 MessageBox.Show("El precio de venta es requerido", "Validación", 
@@ -143,7 +130,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            if (!decimal.TryParse(txtPrecioVenta.Text, out decimal precioVenta) || precioVenta < 0)
+            if (!decimal.TryParse(txtPrecioVenta.Text, out decimal PrecioVenta) || PrecioVenta < 0)
             {
                 MessageBox.Show("El precio de venta debe ser un número válido mayor o igual a 0", "Validación", 
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -151,8 +138,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            // Validar que el precio de venta sea mayor que el de compra
-            if (precioVenta < precioCompra)
+            if (PrecioVenta < PrecioCompra)
             {
                 MessageBox.Show("El precio de venta debe ser mayor o igual al precio de compra", "Validación", 
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -160,7 +146,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            // Validar cantidad en stock
             if (string.IsNullOrWhiteSpace(txtCantidadStock.Text))
             {
                 MessageBox.Show("La cantidad en stock es requerida", "Validación", 
@@ -169,7 +154,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            if (!int.TryParse(txtCantidadStock.Text, out int cantidadStock) || cantidadStock < 0)
+            if (!int.TryParse(txtCantidadStock.Text, out int CantidadStock) || CantidadStock < 0)
             {
                 MessageBox.Show("La cantidad en stock debe ser un número entero mayor o igual a 0", "Validación", 
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -177,7 +162,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                 return false;
             }
 
-            // Validar categoría
             if (cmbCategoria.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe seleccionar una categoría", "Validación", 
@@ -189,7 +173,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             return true;
         }
 
-        private void ClearFields()
+        private void LimpiarCampos()
         {
             txtNombreProducto.Clear();
             txtCodigoReferencia.Clear();
@@ -208,102 +192,78 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             txtNombreProducto.Focus();
         }
 
-        // Validación para campos numéricos decimales (precios)
-        private void NumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void ValidarTextoNumerico_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Permitir números, punto decimal, backspace y delete
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
 
-            // Solo permitir un punto decimal
-            TextBox textBox = sender as TextBox;
-            if ((e.KeyChar == '.' || e.KeyChar == ',') && textBox.Text.Contains("."))
+            TextBox CuadroTexto = sender as TextBox;
+            if ((e.KeyChar == '.' || e.KeyChar == ',') && CuadroTexto.Text.Contains("."))
             {
                 e.Handled = true;
             }
 
-            // Convertir coma en punto
             if (e.KeyChar == ',')
             {
                 e.KeyChar = '.';
             }
         }
 
-        // Validación para campos numéricos enteros (cantidad)
-        private void IntegerTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void ValidarTextoEntero_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Solo permitir números y teclas de control
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
 
-        // Validación para campos alfanuméricos (código de referencia)
-        private void AlphanumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void ValidarTextoAlfanumerico_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Permitir letras, números, guiones y teclas de control
             if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '_')
             {
                 e.Handled = true;
             }
         }
 
-        // Métodos públicos para manejar datos desde el formulario principal
-        public void LoadProduct(ProductData product)
+        public void CargarProducto(DatosProducto ProductoCarga)
         {
-            if (product != null)
+            if (ProductoCarga != null)
             {
-                chkActivo.Checked = product.Active;
-                txtNombreProducto.Text = product.Name;
-                txtCodigoReferencia.Text = product.Code;
-                txtPrecioCompra.Text = product.PurchasePrice.ToString("F2");
-                txtPrecioVenta.Text = product.SalePrice.ToString("F2");
-                txtCantidadStock.Text = product.Stock.ToString();
-                txtRutaImagen.Text = product.ImagePath;
-                txtDetallesProducto.Text = product.Details;
+                chkActivo.Checked = ProductoCarga.EstaActivo;
+                txtNombreProducto.Text = ProductoCarga.NombreProducto;
+                txtCodigoReferencia.Text = ProductoCarga.CodigoReferencia;
+                txtPrecioCompra.Text = ProductoCarga.PrecioCompra.ToString("F2");
+                txtPrecioVenta.Text = ProductoCarga.PrecioVenta.ToString("F2");
+                txtCantidadStock.Text = ProductoCarga.CantidadStock.ToString();
+                txtRutaImagen.Text = ProductoCarga.RutaImagenProducto;
+                txtDetallesProducto.Text = ProductoCarga.DetallesAdicionales;
                 
-                // Seleccionar la categoría si existe
-                int categoryIndex = cmbCategoria.Items.IndexOf(product.Category);
-                if (categoryIndex >= 0)
+                int IndiceCategoria = cmbCategoria.Items.IndexOf(ProductoCarga.CategoriaProducto);
+                if (IndiceCategoria >= 0)
                 {
-                    cmbCategoria.SelectedIndex = categoryIndex;
+                    cmbCategoria.SelectedIndex = IndiceCategoria;
                 }
             }
         }
 
-        public ProductData GetProductData()
+        public DatosProducto ObtenerDatosProducto()
         {
-            if (!ValidateFields()) return null;
+            if (!ValidarCampos()) return null;
 
-            return new ProductData
+            return new DatosProducto
             {
-                Active = chkActivo.Checked,
-                Name = txtNombreProducto.Text.Trim(),
-                Code = txtCodigoReferencia.Text.Trim(),
-                PurchasePrice = decimal.Parse(txtPrecioCompra.Text),
-                SalePrice = decimal.Parse(txtPrecioVenta.Text),
-                Stock = int.Parse(txtCantidadStock.Text),
-                Category = cmbCategoria.SelectedItem?.ToString() ?? "",
-                ImagePath = txtRutaImagen.Text.Trim(),
-                Details = txtDetallesProducto.Text.Trim()
+                EstaActivo = chkActivo.Checked,
+                NombreProducto = txtNombreProducto.Text.Trim(),
+                CodigoReferencia = txtCodigoReferencia.Text.Trim(),
+                PrecioCompra = decimal.Parse(txtPrecioCompra.Text),
+                PrecioVenta = decimal.Parse(txtPrecioVenta.Text),
+                CantidadStock = int.Parse(txtCantidadStock.Text),
+                CategoriaProducto = cmbCategoria.SelectedItem?.ToString() ?? "",
+                RutaImagenProducto = txtRutaImagen.Text.Trim(),
+                DetallesAdicionales = txtDetallesProducto.Text.Trim()
             };
         }
-    }
-
-    // Clase para manejar datos del producto
-    public class ProductData
-    {
-        public bool Active { get; set; }
-        public string Name { get; set; }
-        public string Code { get; set; }
-        public decimal PurchasePrice { get; set; }
-        public decimal SalePrice { get; set; }
-        public int Stock { get; set; }
-        public string Category { get; set; }
-        public string ImagePath { get; set; }
-        public string Details { get; set; }
     }
 }

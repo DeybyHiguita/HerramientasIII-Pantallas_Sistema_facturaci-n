@@ -17,35 +17,35 @@ namespace Pantallas_Sistema_facturación
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            // Loop principal para manejar login y formulario principal
-            bool continueApplication = true;
+            // Bucle principal para manejar login y formulario principal
+            bool ContinuarAplicacion = true;
             
-            while (continueApplication)
+            while (ContinuarAplicacion)
             {
                 // Mostrar formulario de login
-                using (var loginForm = new frmLogin())
+                using (var FormularioLogin = new frmLogin())
                 {
-                    var loginResult = loginForm.ShowDialog();
+                    var ResultadoLogin = FormularioLogin.ShowDialog();
                     
-                    if (loginResult == DialogResult.OK)
+                    if (ResultadoLogin == DialogResult.OK)
                     {
                         // Si el login es exitoso, abrir formulario principal
-                        using (var principalForm = new frmPrincipal())
+                        using (var FormularioPrincipal = new frmPrincipal())
                         {
-                            var principalResult = principalForm.ShowDialog();
+                            var ResultadoPrincipal = FormularioPrincipal.ShowDialog();
                             
                             // Si el formulario principal retorna Cancel, volver al login
                             // Si retorna cualquier otra cosa, salir de la aplicación
-                            if (principalResult != DialogResult.Cancel)
+                            if (ResultadoPrincipal != DialogResult.Cancel)
                             {
-                                continueApplication = false;
+                                ContinuarAplicacion = false;
                             }
                         }
                     }
                     else
                     {
                         // Si se cancela el login, salir de la aplicación
-                        continueApplication = false;
+                        ContinuarAplicacion = false;
                     }
                 }
             }
