@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
+namespace Pantallas_Sistema_facturación.Forms.Ayuda
 {
-    public partial class ucEmpleado : UserControl
+    public partial class ucAyuda : UserControl
     {
-        public ucEmpleado()
+        public ucAyuda()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
