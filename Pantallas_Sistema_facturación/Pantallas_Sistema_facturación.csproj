@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Ayuda\UserControls\ucAyuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Ayuda\UserControls\ucAyuda.Designer.cs">
+      <DependentUpon>ucAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Facturacion\UserControls\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,8 +128,17 @@
     <Compile Include="UserControls\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Ayuda\UserControls\ucAyuda.resx">
+      <DependentUpon>ucAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucAdminSeguridad.resx">
+      <DependentUpon>ucAdminSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Seguridad\UserControls\ucEmpleado.resx">
       <DependentUpon>ucEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucRol.resx">
+      <DependentUpon>ucRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tablas\UserControls\ucCategoriasProductos.resx">
       <DependentUpon>ucCategoriasProductos.cs</DependentUpon>
@@ -172,7 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Forms\Ayuda\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

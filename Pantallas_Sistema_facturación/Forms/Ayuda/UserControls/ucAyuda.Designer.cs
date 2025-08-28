@@ -1,4 +1,4 @@
-﻿namespace Pantallas_Sistema_facturación.Forms.Ayuda
+﻿namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
 {
     partial class ucAyuda
     {
@@ -71,6 +71,7 @@
             this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblPreguntasFrecuentes
             // 
@@ -135,7 +136,7 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(71, 196);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 21);
             this.tableLayoutPanel2.TabIndex = 8;
             // 

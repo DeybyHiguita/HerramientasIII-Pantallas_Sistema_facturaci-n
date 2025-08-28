@@ -30,12 +30,12 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.lblFechaRetiro = new System.Windows.Forms.Label();
-            this.dtpFechaRetiro = new System.Windows.Forms.DateTimePicker();
             this.lblDatosAdicionales = new System.Windows.Forms.Label();
             this.txtDatosAdicionales = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblFechaRetiro = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.dtpFechaRetiro = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -230,45 +230,6 @@
             this.txtDireccion.Size = new System.Drawing.Size(185, 34);
             this.txtDireccion.TabIndex = 7;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label1.Location = new System.Drawing.Point(3, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 28);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Teléfono";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTelefono.Location = new System.Drawing.Point(3, 117);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(185, 34);
-            this.txtTelefono.TabIndex = 10;
-            // 
-            // lblFechaRetiro
-            // 
-            this.lblFechaRetiro.AutoSize = true;
-            this.lblFechaRetiro.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblFechaRetiro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblFechaRetiro.Location = new System.Drawing.Point(198, 0);
-            this.lblFechaRetiro.Name = "lblFechaRetiro";
-            this.lblFechaRetiro.Size = new System.Drawing.Size(119, 28);
-            this.lblFechaRetiro.TabIndex = 8;
-            this.lblFechaRetiro.Text = "Fecha Retiro";
-            // 
-            // dtpFechaRetiro
-            // 
-            this.dtpFechaRetiro.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dtpFechaRetiro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRetiro.Location = new System.Drawing.Point(198, 41);
-            this.dtpFechaRetiro.Name = "dtpFechaRetiro";
-            this.dtpFechaRetiro.Size = new System.Drawing.Size(185, 34);
-            this.dtpFechaRetiro.TabIndex = 11;
-            // 
             // lblDatosAdicionales
             // 
             this.lblDatosAdicionales.AutoSize = true;
@@ -287,6 +248,45 @@
             this.txtDatosAdicionales.Name = "txtDatosAdicionales";
             this.txtDatosAdicionales.Size = new System.Drawing.Size(185, 34);
             this.txtDatosAdicionales.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label1.Location = new System.Drawing.Point(3, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 28);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Teléfono";
+            // 
+            // lblFechaRetiro
+            // 
+            this.lblFechaRetiro.AutoSize = true;
+            this.lblFechaRetiro.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblFechaRetiro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblFechaRetiro.Location = new System.Drawing.Point(198, 0);
+            this.lblFechaRetiro.Name = "lblFechaRetiro";
+            this.lblFechaRetiro.Size = new System.Drawing.Size(119, 28);
+            this.lblFechaRetiro.TabIndex = 8;
+            this.lblFechaRetiro.Text = "Fecha Retiro";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTelefono.Location = new System.Drawing.Point(3, 117);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(185, 34);
+            this.txtTelefono.TabIndex = 10;
+            // 
+            // dtpFechaRetiro
+            // 
+            this.dtpFechaRetiro.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dtpFechaRetiro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaRetiro.Location = new System.Drawing.Point(198, 41);
+            this.dtpFechaRetiro.Name = "dtpFechaRetiro";
+            this.dtpFechaRetiro.Size = new System.Drawing.Size(185, 34);
+            this.dtpFechaRetiro.TabIndex = 11;
             // 
             // tableLayoutPanel3
             // 
@@ -361,6 +361,7 @@
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // ucEmpleado
             // 

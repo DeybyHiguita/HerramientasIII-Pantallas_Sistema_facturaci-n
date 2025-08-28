@@ -356,6 +356,7 @@
             this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSalir.UseAccentColor = false;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // btnActualizar
             // 

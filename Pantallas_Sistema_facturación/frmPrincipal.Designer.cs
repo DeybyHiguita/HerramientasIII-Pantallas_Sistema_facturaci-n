@@ -393,7 +393,6 @@ namespace Pantallas_Sistema_facturación
             this.btnSeguridadLeft.Click += new System.EventHandler(this.btnSeguridadLeft_Click);
 
             // lblModuloAyuda
-            this.lblModuloAyuda = new MaterialSkin.Controls.MaterialLabel();
             this.lblModuloAyuda.AutoSize = true;
             this.lblModuloAyuda.Depth = 0;
             this.lblModuloAyuda.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -424,7 +423,6 @@ namespace Pantallas_Sistema_facturación
             this.btnAyudaLeft.UseAccentColor = false;
             this.btnAyudaLeft.Visible = false;
             this.btnAyudaLeft.Click += new System.EventHandler(this.btnAyudaLeft_Click);
-
             // btnAcercaDeLeft
             this.btnAcercaDeLeft.AutoSize = false;
             this.btnAcercaDeLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
