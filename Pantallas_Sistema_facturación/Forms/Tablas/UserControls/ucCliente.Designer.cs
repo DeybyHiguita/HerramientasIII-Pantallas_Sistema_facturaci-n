@@ -1,8 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-using MaterialSkin.Controls;
-
-namespace Pantallas_Sistema_facturación.Forms.Clientes.UserControls
+﻿namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
 {
     partial class ucCliente
     {
@@ -10,23 +6,6 @@ namespace Pantallas_Sistema_facturación.Forms.Clientes.UserControls
         /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        
-        // Controles del formulario
-        private Panel panelMain;
-        private Panel panelForm;
-        private MaterialLabel lblTitle;
-        private MaterialLabel lblNombre;
-        private MaterialTextBox2 txtNombre;
-        private MaterialLabel lblDocumento;
-        private MaterialTextBox2 txtDocumento;
-        private MaterialLabel lblDireccion;
-        private MaterialTextBox2 txtDireccion;
-        private MaterialLabel lblTelefono;
-        private MaterialTextBox2 txtTelefono;
-        private MaterialLabel lblEmail;
-        private MaterialTextBox2 txtEmail;
-        private MaterialButton btnActualizar;
-        private MaterialButton btnSalir;
 
         /// <summary> 
         /// Limpiar los recursos que se estén usando.
@@ -49,389 +28,419 @@ namespace Pantallas_Sistema_facturación.Forms.Clientes.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panelForm = new System.Windows.Forms.Panel();
+            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
+            this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.tlpNombreProducto = new System.Windows.Forms.TableLayoutPanel();
+            this.lblNombreProducto = new MaterialSkin.Controls.MaterialLabel();
+            this.txtNombreProducto = new MaterialSkin.Controls.MaterialTextBox();
+            this.tlpCodigoReferencia = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCodigoReferencia = new MaterialSkin.Controls.MaterialLabel();
+            this.txtCodigoReferencia = new MaterialSkin.Controls.MaterialTextBox();
+            this.tlpPrecioCompra = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPrecioCompra = new MaterialSkin.Controls.MaterialLabel();
+            this.txtPrecioCompra = new MaterialSkin.Controls.MaterialTextBox();
+            this.tlpPrecioVenta = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPrecioVenta = new MaterialSkin.Controls.MaterialLabel();
+            this.txtPrecioVenta = new MaterialSkin.Controls.MaterialTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new MaterialSkin.Controls.MaterialButton();
             this.btnActualizar = new MaterialSkin.Controls.MaterialButton();
-            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox2();
-            this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
-            this.txtTelefono = new MaterialSkin.Controls.MaterialTextBox2();
-            this.lblTelefono = new MaterialSkin.Controls.MaterialLabel();
-            this.txtDireccion = new MaterialSkin.Controls.MaterialTextBox2();
-            this.lblDireccion = new MaterialSkin.Controls.MaterialLabel();
-            this.txtDocumento = new MaterialSkin.Controls.MaterialTextBox2();
-            this.lblDocumento = new MaterialSkin.Controls.MaterialLabel();
-            this.txtNombre = new MaterialSkin.Controls.MaterialTextBox2();
-            this.lblNombre = new MaterialSkin.Controls.MaterialLabel();
-            this.lblTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panelMain.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panelForm.SuspendLayout();
+            this.tlpPrincipal.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tlpNombreProducto.SuspendLayout();
+            this.tlpCodigoReferencia.SuspendLayout();
+            this.tlpPrecioCompra.SuspendLayout();
+            this.tlpPrecioVenta.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelMain
+            // lblTitulo
             // 
-            this.panelMain.BackColor = System.Drawing.Color.White;
-            this.panelMain.Controls.Add(this.tabControl1);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(50);
-            this.panelMain.Size = new System.Drawing.Size(1132, 730);
-            this.panelMain.TabIndex = 0;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Depth = 0;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblTitulo.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(291, 24);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "ADMINISTRACIÓN DE CLIENTES";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // tabControl1
+            // tlpPrincipal
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(50, 50);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1032, 630);
-            this.tabControl1.TabIndex = 1;
+            this.tlpPrincipal.ColumnCount = 2;
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tlpPrincipal.Controls.Add(this.tlpNombreProducto, 0, 0);
+            this.tlpPrincipal.Controls.Add(this.tlpCodigoReferencia, 1, 0);
+            this.tlpPrincipal.Controls.Add(this.tlpPrecioCompra, 0, 1);
+            this.tlpPrincipal.Controls.Add(this.tlpPrecioVenta, 1, 1);
+            this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 1, 4);
+            this.tlpPrincipal.Location = new System.Drawing.Point(25, 58);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpPrincipal.Name = "tlpPrincipal";
+            this.tlpPrincipal.RowCount = 5;
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpPrincipal.Size = new System.Drawing.Size(500, 265);
+            this.tlpPrincipal.TabIndex = 11;
             // 
-            // tabPage1
+            // tableLayoutPanel2
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(823, 546);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Lista";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.materialTextBox1, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 106);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(245, 48);
+            this.tableLayoutPanel2.TabIndex = 12;
             // 
-            // tabPage2
+            // materialLabel1
             // 
-            this.tabPage2.Controls.Add(this.panelForm);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1024, 604);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Nuevo";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(2, 0);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(128, 16);
+            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Text = "Correo electronico";
             // 
-            // panelForm
+            // materialTextBox1
             // 
-            this.panelForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.panelForm.Controls.Add(this.btnSalir);
-            this.panelForm.Controls.Add(this.btnActualizar);
-            this.panelForm.Controls.Add(this.txtEmail);
-            this.panelForm.Controls.Add(this.lblEmail);
-            this.panelForm.Controls.Add(this.txtTelefono);
-            this.panelForm.Controls.Add(this.lblTelefono);
-            this.panelForm.Controls.Add(this.txtDireccion);
-            this.panelForm.Controls.Add(this.lblDireccion);
-            this.panelForm.Controls.Add(this.txtDocumento);
-            this.panelForm.Controls.Add(this.lblDocumento);
-            this.panelForm.Controls.Add(this.txtNombre);
-            this.panelForm.Controls.Add(this.lblNombre);
-            this.panelForm.Controls.Add(this.lblTitle);
-            this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(3, 3);
-            this.panelForm.Name = "panelForm";
-            this.panelForm.Padding = new System.Windows.Forms.Padding(50);
-            this.panelForm.Size = new System.Drawing.Size(1018, 598);
-            this.panelForm.TabIndex = 0;
+            this.materialTextBox1.AnimateReadOnly = false;
+            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox1.Depth = 0;
+            this.materialTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.LeadingIcon = null;
+            this.materialTextBox1.Location = new System.Drawing.Point(2, 18);
+            this.materialTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.materialTextBox1.MaxLength = 10;
+            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox1.Multiline = false;
+            this.materialTextBox1.Name = "materialTextBox1";
+            this.materialTextBox1.Size = new System.Drawing.Size(241, 50);
+            this.materialTextBox1.TabIndex = 1;
+            this.materialTextBox1.Text = "";
+            this.materialTextBox1.TrailingIcon = null;
+            // 
+            // tlpNombreProducto
+            // 
+            this.tlpNombreProducto.ColumnCount = 1;
+            this.tlpNombreProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpNombreProducto.Controls.Add(this.lblNombreProducto, 0, 0);
+            this.tlpNombreProducto.Controls.Add(this.txtNombreProducto, 0, 1);
+            this.tlpNombreProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpNombreProducto.Location = new System.Drawing.Point(2, 2);
+            this.tlpNombreProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpNombreProducto.Name = "tlpNombreProducto";
+            this.tlpNombreProducto.RowCount = 2;
+            this.tlpNombreProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpNombreProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpNombreProducto.Size = new System.Drawing.Size(245, 48);
+            this.tlpNombreProducto.TabIndex = 2;
+            // 
+            // lblNombreProducto
+            // 
+            this.lblNombreProducto.AutoSize = true;
+            this.lblNombreProducto.Depth = 0;
+            this.lblNombreProducto.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblNombreProducto.Location = new System.Drawing.Point(2, 0);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreProducto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(109, 16);
+            this.lblNombreProducto.TabIndex = 0;
+            this.lblNombreProducto.Text = "Nombre Cliente";
+            this.lblNombreProducto.Click += new System.EventHandler(this.lblNombreProducto_Click);
+            // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.AnimateReadOnly = false;
+            this.txtNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreProducto.Depth = 0;
+            this.txtNombreProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNombreProducto.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombreProducto.LeadingIcon = null;
+            this.txtNombreProducto.Location = new System.Drawing.Point(2, 18);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreProducto.MaxLength = 100;
+            this.txtNombreProducto.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNombreProducto.Multiline = false;
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(241, 50);
+            this.txtNombreProducto.TabIndex = 1;
+            this.txtNombreProducto.Text = "";
+            this.txtNombreProducto.TrailingIcon = null;
+            // 
+            // tlpCodigoReferencia
+            // 
+            this.tlpCodigoReferencia.ColumnCount = 1;
+            this.tlpCodigoReferencia.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCodigoReferencia.Controls.Add(this.lblCodigoReferencia, 0, 0);
+            this.tlpCodigoReferencia.Controls.Add(this.txtCodigoReferencia, 0, 1);
+            this.tlpCodigoReferencia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCodigoReferencia.Location = new System.Drawing.Point(251, 2);
+            this.tlpCodigoReferencia.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpCodigoReferencia.Name = "tlpCodigoReferencia";
+            this.tlpCodigoReferencia.RowCount = 2;
+            this.tlpCodigoReferencia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpCodigoReferencia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCodigoReferencia.Size = new System.Drawing.Size(247, 48);
+            this.tlpCodigoReferencia.TabIndex = 3;
+            // 
+            // lblCodigoReferencia
+            // 
+            this.lblCodigoReferencia.AutoSize = true;
+            this.lblCodigoReferencia.Depth = 0;
+            this.lblCodigoReferencia.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblCodigoReferencia.Location = new System.Drawing.Point(2, 0);
+            this.lblCodigoReferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigoReferencia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCodigoReferencia.Name = "lblCodigoReferencia";
+            this.lblCodigoReferencia.Size = new System.Drawing.Size(83, 16);
+            this.lblCodigoReferencia.TabIndex = 0;
+            this.lblCodigoReferencia.Text = "Documento";
+            // 
+            // txtCodigoReferencia
+            // 
+            this.txtCodigoReferencia.AnimateReadOnly = false;
+            this.txtCodigoReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoReferencia.Depth = 0;
+            this.txtCodigoReferencia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCodigoReferencia.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCodigoReferencia.LeadingIcon = null;
+            this.txtCodigoReferencia.Location = new System.Drawing.Point(2, 18);
+            this.txtCodigoReferencia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigoReferencia.MaxLength = 50;
+            this.txtCodigoReferencia.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCodigoReferencia.Multiline = false;
+            this.txtCodigoReferencia.Name = "txtCodigoReferencia";
+            this.txtCodigoReferencia.Size = new System.Drawing.Size(243, 50);
+            this.txtCodigoReferencia.TabIndex = 1;
+            this.txtCodigoReferencia.Text = "";
+            this.txtCodigoReferencia.TrailingIcon = null;
+            // 
+            // tlpPrecioCompra
+            // 
+            this.tlpPrecioCompra.ColumnCount = 1;
+            this.tlpPrecioCompra.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrecioCompra.Controls.Add(this.lblPrecioCompra, 0, 0);
+            this.tlpPrecioCompra.Controls.Add(this.txtPrecioCompra, 0, 1);
+            this.tlpPrecioCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPrecioCompra.Location = new System.Drawing.Point(2, 54);
+            this.tlpPrecioCompra.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpPrecioCompra.Name = "tlpPrecioCompra";
+            this.tlpPrecioCompra.RowCount = 2;
+            this.tlpPrecioCompra.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpPrecioCompra.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrecioCompra.Size = new System.Drawing.Size(245, 48);
+            this.tlpPrecioCompra.TabIndex = 4;
+            // 
+            // lblPrecioCompra
+            // 
+            this.lblPrecioCompra.AutoSize = true;
+            this.lblPrecioCompra.Depth = 0;
+            this.lblPrecioCompra.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPrecioCompra.Location = new System.Drawing.Point(2, 0);
+            this.lblPrecioCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecioCompra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrecioCompra.Name = "lblPrecioCompra";
+            this.lblPrecioCompra.Size = new System.Drawing.Size(67, 16);
+            this.lblPrecioCompra.TabIndex = 0;
+            this.lblPrecioCompra.Text = "Direccion";
+            // 
+            // txtPrecioCompra
+            // 
+            this.txtPrecioCompra.AnimateReadOnly = false;
+            this.txtPrecioCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecioCompra.Depth = 0;
+            this.txtPrecioCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPrecioCompra.LeadingIcon = null;
+            this.txtPrecioCompra.Location = new System.Drawing.Point(2, 18);
+            this.txtPrecioCompra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioCompra.MaxLength = 20;
+            this.txtPrecioCompra.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPrecioCompra.Multiline = false;
+            this.txtPrecioCompra.Name = "txtPrecioCompra";
+            this.txtPrecioCompra.Size = new System.Drawing.Size(241, 50);
+            this.txtPrecioCompra.TabIndex = 1;
+            this.txtPrecioCompra.Text = "";
+            this.txtPrecioCompra.TrailingIcon = null;
+            // 
+            // tlpPrecioVenta
+            // 
+            this.tlpPrecioVenta.ColumnCount = 1;
+            this.tlpPrecioVenta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrecioVenta.Controls.Add(this.lblPrecioVenta, 0, 0);
+            this.tlpPrecioVenta.Controls.Add(this.txtPrecioVenta, 0, 1);
+            this.tlpPrecioVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPrecioVenta.Location = new System.Drawing.Point(251, 54);
+            this.tlpPrecioVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpPrecioVenta.Name = "tlpPrecioVenta";
+            this.tlpPrecioVenta.RowCount = 2;
+            this.tlpPrecioVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpPrecioVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrecioVenta.Size = new System.Drawing.Size(247, 48);
+            this.tlpPrecioVenta.TabIndex = 5;
+            // 
+            // lblPrecioVenta
+            // 
+            this.lblPrecioVenta.AutoSize = true;
+            this.lblPrecioVenta.Depth = 0;
+            this.lblPrecioVenta.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(2, 0);
+            this.lblPrecioVenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecioVenta.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrecioVenta.Name = "lblPrecioVenta";
+            this.lblPrecioVenta.Size = new System.Drawing.Size(64, 16);
+            this.lblPrecioVenta.TabIndex = 0;
+            this.lblPrecioVenta.Text = "Telefono";
+            // 
+            // txtPrecioVenta
+            // 
+            this.txtPrecioVenta.AnimateReadOnly = false;
+            this.txtPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecioVenta.Depth = 0;
+            this.txtPrecioVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPrecioVenta.LeadingIcon = null;
+            this.txtPrecioVenta.Location = new System.Drawing.Point(2, 18);
+            this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioVenta.MaxLength = 20;
+            this.txtPrecioVenta.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPrecioVenta.Multiline = false;
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(243, 50);
+            this.txtPrecioVenta.TabIndex = 1;
+            this.txtPrecioVenta.Text = "";
+            this.txtPrecioVenta.TrailingIcon = null;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnSalir, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnActualizar, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(251, 210);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(247, 53);
+            this.tableLayoutPanel1.TabIndex = 13;
             // 
             // btnSalir
             // 
-            this.btnSalir.AutoSize = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSalir.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSalir.Depth = 0;
             this.btnSalir.HighEmphasis = true;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(220, 520);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalir.Location = new System.Drawing.Point(126, 8);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalir.Size = new System.Drawing.Size(100, 40);
+            this.btnSalir.Size = new System.Drawing.Size(118, 36);
             this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "SALIR";
-            this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSalir.UseAccentColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.AutoSize = false;
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnActualizar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnActualizar.Depth = 0;
             this.btnActualizar.HighEmphasis = true;
             this.btnActualizar.Icon = null;
-            this.btnActualizar.Location = new System.Drawing.Point(50, 520);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnActualizar.Location = new System.Drawing.Point(3, 8);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnActualizar.Size = new System.Drawing.Size(150, 40);
+            this.btnActualizar.Size = new System.Drawing.Size(117, 36);
             this.btnActualizar.TabIndex = 11;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnActualizar.UseAccentColor = false;
+            this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // txtEmail
-            // 
-            this.txtEmail.AnimateReadOnly = false;
-            this.txtEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEmail.HideSelection = true;
-            this.txtEmail.Hint = "Correo electrónico";
-            this.txtEmail.LeadingIcon = null;
-            this.txtEmail.Location = new System.Drawing.Point(50, 445);
-            this.txtEmail.MaxLength = 100;
-            this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PrefixSuffixText = null;
-            this.txtEmail.ReadOnly = false;
-            this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.SelectionLength = 0;
-            this.txtEmail.SelectionStart = 0;
-            this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(500, 48);
-            this.txtEmail.TabIndex = 10;
-            this.txtEmail.TabStop = false;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmail.TrailingIcon = null;
-            this.txtEmail.UseSystemPasswordChar = false;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Depth = 0;
-            this.lblEmail.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblEmail.Location = new System.Drawing.Point(50, 420);
-            this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 19);
-            this.lblEmail.TabIndex = 9;
-            this.lblEmail.Text = "Email";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.AnimateReadOnly = false;
-            this.txtTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtTelefono.Depth = 0;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtTelefono.HideSelection = true;
-            this.txtTelefono.Hint = "Número de teléfono";
-            this.txtTelefono.LeadingIcon = null;
-            this.txtTelefono.Location = new System.Drawing.Point(310, 245);
-            this.txtTelefono.MaxLength = 15;
-            this.txtTelefono.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PasswordChar = '\0';
-            this.txtTelefono.PrefixSuffixText = null;
-            this.txtTelefono.ReadOnly = false;
-            this.txtTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTelefono.SelectedText = "";
-            this.txtTelefono.SelectionLength = 0;
-            this.txtTelefono.SelectionStart = 0;
-            this.txtTelefono.ShortcutsEnabled = true;
-            this.txtTelefono.Size = new System.Drawing.Size(240, 48);
-            this.txtTelefono.TabIndex = 6;
-            this.txtTelefono.TabStop = false;
-            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTelefono.TrailingIcon = null;
-            this.txtTelefono.UseSystemPasswordChar = false;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Depth = 0;
-            this.lblTelefono.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTelefono.Location = new System.Drawing.Point(310, 220);
-            this.lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(64, 19);
-            this.lblTelefono.TabIndex = 5;
-            this.lblTelefono.Text = "Teléfono";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.AnimateReadOnly = false;
-            this.txtDireccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtDireccion.Depth = 0;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDireccion.HideSelection = true;
-            this.txtDireccion.Hint = "Dirección completa";
-            this.txtDireccion.LeadingIcon = null;
-            this.txtDireccion.Location = new System.Drawing.Point(50, 345);
-            this.txtDireccion.MaxLength = 200;
-            this.txtDireccion.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.PasswordChar = '\0';
-            this.txtDireccion.PrefixSuffixText = null;
-            this.txtDireccion.ReadOnly = false;
-            this.txtDireccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDireccion.SelectedText = "";
-            this.txtDireccion.SelectionLength = 0;
-            this.txtDireccion.SelectionStart = 0;
-            this.txtDireccion.ShortcutsEnabled = true;
-            this.txtDireccion.Size = new System.Drawing.Size(500, 48);
-            this.txtDireccion.TabIndex = 8;
-            this.txtDireccion.TabStop = false;
-            this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDireccion.TrailingIcon = null;
-            this.txtDireccion.UseSystemPasswordChar = false;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Depth = 0;
-            this.lblDireccion.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDireccion.Location = new System.Drawing.Point(50, 320);
-            this.lblDireccion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(67, 19);
-            this.lblDireccion.TabIndex = 7;
-            this.lblDireccion.Text = "Dirección";
-            // 
-            // txtDocumento
-            // 
-            this.txtDocumento.AnimateReadOnly = false;
-            this.txtDocumento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtDocumento.Depth = 0;
-            this.txtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDocumento.HideSelection = true;
-            this.txtDocumento.Hint = "Número de documento";
-            this.txtDocumento.LeadingIcon = null;
-            this.txtDocumento.Location = new System.Drawing.Point(50, 245);
-            this.txtDocumento.MaxLength = 20;
-            this.txtDocumento.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.PasswordChar = '\0';
-            this.txtDocumento.PrefixSuffixText = null;
-            this.txtDocumento.ReadOnly = false;
-            this.txtDocumento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDocumento.SelectedText = "";
-            this.txtDocumento.SelectionLength = 0;
-            this.txtDocumento.SelectionStart = 0;
-            this.txtDocumento.ShortcutsEnabled = true;
-            this.txtDocumento.Size = new System.Drawing.Size(240, 48);
-            this.txtDocumento.TabIndex = 4;
-            this.txtDocumento.TabStop = false;
-            this.txtDocumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDocumento.TrailingIcon = null;
-            this.txtDocumento.UseSystemPasswordChar = false;
-            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
-            // 
-            // lblDocumento
-            // 
-            this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Depth = 0;
-            this.lblDocumento.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDocumento.Location = new System.Drawing.Point(50, 220);
-            this.lblDocumento.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(83, 19);
-            this.lblDocumento.TabIndex = 3;
-            this.lblDocumento.Text = "Documento";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.AnimateReadOnly = false;
-            this.txtNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtNombre.Depth = 0;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNombre.HideSelection = true;
-            this.txtNombre.Hint = "Ingrese el nombre completo del cliente";
-            this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(50, 145);
-            this.txtNombre.MaxLength = 100;
-            this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.PrefixSuffixText = null;
-            this.txtNombre.ReadOnly = false;
-            this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.SelectionLength = 0;
-            this.txtNombre.SelectionStart = 0;
-            this.txtNombre.ShortcutsEnabled = true;
-            this.txtNombre.Size = new System.Drawing.Size(500, 48);
-            this.txtNombre.TabIndex = 2;
-            this.txtNombre.TabStop = false;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNombre.TrailingIcon = null;
-            this.txtNombre.UseSystemPasswordChar = false;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Depth = 0;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNombre.Location = new System.Drawing.Point(50, 120);
-            this.lblNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(109, 19);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre Cliente";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Depth = 0;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
-            this.lblTitle.Location = new System.Drawing.Point(50, 50);
-            this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(197, 19);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "NUEVO REGISTRO CLIENTE";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(823, 546);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Editar";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // ucNuevoCliente
+            // ucCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panelMain);
-            this.Name = "ucNuevoCliente";
-            this.Size = new System.Drawing.Size(1132, 730);
-            this.panelMain.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panelForm.ResumeLayout(false);
-            this.panelForm.PerformLayout();
+            this.Controls.Add(this.tlpPrincipal);
+            this.Controls.Add(this.lblTitulo);
+            this.Name = "ucCliente";
+            this.Size = new System.Drawing.Size(550, 350);
+            this.tlpPrincipal.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tlpNombreProducto.ResumeLayout(false);
+            this.tlpNombreProducto.PerformLayout();
+            this.tlpCodigoReferencia.ResumeLayout(false);
+            this.tlpCodigoReferencia.PerformLayout();
+            this.tlpPrecioCompra.ResumeLayout(false);
+            this.tlpPrecioCompra.PerformLayout();
+            this.tlpPrecioVenta.ResumeLayout(false);
+            this.tlpPrecioVenta.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private TabPage tabPage3;
+        private MaterialSkin.Controls.MaterialLabel lblTitulo;
+        private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MaterialSkin.Controls.MaterialButton btnSalir;
+        private MaterialSkin.Controls.MaterialButton btnActualizar;
+        private System.Windows.Forms.TableLayoutPanel tlpNombreProducto;
+        private MaterialSkin.Controls.MaterialLabel lblNombreProducto;
+        private MaterialSkin.Controls.MaterialTextBox txtNombreProducto;
+        private System.Windows.Forms.TableLayoutPanel tlpCodigoReferencia;
+        private MaterialSkin.Controls.MaterialLabel lblCodigoReferencia;
+        private MaterialSkin.Controls.MaterialTextBox txtCodigoReferencia;
+        private System.Windows.Forms.TableLayoutPanel tlpPrecioCompra;
+        private MaterialSkin.Controls.MaterialLabel lblPrecioCompra;
+        private MaterialSkin.Controls.MaterialTextBox txtPrecioCompra;
+        private System.Windows.Forms.TableLayoutPanel tlpPrecioVenta;
+        private MaterialSkin.Controls.MaterialLabel lblPrecioVenta;
+        private MaterialSkin.Controls.MaterialTextBox txtPrecioVenta;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
     }
 }

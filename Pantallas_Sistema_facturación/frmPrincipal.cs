@@ -1,6 +1,6 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
-using Pantallas_Sistema_facturación.Forms.Clientes.UserControls;
+using Pantallas_Sistema_facturación.Forms.Tablas.UserControls;
 using Pantallas_Sistema_facturación.UserControls;
 using System;
 using System.Drawing;
@@ -37,6 +37,13 @@ namespace Pantallas_Sistema_facturación
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
+            
+            if (panelContent != null)
+            {
+                panelContent.AutoScroll = true;
+                panelContent.AutoScrollMargin = new Size(20, 20);
+                panelContent.Padding = new Padding(20);
+            }
         }
         
         private void btnSalir_Click(object sender, EventArgs e)
@@ -54,176 +61,284 @@ namespace Pantallas_Sistema_facturación
             switch (result)
             {
                 case DialogResult.Yes:
-                    // Volver al login - cerrar con DialogResult.Cancel para que Program.cs vuelva al login
                     this.DialogResult = DialogResult.Cancel;
                     this.Close();
                     break;
                     
                 case DialogResult.No:
-                    // Salir completamente de la aplicación
-                    this.DialogResult = DialogResult.Abort; // Usamos Abort para indicar salida completa
+                    this.DialogResult = DialogResult.Abort;
                     Application.Exit();
                     break;
                     
                 case DialogResult.Cancel:
                 default:
-                    // No hacer nada (quedarse en el formulario)
                     break;
             }
         }
 
-
         
-        // Métodos para manejar la navegación de menús
         private void menuPrincipal_Click(object sender, EventArgs e)
         {
-            // Lógica para mostrar página principal
+            HideTablaButtons();
             ShowMainContent();
         }
         
         private void menuTablas_Click(object sender, EventArgs e)
         {
-            // Lógica para mostrar página de tablas
-            ShowTablasContent();
+            ShowTablaButtons();
+            ShowMainContent();
+        }
+
+        private void btnProductosLeft_Click(object sender, EventArgs e)
+        {
+            ShowProductos();
+        }
+
+        private void btnClientesLeft_Click(object sender, EventArgs e)
+        {
+            ShowCliente();
+        }
+
+        private void btnCategoriasLeft_Click(object sender, EventArgs e)
+        {
+            ShowCategorias();
         }
         
         private void menuFacturacion_Click(object sender, EventArgs e)
         {
-            // Lógica para mostrar página de facturación
+            HideTablaButtons();
             ShowFacturacionContent();
         }
         
         private void menuSeguridad_Click(object sender, EventArgs e)
         {
-            // Lógica para mostrar página de seguridad
+            HideTablaButtons();
             ShowSeguridadContent();
         }
         
         private void menuAyuda_Click(object sender, EventArgs e)
         {
+            HideTablaButtons();
             ShowCliente();
+        }
+        
+        private void ShowTablaButtons()
+        {
+            if (lblModuloTablas != null) lblModuloTablas.Visible = true;
+            if (btnProductosLeft != null) btnProductosLeft.Visible = true;
+            if (btnClientesLeft != null) btnClientesLeft.Visible = true;
+            if (btnCategoriasLeft != null) btnCategoriasLeft.Visible = true;
+        }
+        
+        private void HideTablaButtons()
+        {
+            if (lblModuloTablas != null) lblModuloTablas.Visible = false;
+            if (btnProductosLeft != null) btnProductosLeft.Visible = false;
+            if (btnClientesLeft != null) btnClientesLeft.Visible = false;
+            if (btnCategoriasLeft != null) btnCategoriasLeft.Visible = false;
         }
         
         private void ShowMainContent()
         {
-            // Cargar el dashboard principal
             panelContent.Controls.Clear();
             var dashboard = new ucDashboard();
+            
+            dashboard.Location = new Point(0, 0);
+            dashboard.Size = panelContent.ClientSize;
+            dashboard.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
+            
             panelContent.Controls.Add(dashboard);
+            
+            panelContent.Resize += (sender, e) => {
+                if (dashboard != null && !dashboard.IsDisposed)
+                {
+                    dashboard.Size = panelContent.ClientSize;
+                }
+            };
         }
         
-        private void ShowTablasContent()
+        private void ShowProductos()
+        {
+            // Cargar el formulario de productos
+            panelContent.Controls.Clear();
+            
+            // Crear un panel wrapper con scroll
+            var scrollPanel = new Panel
+            {
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
+            };
+            
+            var ucProductos = new ucProducto();
+            ucProductos.Location = new Point(20, 20);
+            ucProductos.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucProductos);
+            
+            panelContent.Controls.Add(scrollPanel);
+            
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
+            };
+        }
+
+        private void ShowCliente()
         {
             panelContent.Controls.Clear();
-            var lblTablas = new MaterialLabel
+            
+            var scrollPanel = new Panel
             {
-                Text = "Módulo de Tablas",
-                Font = new Font("Roboto", 20, FontStyle.Bold),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 60
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
             };
             
-            var lblSubtitle = new MaterialLabel
-            {
-                Text = "Gestión de Clientes, Productos y Categorías",
-                Font = new Font("Roboto", 14, FontStyle.Regular),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 40
+            var ucClientes = new ucCliente();
+            ucClientes.Location = new Point(20, 20);
+            ucClientes.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucClientes);
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
             };
-            
-            panelContent.Controls.Add(lblSubtitle);
-            panelContent.Controls.Add(lblTablas);
+        }
+        
+        private void ShowCategorias()
+        {
+            panelContent.Controls.Clear();
+
+            var scrollPanel = new Panel
+            {
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
+            };
+
+            var uc = new ucCategoriasProductos();
+            uc.Location = new Point(20, 20);
+            uc.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(uc);
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
+            };
         }
         
         private void ShowFacturacionContent()
         {
             panelContent.Controls.Clear();
+            
+            var panelFacturacion = new Panel
+            {
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                BackColor = Color.White,
+                AutoScroll = true,
+                Padding = new Padding(30),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
+            };
+            
             var lblFacturacion = new MaterialLabel
             {
                 Text = "Módulo de Facturación",
                 Font = new Font("Roboto", 20, FontStyle.Bold),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 60
+                Location = new Point(0, 20),
+                Size = new Size(400, 40),
+                TextAlign = ContentAlignment.MiddleLeft
             };
             
             var lblSubtitle = new MaterialLabel
             {
                 Text = "Crear Facturas, Cotizaciones y Reportes",
                 Font = new Font("Roboto", 14, FontStyle.Regular),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 40
+                Location = new Point(0, 70),
+                Size = new Size(400, 30),
+                TextAlign = ContentAlignment.MiddleLeft
             };
             
-            panelContent.Controls.Add(lblSubtitle);
-            panelContent.Controls.Add(lblFacturacion);
+            panelFacturacion.Controls.Add(lblFacturacion);
+            panelFacturacion.Controls.Add(lblSubtitle);
+            
+            panelContent.Controls.Add(panelFacturacion);
+            
+            panelContent.Resize += (sender, e) => {
+                if (panelFacturacion != null && !panelFacturacion.IsDisposed)
+                {
+                    panelFacturacion.Size = panelContent.ClientSize;
+                }
+            };
         }
         
         private void ShowSeguridadContent()
         {
             panelContent.Controls.Clear();
+            
+            var panelSeguridad = new Panel
+            {
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                BackColor = Color.White,
+                AutoScroll = true,
+                Padding = new Padding(30),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
+            };
+            
             var lblSeguridad = new MaterialLabel
             {
                 Text = "Módulo de Seguridad",
                 Font = new Font("Roboto", 20, FontStyle.Bold),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 60
+                Location = new Point(0, 20),
+                Size = new Size(400, 40),
+                TextAlign = ContentAlignment.MiddleLeft
             };
             
             var lblSubtitle = new MaterialLabel
             {
                 Text = "Gestión de Usuarios y Permisos",
                 Font = new Font("Roboto", 14, FontStyle.Regular),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 40
+                Location = new Point(0, 70),
+                Size = new Size(400, 30),
+                TextAlign = ContentAlignment.MiddleLeft
             };
             
-            panelContent.Controls.Add(lblSubtitle);
-            panelContent.Controls.Add(lblSeguridad);
-        }
-        
-        private void ShowAyudaContent()
-        {
-            panelContent.Controls.Clear();
-            var lblAyuda = new MaterialLabel
-            {
-                Text = "Módulo de Ayuda",
-                Font = new Font("Roboto", 20, FontStyle.Bold),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 60
-            };
+            panelSeguridad.Controls.Add(lblSeguridad);
+            panelSeguridad.Controls.Add(lblSubtitle);
             
-            var lblSubtitle = new MaterialLabel
-            {
-                Text = "Documentación y Soporte Técnico",
-                Font = new Font("Roboto", 14, FontStyle.Regular),
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 40
-            };
+            panelContent.Controls.Add(panelSeguridad);
             
-            panelContent.Controls.Add(lblSubtitle);
-            panelContent.Controls.Add(lblAyuda);
-        }
-
-        private void ShowCliente()
-        {
-            // Cargar el dashboard principal
-            panelContent.Controls.Clear();
-            var uc = new ucCliente();
-            panelContent.Controls.Add(uc);
+            // Suscribirse al evento de redimensionamiento del panel
+            panelContent.Resize += (sender, e) => {
+                if (panelSeguridad != null && !panelSeguridad.IsDisposed)
+                {
+                    panelSeguridad.Size = panelContent.ClientSize;
+                }
+            };
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             // Cargar logo
             LoadLogo();
+            
+            // Ocultar botones de tablas por defecto
+            HideTablaButtons();
             
             // Mostrar contenido principal por defecto
             ShowMainContent();
@@ -233,7 +348,6 @@ namespace Pantallas_Sistema_facturación
         {
             try
             {
-                // Crear un logo simple programáticamente con paleta morada
                 Bitmap logo = new Bitmap(160, 120);
                 using (Graphics g = Graphics.FromImage(logo))
                 {
@@ -260,12 +374,17 @@ namespace Pantallas_Sistema_facturación
                         g.DrawString(logoText, logoFont, textBrush, textRect, stringFormat);
                     }
                 }
-                pictureBoxLogo.Image = logo;
+                if (pictureBoxLogo != null)
+                {
+                    pictureBoxLogo.Image = logo;
+                }
             }
             catch (Exception ex)
             {
-                // Si hay error, mantener el fondo del color del sistema
-                pictureBoxLogo.BackColor = Color.FromArgb(165, 135, 195);
+                if (pictureBoxLogo != null)
+                {
+                    pictureBoxLogo.BackColor = Color.FromArgb(165, 135, 195);
+                }
             }
         }
     }

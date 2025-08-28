@@ -30,7 +30,7 @@ namespace Pantallas_Sistema_facturación
             this.lblDesarrolladoPor.Name = "lblDesarrolladoPor";
             this.lblDesarrolladoPor.Size = new System.Drawing.Size(261, 19);
             this.lblDesarrolladoPor.TabIndex = 0;
-            this.lblDesarrolladoPor.Text = "Desarrollado por Jhon Deyby Higuita";
+            this.lblDesarrolladoPor.Text = "Desarrollado por Jhon Deyby Higuita, Santiago Catano y David Paredes";
             // 
             // lblEmail
             // 
@@ -54,7 +54,7 @@ namespace Pantallas_Sistema_facturación
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(154, 19);
             this.lblTelefono.TabIndex = 2;
-            this.lblTelefono.Text = "📞 +57 302 239 97 24";
+            this.lblTelefono.Text = "📞 +57 302 239 00 00";
             // 
             // lblCopyright
             // 
