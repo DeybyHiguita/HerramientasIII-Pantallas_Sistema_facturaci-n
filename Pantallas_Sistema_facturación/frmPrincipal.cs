@@ -17,7 +17,7 @@ namespace Pantallas_Sistema_facturación
             InitializeSkin();
             ConfigureForm();
         }
-        
+
         void InitializeSkin()
         {
             MaterialSkinManager manager = MaterialSkinManager.Instance;
@@ -32,13 +32,13 @@ namespace Pantallas_Sistema_facturación
                 TextShade.WHITE
             );
         }
-        
+
         void ConfigureForm()
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
-            
+
             if (panelContent != null)
             {
                 panelContent.AutoScroll = true;
@@ -46,7 +46,7 @@ namespace Pantallas_Sistema_facturación
                 panelContent.Padding = new Padding(20);
             }
         }
-        
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show(this,
@@ -58,37 +58,38 @@ namespace Pantallas_Sistema_facturación
                 MessageBoxButtons.YesNoCancel,
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button3);
-                
+
             switch (result)
             {
                 case DialogResult.Yes:
                     this.DialogResult = DialogResult.Cancel;
                     this.Close();
                     break;
-                    
+
                 case DialogResult.No:
                     this.DialogResult = DialogResult.Abort;
                     Application.Exit();
                     break;
-                    
+
                 case DialogResult.Cancel:
                 default:
                     break;
             }
         }
 
-        
+
         private void menuPrincipal_Click(object sender, EventArgs e)
         {
             HideTablaButtons();
             HideSeguridadButtons();
             ShowMainContent();
         }
-        
+
         private void menuTablas_Click(object sender, EventArgs e)
         {
             ShowTablaButtons();
             HideSeguridadButtons();
+            HideAyudaButtons();
             ShowMainContent();
         }
 
@@ -106,18 +107,20 @@ namespace Pantallas_Sistema_facturación
         {
             ShowCategorias();
         }
-        
+
         private void menuFacturacion_Click(object sender, EventArgs e)
         {
             HideSeguridadButtons();
             HideTablaButtons();
+            HideAyudaButtons();
             ShowFacturacionContent();
         }
-        
+
         private void menuSeguridad_Click(object sender, EventArgs e)
         {
             ShowSeguridadButtons();
             HideTablaButtons();
+            HideAyudaButtons();
             ShowMainContent();
         }
 
@@ -141,8 +144,15 @@ namespace Pantallas_Sistema_facturación
         {
             HideSeguridadButtons();
             HideTablaButtons();
-            ShowCliente();
+            ShowAyudaButtons();
+            ShowMainContent();
         }
+
+        private void btnAyudaLeft_Click(object sender, EventArgs e)
+        {
+            ShowAyuda();
+        }
+
 
         private void ShowTablaButtons()
         {
@@ -154,10 +164,23 @@ namespace Pantallas_Sistema_facturación
 
         private void ShowSeguridadButtons()
         {
-            if (lblModuloSegurdad != null) lblModuloSegurdad.Visible = true;
+            if (lblModuloSeguridad != null) lblModuloSeguridad.Visible = true;
             if (btnEmpleadosLeft != null) btnEmpleadosLeft.Visible = true;
             if (btnRolesLeft != null) btnRolesLeft.Visible = true;
             if (btnSeguridadLeft != null) btnSeguridadLeft.Visible = true;
+        }
+        private void ShowAyudaButtons()
+        {
+            if (lblModuloAyuda != null) lblModuloAyuda.Visible = true;
+            if (btnAyudaLeft != null) btnAyudaLeft.Visible = true;
+            if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = true;
+        }
+
+        private void HideAyudaButtons()
+        {
+            if (lblModuloAyuda != null) lblModuloAyuda.Visible = false;
+            if (btnAyudaLeft != null) btnAyudaLeft.Visible = false;
+            if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = false;
         }
 
         private void HideTablaButtons()
@@ -170,7 +193,7 @@ namespace Pantallas_Sistema_facturación
 
         private void HideSeguridadButtons()
         {
-            if (lblModuloSegurdad != null) lblModuloSegurdad.Visible = false;
+            if (lblModuloSeguridad != null) lblModuloSeguridad.Visible = false;
             if (btnEmpleadosLeft != null) btnEmpleadosLeft.Visible = false;
             if (btnRolesLeft != null) btnRolesLeft.Visible = false;
             if (btnSeguridadLeft != null) btnSeguridadLeft.Visible = false;
@@ -404,6 +427,37 @@ namespace Pantallas_Sistema_facturación
             ucAdminsSeguridad.Location = new Point(20, 20);
             ucAdminsSeguridad.Size = new Size(820, 540);
             scrollPanel.Controls.Add(ucAdminsSeguridad);
+
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
+            };
+
+        }
+
+        private void ShowAyuda()
+        {
+            // Cargar el formulario de productos
+            panelContent.Controls.Clear();
+
+            // Crear un panel wrapper con scroll
+            var scrollPanel = new Panel
+            {
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
+            };
+
+            var ucAyudas = new ucAyuda();
+            ucAyudas.Location = new Point(20, 20);
+            ucAyudas.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucAyudas);
 
             panelContent.Controls.Add(scrollPanel);
 
