@@ -50,11 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Ayuda\UserControls\ucAyuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Ayuda\UserControls\ucAyuda.Designer.cs">
+      <DependentUpon>ucAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Facturacion\UserControls\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Facturacion\UserControls\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\UserControls\ucAdminSeguridad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\UserControls\ucAdminSeguridad.Designer.cs">
+      <DependentUpon>ucAdminSeguridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\UserControls\ucEmpleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\UserControls\ucEmpleado.Designer.cs">
+      <DependentUpon>ucEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\UserControls\ucRol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\UserControls\ucRol.Designer.cs">
+      <DependentUpon>ucRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tablas\UserControls\ucCategoriasProductos.cs">
       <SubType>UserControl</SubType>
@@ -105,6 +129,18 @@
     <Compile Include="UserControls\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Ayuda\UserControls\ucAyuda.resx">
+      <DependentUpon>ucAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucAdminSeguridad.resx">
+      <DependentUpon>ucAdminSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucEmpleado.resx">
+      <DependentUpon>ucEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucRol.resx">
+      <DependentUpon>ucRol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tablas\UserControls\ucCategoriasProductos.resx">
       <DependentUpon>ucCategoriasProductos.cs</DependentUpon>
     </EmbeddedResource>

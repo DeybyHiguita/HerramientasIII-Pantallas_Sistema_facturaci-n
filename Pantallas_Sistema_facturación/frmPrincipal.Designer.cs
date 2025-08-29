@@ -21,12 +21,23 @@ namespace Pantallas_Sistema_facturación
         private MaterialButton btnFacturacion;
         private MaterialButton btnSeguridad;
         
-        // Nuevos botones para el panel izquierdo
+        // Nuevos botones para el panel izquierdo de tablas
         private MaterialLabel lblModuloTablas;
         private MaterialButton btnProductosLeft;
         private MaterialButton btnClientesLeft;
         private MaterialButton btnCategoriasLeft;
-        
+
+        // Nuevos botones para el panel izquierdo de Seguridad
+        private MaterialLabel lblModuloSeguridad;
+        private MaterialButton btnEmpleadosLeft;
+        private MaterialButton btnRolesLeft;
+        private MaterialButton btnSeguridadLeft;
+
+        // Nuevos botones para el panel izquierdo de Ayuda
+        private MaterialLabel lblModuloAyuda;
+        private MaterialButton btnAyudaLeft;
+        private MaterialButton btnAcercaDeLeft;
+
         private PictureBox pictureBoxLogo;
         private MaterialButton btnSalir;
 
@@ -64,6 +75,13 @@ namespace Pantallas_Sistema_facturación
             this.btnProductosLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnClientesLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnCategoriasLeft = new MaterialSkin.Controls.MaterialButton();
+            this.lblModuloSeguridad = new MaterialSkin.Controls.MaterialLabel();
+            this.btnEmpleadosLeft = new MaterialSkin.Controls.MaterialButton();
+            this.btnRolesLeft = new MaterialSkin.Controls.MaterialButton();
+            this.btnSeguridadLeft = new MaterialSkin.Controls.MaterialButton();
+            this.lblModuloAyuda = new MaterialSkin.Controls.MaterialLabel();
+            this.btnAyudaLeft = new MaterialSkin.Controls.MaterialButton();  
+            this.btnAcercaDeLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelContent = new System.Windows.Forms.Panel();
@@ -105,6 +123,7 @@ namespace Pantallas_Sistema_facturación
             this.materialButton1.Text = "Ayuda";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.materialButton1.UseAccentColor = false;
+            this.materialButton1.Click += new System.EventHandler(this.menuAyuda_Click);
             // 
             // btnSeguridad
             // 
@@ -206,6 +225,13 @@ namespace Pantallas_Sistema_facturación
             this.panelLeft.Controls.Add(this.btnProductosLeft);
             this.panelLeft.Controls.Add(this.btnClientesLeft);
             this.panelLeft.Controls.Add(this.btnCategoriasLeft);
+            this.panelLeft.Controls.Add(this.lblModuloSeguridad);
+            this.panelLeft.Controls.Add(this.btnEmpleadosLeft);
+            this.panelLeft.Controls.Add(this.btnRolesLeft);
+            this.panelLeft.Controls.Add(this.btnSeguridadLeft);
+            this.panelLeft.Controls.Add(this.lblModuloAyuda);
+            this.panelLeft.Controls.Add(this.btnAyudaLeft);
+            this.panelLeft.Controls.Add(this.btnAcercaDeLeft);
             this.panelLeft.Controls.Add(this.btnSalir);
             this.panelLeft.Controls.Add(this.pictureBoxLogo);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -289,6 +315,133 @@ namespace Pantallas_Sistema_facturación
             this.btnCategoriasLeft.UseAccentColor = false;
             this.btnCategoriasLeft.Visible = false;
             this.btnCategoriasLeft.Click += new System.EventHandler(this.btnCategoriasLeft_Click);
+            // 
+            // lblModuloSeguridad
+            // 
+            this.lblModuloSeguridad.AutoSize = true;
+            this.lblModuloSeguridad.Depth = 0;
+            this.lblModuloSeguridad.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblModuloSeguridad.Location = new System.Drawing.Point(20, 160);
+            this.lblModuloSeguridad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblModuloSeguridad.Name = "lblModuloSeguridad";
+            this.lblModuloSeguridad.Size = new System.Drawing.Size(129, 19);
+            this.lblModuloSeguridad.TabIndex = 6;
+            this.lblModuloSeguridad.Text = "Módulo de Seguridad";
+            this.lblModuloSeguridad.Visible = false;
+            // 
+            // btnEmpleadosLeft
+            // 
+            this.btnEmpleadosLeft.AutoSize = false;
+            this.btnEmpleadosLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEmpleadosLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEmpleadosLeft.Depth = 0;
+            this.btnEmpleadosLeft.HighEmphasis = true;
+            this.btnEmpleadosLeft.Icon = null;
+            this.btnEmpleadosLeft.Location = new System.Drawing.Point(20, 190);
+            this.btnEmpleadosLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEmpleadosLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEmpleadosLeft.Name = "btnEmpleadosLeft";
+            this.btnEmpleadosLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEmpleadosLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnEmpleadosLeft.TabIndex = 2;
+            this.btnEmpleadosLeft.Text = "EMPLEADOS";
+            this.btnEmpleadosLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEmpleadosLeft.UseAccentColor = false;
+            this.btnEmpleadosLeft.Visible = false;
+            this.btnEmpleadosLeft.Click += new System.EventHandler(this.btnEmpleadosLeft_Click);
+            // 
+            // btnRolesLeft
+            // 
+            this.btnRolesLeft.AutoSize = false;
+            this.btnRolesLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRolesLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRolesLeft.Depth = 0;
+            this.btnRolesLeft.HighEmphasis = true;
+            this.btnRolesLeft.Icon = null;
+            this.btnRolesLeft.Location = new System.Drawing.Point(20, 240);
+            this.btnRolesLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRolesLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRolesLeft.Name = "btnRolesLeft";
+            this.btnRolesLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnRolesLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnRolesLeft.TabIndex = 3;
+            this.btnRolesLeft.Text = "ROLES";
+            this.btnRolesLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRolesLeft.UseAccentColor = false;
+            this.btnRolesLeft.Visible = false;
+            this.btnRolesLeft.Click += new System.EventHandler(this.btnRolesLeft_Click);
+            // 
+            // btnSeguridadLeft
+            // 
+            this.btnSeguridadLeft.AutoSize = false;
+            this.btnSeguridadLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSeguridadLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSeguridadLeft.Depth = 0;
+            this.btnSeguridadLeft.HighEmphasis = true;
+            this.btnSeguridadLeft.Icon = null;
+            this.btnSeguridadLeft.Location = new System.Drawing.Point(20, 290);
+            this.btnSeguridadLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSeguridadLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSeguridadLeft.Name = "btnSeguridadLeft";
+            this.btnSeguridadLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSeguridadLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnSeguridadLeft.TabIndex = 4;
+            this.btnSeguridadLeft.Text = "SEGURIDAD";
+            this.btnSeguridadLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSeguridadLeft.UseAccentColor = false;
+            this.btnSeguridadLeft.Visible = false;
+            this.btnSeguridadLeft.Click += new System.EventHandler(this.btnSeguridadLeft_Click);
+
+            // lblModuloAyuda
+            this.lblModuloAyuda.AutoSize = true;
+            this.lblModuloAyuda.Depth = 0;
+            this.lblModuloAyuda.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblModuloAyuda.Location = new System.Drawing.Point(20, 160);
+            this.lblModuloAyuda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblModuloAyuda.Name = "lblModuloAyuda";
+            this.lblModuloAyuda.Size = new System.Drawing.Size(114, 19);
+            this.lblModuloAyuda.TabIndex = 7;
+            this.lblModuloAyuda.Text = "Módulo de Ayuda";
+            this.lblModuloAyuda.Visible = false;
+
+            // btnAyudaLeft
+            this.btnAyudaLeft.AutoSize = false;
+            this.btnAyudaLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAyudaLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAyudaLeft.Depth = 0;
+            this.btnAyudaLeft.HighEmphasis = true;
+            this.btnAyudaLeft.Icon = null;
+            this.btnAyudaLeft.Location = new System.Drawing.Point(20, 190);
+            this.btnAyudaLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAyudaLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAyudaLeft.Name = "btnAyudaLeft";
+            this.btnAyudaLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAyudaLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnAyudaLeft.TabIndex = 4;
+            this.btnAyudaLeft.Text = "AYUDA";
+            this.btnAyudaLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAyudaLeft.UseAccentColor = false;
+            this.btnAyudaLeft.Visible = false;
+            this.btnAyudaLeft.Click += new System.EventHandler(this.btnAyudaLeft_Click);
+            // btnAcercaDeLeft
+            this.btnAcercaDeLeft.AutoSize = false;
+            this.btnAcercaDeLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAcercaDeLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAcercaDeLeft.Depth = 0;
+            this.btnAcercaDeLeft.HighEmphasis = true;
+            this.btnAcercaDeLeft.Icon = null;
+            this.btnAcercaDeLeft.Location = new System.Drawing.Point(20, 240);
+            this.btnAcercaDeLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAcercaDeLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAcercaDeLeft.Name = "btnAcercaDeLeft";
+            this.btnAcercaDeLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAcercaDeLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnAcercaDeLeft.TabIndex = 4;
+            this.btnAcercaDeLeft.Text = "ACERCA DE";
+            this.btnAcercaDeLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAcercaDeLeft.UseAccentColor = false;
+            this.btnAcercaDeLeft.Visible = false;
+            //this.btnAcercaDeLeft.Click += new System.EventHandler(this.btnAcercaDeLeft_Click);
             // 
             // btnSalir
             // 

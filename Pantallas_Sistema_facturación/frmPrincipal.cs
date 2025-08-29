@@ -1,5 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
+using Pantallas_Sistema_facturación.Forms.Ayuda.UserControls;
+using Pantallas_Sistema_facturación.Forms.Seguridad.UserControls;
 using Pantallas_Sistema_facturación.Forms.Tablas.UserControls;
 using Pantallas_Sistema_facturación.UserControls;
 using System;
@@ -16,6 +18,7 @@ namespace Pantallas_Sistema_facturación
             InicializarApariencia();
             ConfigurarFormulario();
         }
+
         
         void InicializarApariencia()
         {
@@ -36,7 +39,7 @@ namespace Pantallas_Sistema_facturación
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
-            
+
             if (panelContent != null)
             {
                 panelContent.AutoScroll = true;
@@ -44,7 +47,7 @@ namespace Pantallas_Sistema_facturación
                 panelContent.Padding = new Padding(20);
             }
         }
-        
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var ResultadoOpcion = MessageBox.Show(this,
@@ -63,25 +66,25 @@ namespace Pantallas_Sistema_facturación
                     this.DialogResult = DialogResult.Cancel;
                     this.Close();
                     break;
-                    
+
                 case DialogResult.No:
                     this.DialogResult = DialogResult.Abort;
                     Application.Exit();
                     break;
-                    
+
                 case DialogResult.Cancel:
                 default:
                     break;
             }
         }
 
-        
+
         private void menuPrincipal_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
             MostrarContenidoPrincipal();
         }
-        
+
         private void menuTablas_Click(object sender, EventArgs e)
         {
             MostrarBotonesTabla();
@@ -102,19 +105,35 @@ namespace Pantallas_Sistema_facturación
         {
             MostrarCategorias();
         }
-        
+
         private void menuFacturacion_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
             MostrarContenidoFacturacion();
         }
-        
+
         private void menuSeguridad_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
             MostrarContenidoSeguridad();
         }
-        
+
+        private void btnEmpleadosLeft_Click(object sender, EventArgs e)
+        {
+            ShowEmpleados();
+        }
+
+        private void btnRolesLeft_Click(object sender, EventArgs e)
+        {
+            ShowRolesEmpleado();
+        }
+
+        private void btnSeguridadLeft_Click(object sender, EventArgs e)
+        {
+            ShowAdminSeguridad();
+        }
+
+
         private void menuAyuda_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
@@ -128,6 +147,29 @@ namespace Pantallas_Sistema_facturación
             if (btnClientesLeft != null) btnClientesLeft.Visible = true;
             if (btnCategoriasLeft != null) btnCategoriasLeft.Visible = true;
         }
+
+        private void ShowSeguridadButtons()
+        {
+            if (lblModuloSeguridad != null) lblModuloSeguridad.Visible = true;
+            if (btnEmpleadosLeft != null) btnEmpleadosLeft.Visible = true;
+            if (btnRolesLeft != null) btnRolesLeft.Visible = true;
+            if (btnSeguridadLeft != null) btnSeguridadLeft.Visible = true;
+        }
+        
+        private void ShowAyudaButtons()
+        {
+            if (lblModuloAyuda != null) lblModuloAyuda.Visible = true;
+            if (btnAyudaLeft != null) btnAyudaLeft.Visible = true;
+            if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = true;
+        }
+
+        private void HideAyudaButtons()
+        {
+            if (lblModuloAyuda != null) lblModuloAyuda.Visible = false;
+            if (btnAyudaLeft != null) btnAyudaLeft.Visible = false;
+            if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = false;
+        }
+
         
         private void OcultarBotonesTabla()
         {
@@ -136,6 +178,15 @@ namespace Pantallas_Sistema_facturación
             if (btnClientesLeft != null) btnClientesLeft.Visible = false;
             if (btnCategoriasLeft != null) btnCategoriasLeft.Visible = false;
         }
+        
+        private void HideSeguridadButtons()
+        {
+            if (lblModuloSeguridad != null) lblModuloSeguridad.Visible = false;
+            if (btnEmpleadosLeft != null) btnEmpleadosLeft.Visible = false;
+            if (btnRolesLeft != null) btnRolesLeft.Visible = false;
+            if (btnSeguridadLeft != null) btnSeguridadLeft.Visible = false;
+        }
+
         
         private void MostrarContenidoPrincipal()
         {
@@ -287,40 +338,131 @@ namespace Pantallas_Sistema_facturación
         
         private void MostrarContenidoSeguridad()
         {
+            // Cargar el formulario de productos
             panelContent.Controls.Clear();
             
             var PanelSeguridad = new Panel
             {
                 Location = new Point(0, 0),
                 Size = panelContent.ClientSize,
-                BackColor = Color.White,
                 AutoScroll = true,
-                Padding = new Padding(30),
+                BackColor = Color.White,
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
             };
+
+            var ucEmpleados = new ucEmpleado();
+            ucEmpleados.Location = new Point(20, 20);
+            ucEmpleados.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucEmpleados);
+
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
+            };
+        }
+
+        private void ShowRolesEmpleado()
+        {
+            // Cargar el formulario de productos
+            panelContent.Controls.Clear();
+
+            // Crear un panel wrapper con scroll
+            var scrollPanel = new Panel
+            {
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
+            };
+
+            var ucRoles = new ucRol();
+            ucRoles.Location = new Point(20, 20);
+            ucRoles.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucRoles);
+
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
+            };
+
+        }
+
+        private void ShowAdminSeguridad()
+        {
+            // Cargar el formulario de productos
+            panelContent.Controls.Clear();
+
+            // Crear un panel wrapper con scroll
+            var scrollPanel = new Panel
             
             var EtiquetaSeguridad = new MaterialLabel
             {
-                Text = "Módulo de Seguridad",
-                Font = new Font("Roboto", 20, FontStyle.Bold),
-                Location = new Point(0, 20),
-                Size = new Size(400, 40),
-                TextAlign = ContentAlignment.MiddleLeft
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
             };
+
+            var ucAdminsSeguridad = new ucAdminSeguridad();
+            ucAdminsSeguridad.Location = new Point(20, 20);
+            ucAdminsSeguridad.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucAdminsSeguridad);
+
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+                }
+            };
+
+        }
+
+        private void ShowAyuda()
+        {
+            // Cargar el formulario de productos
+            panelContent.Controls.Clear();
+
+            // Crear un panel wrapper con scroll
+            var scrollPanel = new Panel
+
             
             var EtiquetaSubtitulo = new MaterialLabel
             {
-                Text = "Gestión de Usuarios y Permisos",
-                Font = new Font("Roboto", 14, FontStyle.Regular),
-                Location = new Point(0, 70),
-                Size = new Size(400, 30),
-                TextAlign = ContentAlignment.MiddleLeft
+                Location = new Point(0, 0),
+                Size = panelContent.ClientSize,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
             };
-            
-            PanelSeguridad.Controls.Add(EtiquetaSeguridad);
-            PanelSeguridad.Controls.Add(EtiquetaSubtitulo);
-            
-            panelContent.Controls.Add(PanelSeguridad);
+
+            var ucAyudas = new ucAyuda();
+            ucAyudas.Location = new Point(20, 20);
+            ucAyudas.Size = new Size(820, 540);
+            scrollPanel.Controls.Add(ucAyudas);
+
+            panelContent.Controls.Add(scrollPanel);
+
+            panelContent.Resize += (sender, e) => {
+                if (scrollPanel != null && !scrollPanel.IsDisposed)
+                {
+                    scrollPanel.Size = panelContent.ClientSize;
+
+                    PanelSeguridad.Controls.Add(EtiquetaSeguridad);
+                    PanelSeguridad.Controls.Add(EtiquetaSubtitulo);
+
+                    panelContent.Controls.Add(PanelSeguridad);
             
             panelContent.Resize += (sender, e) => {
                 if (PanelSeguridad != null && !PanelSeguridad.IsDisposed)
@@ -328,6 +470,7 @@ namespace Pantallas_Sistema_facturación
                     PanelSeguridad.Size = panelContent.ClientSize;
                 }
             };
+
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
