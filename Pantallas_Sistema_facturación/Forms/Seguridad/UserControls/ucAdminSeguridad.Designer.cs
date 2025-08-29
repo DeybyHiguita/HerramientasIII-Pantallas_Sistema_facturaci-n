@@ -1,4 +1,5 @@
-﻿namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
+﻿
+namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
 {
     partial class ucAdminSeguridad
     {
@@ -18,14 +19,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.lblRolEmpleado = new System.Windows.Forms.Label();
             this.txtDescripcionRol = new System.Windows.Forms.TextBox();
+            this.txtNombreRol = new System.Windows.Forms.TextBox();
             this.lblDescripcionRol = new System.Windows.Forms.Label();
             this.lblNombreRol = new System.Windows.Forms.Label();
-            this.txtNombreRol = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblRolEmpleado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -38,6 +39,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(566, 328);
             this.panel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.btnSalir, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btnActualizar, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtDescripcionRol, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtNombreRol, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lblDescripcionRol, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lblNombreRol, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(112, 106);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(349, 139);
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
             // btnSalir
             // 
@@ -68,18 +89,6 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
-            // lblRolEmpleado
-            // 
-            this.lblRolEmpleado.AutoSize = true;
-            this.lblRolEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblRolEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblRolEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblRolEmpleado.Location = new System.Drawing.Point(0, 0);
-            this.lblRolEmpleado.Name = "lblRolEmpleado";
-            this.lblRolEmpleado.Size = new System.Drawing.Size(196, 32);
-            this.lblRolEmpleado.TabIndex = 1;
-            this.lblRolEmpleado.Text = "ROL EMPLEADO";
-            // 
             // txtDescripcionRol
             // 
             this.txtDescripcionRol.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -88,6 +97,15 @@
             this.txtDescripcionRol.Name = "txtDescripcionRol";
             this.txtDescripcionRol.Size = new System.Drawing.Size(169, 34);
             this.txtDescripcionRol.TabIndex = 5;
+            // 
+            // txtNombreRol
+            // 
+            this.txtNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNombreRol.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNombreRol.Location = new System.Drawing.Point(177, 3);
+            this.txtNombreRol.Name = "txtNombreRol";
+            this.txtNombreRol.Size = new System.Drawing.Size(169, 34);
+            this.txtNombreRol.TabIndex = 3;
             // 
             // lblDescripcionRol
             // 
@@ -113,34 +131,17 @@
             this.lblNombreRol.TabIndex = 0;
             this.lblNombreRol.Text = "Nombre de Rol";
             // 
-            // txtNombreRol
+            // lblRolEmpleado
             // 
-            this.txtNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNombreRol.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNombreRol.Location = new System.Drawing.Point(177, 3);
-            this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(169, 34);
-            this.txtNombreRol.TabIndex = 3;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.btnSalir, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnActualizar, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.txtDescripcionRol, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtNombreRol, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblDescripcionRol, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lblNombreRol, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(112, 106);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(349, 139);
-            this.tableLayoutPanel3.TabIndex = 3;
+            this.lblRolEmpleado.AutoSize = true;
+            this.lblRolEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblRolEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblRolEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblRolEmpleado.Location = new System.Drawing.Point(0, 0);
+            this.lblRolEmpleado.Name = "lblRolEmpleado";
+            this.lblRolEmpleado.Size = new System.Drawing.Size(196, 32);
+            this.lblRolEmpleado.TabIndex = 1;
+            this.lblRolEmpleado.Text = "ROL EMPLEADO";
             // 
             // ucAdminSeguridad
             // 
