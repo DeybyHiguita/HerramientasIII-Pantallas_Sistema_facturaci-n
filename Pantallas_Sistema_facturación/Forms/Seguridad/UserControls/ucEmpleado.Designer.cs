@@ -68,13 +68,14 @@
             // lblAdministracionEmpleados
             // 
             this.lblAdministracionEmpleados.AutoSize = true;
-            this.lblAdministracionEmpleados.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblAdministracionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblAdministracionEmpleados.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblAdministracionEmpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblAdministracionEmpleados.Location = new System.Drawing.Point(160, 15);
+            this.lblAdministracionEmpleados.Location = new System.Drawing.Point(0, 0);
             this.lblAdministracionEmpleados.Name = "lblAdministracionEmpleados";
-            this.lblAdministracionEmpleados.Size = new System.Drawing.Size(420, 45);
+            this.lblAdministracionEmpleados.Size = new System.Drawing.Size(376, 32);
             this.lblAdministracionEmpleados.TabIndex = 6;
-            this.lblAdministracionEmpleados.Text = "Administración Empleados";
+            this.lblAdministracionEmpleados.Text = "ADMINISTRACION EMPLEADOS\r\n";
             this.lblAdministracionEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -291,8 +292,8 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.07692F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.92308F));
             this.tableLayoutPanel3.Controls.Add(this.lblEmail, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtEmail, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(181, 396);
@@ -306,20 +307,22 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblEmail.Location = new System.Drawing.Point(3, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(59, 28);
+            this.lblEmail.Size = new System.Drawing.Size(84, 36);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email";
             // 
             // txtEmail
             // 
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtEmail.Location = new System.Drawing.Point(198, 3);
+            this.txtEmail.Location = new System.Drawing.Point(93, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(185, 34);
+            this.txtEmail.Size = new System.Drawing.Size(294, 34);
             this.txtEmail.TabIndex = 1;
             // 
             // tableLayoutPanel4

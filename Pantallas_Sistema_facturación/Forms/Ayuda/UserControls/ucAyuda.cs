@@ -65,5 +65,10 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
 
             Clear(this);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
