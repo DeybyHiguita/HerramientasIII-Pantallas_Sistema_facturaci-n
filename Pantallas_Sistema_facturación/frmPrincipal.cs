@@ -82,6 +82,8 @@ namespace Pantallas_Sistema_facturación
         private void menuPrincipal_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
+            HideSeguridadButtons();
+            HideAyudaButtons();
             MostrarContenidoPrincipal();
         }
 
