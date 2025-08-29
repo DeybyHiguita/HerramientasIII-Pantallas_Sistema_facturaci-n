@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using Pantallas_Sistema_facturación.Forms.Facturacion.UserControls;
+using Pantallas_Sistema_facturación.Forms.Tablas.UserControls;
 
 namespace Pantallas_Sistema_facturación
 {
@@ -10,6 +11,9 @@ namespace Pantallas_Sistema_facturación
         // Instancias de los UserControls
         private ucFacturacion ucFacturacion;
         private ucInforme ucInforme;
+        private ucProducto ucProducto;
+        private ucCliente ucCliente;
+        private ucCategoriasProductos ucCategoriasProductos;
 
         public frmPrincipal()
         {
@@ -57,17 +61,17 @@ namespace Pantallas_Sistema_facturación
 
         private void btnProductosLeft_Click(object sender, EventArgs e)
         {
-            MostrarBienvenida("Bienvenido al módulo de Productos");
+            MostrarUserControl(new ucProducto());
         }
 
         private void btnClientesLeft_Click(object sender, EventArgs e)
         {
-            MostrarBienvenida("Bienvenido al módulo de Clientes");
+            MostrarUserControl(new ucCliente());
         }
 
         private void btnCategoriasLeft_Click(object sender, EventArgs e)
         {
-            MostrarBienvenida("Bienvenido al módulo de Categorías");
+            MostrarUserControl(new ucCategoriasProductos());
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
