@@ -1,4 +1,5 @@
-﻿namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
+﻿
+namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
 {
     partial class ucEmpleado
     {
@@ -312,7 +313,7 @@
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblEmail.Location = new System.Drawing.Point(3, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(84, 36);
+            this.lblEmail.Size = new System.Drawing.Size(83, 36);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email";
             // 
@@ -320,9 +321,9 @@
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtEmail.Location = new System.Drawing.Point(93, 3);
+            this.txtEmail.Location = new System.Drawing.Point(92, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(294, 34);
+            this.txtEmail.Size = new System.Drawing.Size(295, 34);
             this.txtEmail.TabIndex = 1;
             // 
             // tableLayoutPanel4

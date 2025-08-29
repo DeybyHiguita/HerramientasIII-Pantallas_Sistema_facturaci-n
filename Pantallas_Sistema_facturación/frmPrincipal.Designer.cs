@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿
+using System.Drawing;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 
@@ -10,17 +11,17 @@ namespace Pantallas_Sistema_facturación
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        
+
         private Panel panelTop;
         private Panel panelLeft;
         private Panel panelContent;
-        
+
         private MaterialLabel lblSistemaFacturacion;
         private MaterialButton btnPrincipal;
         private MaterialButton btnTablas;
         private MaterialButton btnFacturacion;
         private MaterialButton btnSeguridad;
-        
+
         // Nuevos botones para el panel izquierdo de tablas
         private MaterialLabel lblModuloTablas;
         private MaterialButton btnProductosLeft;
@@ -80,7 +81,7 @@ namespace Pantallas_Sistema_facturación
             this.btnRolesLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnSeguridadLeft = new MaterialSkin.Controls.MaterialButton();
             this.lblModuloAyuda = new MaterialSkin.Controls.MaterialLabel();
-            this.btnAyudaLeft = new MaterialSkin.Controls.MaterialButton();  
+            this.btnAyudaLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnAcercaDeLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();

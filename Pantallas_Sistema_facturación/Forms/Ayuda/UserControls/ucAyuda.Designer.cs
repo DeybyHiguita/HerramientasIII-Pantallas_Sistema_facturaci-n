@@ -1,4 +1,5 @@
-﻿namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
+﻿
+namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
 {
     partial class ucAyuda
     {
@@ -27,28 +28,28 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblNombreRol = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblNombreRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAyuda
@@ -166,6 +167,18 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(479, 152);
             this.tableLayoutPanel5.TabIndex = 12;
             // 
+            // lblNombreRol
+            // 
+            this.lblNombreRol.AutoSize = true;
+            this.lblNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNombreRol.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblNombreRol.ForeColor = System.Drawing.Color.Black;
+            this.lblNombreRol.Location = new System.Drawing.Point(3, 0);
+            this.lblNombreRol.Name = "lblNombreRol";
+            this.lblNombreRol.Size = new System.Drawing.Size(473, 76);
+            this.lblNombreRol.TabIndex = 2;
+            this.lblNombreRol.Text = "¿Tienes alguna duda? ";
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
@@ -196,6 +209,18 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(479, 258);
             this.tableLayoutPanel7.TabIndex = 13;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(473, 81);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Aquí puedes encontrar alguna información útil sobre cómo utilizar el sistema.";
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 3;
@@ -213,20 +238,31 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(473, 171);
             this.tableLayoutPanel8.TabIndex = 4;
             // 
-            // tableLayoutPanel9
+            // tableLayoutPanel11
             // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.lblComoActualizarDatos, 0, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(151, 165);
-            this.tableLayoutPanel9.TabIndex = 0;
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.lblOlvidoContraseña, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.pictureBox3, 0, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(317, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(153, 165);
+            this.tableLayoutPanel11.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(147, 76);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // tableLayoutPanel10
             // 
@@ -243,32 +279,6 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(151, 165);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.ColumnCount = 1;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Controls.Add(this.lblOlvidoContraseña, 0, 1);
-            this.tableLayoutPanel11.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(317, 3);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 2;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(153, 165);
-            this.tableLayoutPanel11.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -281,40 +291,31 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox3
+            // tableLayoutPanel9
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(147, 76);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lblComoActualizarDatos, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(151, 165);
+            this.tableLayoutPanel9.TabIndex = 0;
             // 
-            // lblNombreRol
+            // pictureBox1
             // 
-            this.lblNombreRol.AutoSize = true;
-            this.lblNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreRol.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblNombreRol.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreRol.Location = new System.Drawing.Point(3, 0);
-            this.lblNombreRol.Name = "lblNombreRol";
-            this.lblNombreRol.Size = new System.Drawing.Size(473, 76);
-            this.lblNombreRol.TabIndex = 2;
-            this.lblNombreRol.Text = "¿Tienes alguna duda? ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(473, 81);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Aquí puedes encontrar alguna información útil sobre cómo utilizar el sistema.";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ucAyuda
             // 
@@ -332,15 +333,15 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

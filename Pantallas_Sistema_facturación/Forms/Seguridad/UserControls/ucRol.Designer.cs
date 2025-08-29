@@ -1,4 +1,5 @@
-﻿namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
+﻿
+namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
 {
     partial class ucRol
     {
