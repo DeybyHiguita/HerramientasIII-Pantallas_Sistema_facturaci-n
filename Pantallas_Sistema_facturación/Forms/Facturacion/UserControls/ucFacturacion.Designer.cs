@@ -359,6 +359,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.btnSalir.Text = "SALIR";
             this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSalir.UseAccentColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // tlpPrincipal
             // 

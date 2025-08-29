@@ -51,5 +51,10 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
         {
 
         }
+
+        private void btnSalir_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
