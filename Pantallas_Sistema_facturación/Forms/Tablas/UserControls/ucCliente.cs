@@ -367,5 +367,10 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         // Métodos de eventos originales - mantener vacíos si no se necesitan
         private void lblNombreProducto_Click(object sender, EventArgs e) { }
         private void lblTitulo_Click(object sender, EventArgs e) { }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

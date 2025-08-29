@@ -53,6 +53,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitulo.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(271, 24);
@@ -69,16 +70,15 @@
             this.tlpPrincipal.Controls.Add(this.tlpNombreProducto, 0, 0);
             this.tlpPrincipal.Controls.Add(this.tlpCodigoReferencia, 1, 0);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 1, 4);
-            this.tlpPrincipal.Location = new System.Drawing.Point(22, 40);
-            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpPrincipal.Location = new System.Drawing.Point(33, 62);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 5;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(500, 265);
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.Size = new System.Drawing.Size(750, 408);
             this.tlpPrincipal.TabIndex = 12;
             // 
             // tlpNombreProducto
@@ -88,13 +88,12 @@
             this.tlpNombreProducto.Controls.Add(this.lblNombreProducto, 0, 0);
             this.tlpNombreProducto.Controls.Add(this.txtId, 0, 1);
             this.tlpNombreProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpNombreProducto.Location = new System.Drawing.Point(2, 2);
-            this.tlpNombreProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpNombreProducto.Location = new System.Drawing.Point(3, 3);
             this.tlpNombreProducto.Name = "tlpNombreProducto";
             this.tlpNombreProducto.RowCount = 2;
-            this.tlpNombreProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpNombreProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tlpNombreProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpNombreProducto.Size = new System.Drawing.Size(245, 48);
+            this.tlpNombreProducto.Size = new System.Drawing.Size(369, 74);
             this.tlpNombreProducto.TabIndex = 2;
             // 
             // lblNombreProducto
@@ -102,11 +101,10 @@
             this.lblNombreProducto.AutoSize = true;
             this.lblNombreProducto.Depth = 0;
             this.lblNombreProducto.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNombreProducto.Location = new System.Drawing.Point(2, 0);
-            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreProducto.Location = new System.Drawing.Point(3, 0);
             this.lblNombreProducto.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(14, 16);
+            this.lblNombreProducto.Size = new System.Drawing.Size(14, 19);
             this.lblNombreProducto.TabIndex = 0;
             this.lblNombreProducto.Text = "Id";
             // 
@@ -118,13 +116,12 @@
             this.txtId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtId.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(2, 18);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Location = new System.Drawing.Point(3, 28);
             this.txtId.MaxLength = 100;
             this.txtId.MouseState = MaterialSkin.MouseState.OUT;
             this.txtId.Multiline = false;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(241, 50);
+            this.txtId.Size = new System.Drawing.Size(363, 50);
             this.txtId.TabIndex = 1;
             this.txtId.Text = "";
             this.txtId.TrailingIcon = null;
@@ -136,13 +133,12 @@
             this.tlpCodigoReferencia.Controls.Add(this.lblCodigoReferencia, 0, 0);
             this.tlpCodigoReferencia.Controls.Add(this.txtNombrecategoria, 0, 1);
             this.tlpCodigoReferencia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCodigoReferencia.Location = new System.Drawing.Point(251, 2);
-            this.tlpCodigoReferencia.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpCodigoReferencia.Location = new System.Drawing.Point(378, 3);
             this.tlpCodigoReferencia.Name = "tlpCodigoReferencia";
             this.tlpCodigoReferencia.RowCount = 2;
-            this.tlpCodigoReferencia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpCodigoReferencia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tlpCodigoReferencia.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCodigoReferencia.Size = new System.Drawing.Size(247, 48);
+            this.tlpCodigoReferencia.Size = new System.Drawing.Size(369, 74);
             this.tlpCodigoReferencia.TabIndex = 3;
             // 
             // lblCodigoReferencia
@@ -150,11 +146,10 @@
             this.lblCodigoReferencia.AutoSize = true;
             this.lblCodigoReferencia.Depth = 0;
             this.lblCodigoReferencia.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblCodigoReferencia.Location = new System.Drawing.Point(2, 0);
-            this.lblCodigoReferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigoReferencia.Location = new System.Drawing.Point(3, 0);
             this.lblCodigoReferencia.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCodigoReferencia.Name = "lblCodigoReferencia";
-            this.lblCodigoReferencia.Size = new System.Drawing.Size(129, 16);
+            this.lblCodigoReferencia.Size = new System.Drawing.Size(129, 19);
             this.lblCodigoReferencia.TabIndex = 0;
             this.lblCodigoReferencia.Text = "Nombre Categoria";
             // 
@@ -166,13 +161,12 @@
             this.txtNombrecategoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombrecategoria.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombrecategoria.LeadingIcon = null;
-            this.txtNombrecategoria.Location = new System.Drawing.Point(2, 18);
-            this.txtNombrecategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombrecategoria.Location = new System.Drawing.Point(3, 28);
             this.txtNombrecategoria.MaxLength = 50;
             this.txtNombrecategoria.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombrecategoria.Multiline = false;
             this.txtNombrecategoria.Name = "txtNombrecategoria";
-            this.txtNombrecategoria.Size = new System.Drawing.Size(243, 50);
+            this.txtNombrecategoria.Size = new System.Drawing.Size(363, 50);
             this.txtNombrecategoria.TabIndex = 1;
             this.txtNombrecategoria.Text = "";
             this.txtNombrecategoria.TrailingIcon = null;
@@ -185,12 +179,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSalir, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnActualizar, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(251, 210);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(378, 323);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(247, 53);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 82);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
             // btnSalir
@@ -201,17 +194,18 @@
             this.btnSalir.Depth = 0;
             this.btnSalir.HighEmphasis = true;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(126, 8);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSalir.Location = new System.Drawing.Point(188, 23);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalir.Size = new System.Drawing.Size(118, 36);
+            this.btnSalir.Size = new System.Drawing.Size(177, 36);
             this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSalir.UseAccentColor = false;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnActualizar
             // 
@@ -221,12 +215,12 @@
             this.btnActualizar.Depth = 0;
             this.btnActualizar.HighEmphasis = true;
             this.btnActualizar.Icon = null;
-            this.btnActualizar.Location = new System.Drawing.Point(3, 8);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnActualizar.Location = new System.Drawing.Point(4, 23);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnActualizar.Size = new System.Drawing.Size(117, 36);
+            this.btnActualizar.Size = new System.Drawing.Size(176, 36);
             this.btnActualizar.TabIndex = 11;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -235,12 +229,13 @@
             // 
             // ucCategoriasProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpPrincipal);
             this.Controls.Add(this.lblTitulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucCategoriasProductos";
-            this.Size = new System.Drawing.Size(555, 364);
+            this.Size = new System.Drawing.Size(832, 560);
             this.tlpPrincipal.ResumeLayout(false);
             this.tlpNombreProducto.ResumeLayout(false);
             this.tlpNombreProducto.PerformLayout();

@@ -24,7 +24,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
 
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void tlpBotones_Paint(object sender, PaintEventArgs e)
@@ -54,7 +54,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
 
         private void btnSalir_Click_2(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
     }
 }

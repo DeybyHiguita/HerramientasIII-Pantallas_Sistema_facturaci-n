@@ -26,5 +26,10 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
