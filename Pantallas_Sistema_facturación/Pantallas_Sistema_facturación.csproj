@@ -62,12 +62,6 @@
     <Compile Include="Forms\Facturacion\UserControls\ucInforme.Designer.cs">
       <DependentUpon>ucInforme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Facturacion\UserControls\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Facturacion\UserControls\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Tablas\UserControls\ucCategoriasProductos.cs">
       <SubType>UserControl</SubType>
     </Compile>
