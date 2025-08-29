@@ -40,13 +40,27 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.btnSalir = new MaterialSkin.Controls.MaterialButton();
             this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblProductos = new MaterialSkin.Controls.MaterialLabel();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.lblProductos = new MaterialSkin.Controls.MaterialLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tlpPrincipal.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -66,14 +80,16 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblNroFactura
             // 
+            this.lblNroFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNroFactura.Depth = 0;
             this.lblNroFactura.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNroFactura.Location = new System.Drawing.Point(3, 0);
+            this.lblNroFactura.Location = new System.Drawing.Point(3, 5);
             this.lblNroFactura.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNroFactura.Name = "lblNroFactura";
-            this.lblNroFactura.Size = new System.Drawing.Size(100, 23);
+            this.lblNroFactura.Size = new System.Drawing.Size(169, 23);
             this.lblNroFactura.TabIndex = 0;
             this.lblNroFactura.Text = "Nro Factura";
+            this.lblNroFactura.Click += new System.EventHandler(this.lblNroFactura_Click);
             // 
             // txtNroFactura
             // 
@@ -83,7 +99,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.txtNroFactura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNroFactura.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNroFactura.LeadingIcon = null;
-            this.txtNroFactura.Location = new System.Drawing.Point(3, 28);
+            this.txtNroFactura.Location = new System.Drawing.Point(3, 43);
             this.txtNroFactura.MaxLength = 20;
             this.txtNroFactura.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNroFactura.Multiline = false;
@@ -95,9 +111,10 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblFecha.Depth = 0;
             this.lblFecha.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblFecha.Location = new System.Drawing.Point(218, 0);
+            this.lblFecha.Location = new System.Drawing.Point(3, 5);
             this.lblFecha.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(100, 23);
@@ -107,16 +124,17 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // dtpFecha
             // 
             this.dtpFecha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpFecha.Location = new System.Drawing.Point(218, 28);
+            this.dtpFecha.Location = new System.Drawing.Point(218, 43);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(209, 26);
             this.dtpFecha.TabIndex = 3;
             // 
             // lblCliente
             // 
+            this.lblCliente.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCliente.Depth = 0;
             this.lblCliente.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblCliente.Location = new System.Drawing.Point(3, 125);
+            this.lblCliente.Location = new System.Drawing.Point(3, 5);
             this.lblCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(100, 23);
@@ -133,11 +151,11 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.cmbCliente.DropDownHeight = 174;
             this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.DropDownWidth = 121;
-            this.cmbCliente.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbCliente.IntegralHeight = false;
             this.cmbCliente.ItemHeight = 43;
-            this.cmbCliente.Location = new System.Drawing.Point(3, 173);
+            this.cmbCliente.Location = new System.Drawing.Point(3, 210);
             this.cmbCliente.MaxDropDownItems = 4;
             this.cmbCliente.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbCliente.Name = "cmbCliente";
@@ -148,12 +166,13 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblEmpleado
             // 
+            this.lblEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEmpleado.Depth = 0;
             this.lblEmpleado.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblEmpleado.Location = new System.Drawing.Point(218, 125);
+            this.lblEmpleado.Location = new System.Drawing.Point(0, 6);
             this.lblEmpleado.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(100, 23);
+            this.lblEmpleado.Size = new System.Drawing.Size(123, 23);
             this.lblEmpleado.TabIndex = 9;
             this.lblEmpleado.Text = "Empleado";
             // 
@@ -167,11 +186,11 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.cmbEmpleado.DropDownHeight = 174;
             this.cmbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpleado.DropDownWidth = 121;
-            this.cmbEmpleado.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbEmpleado.IntegralHeight = false;
             this.cmbEmpleado.ItemHeight = 43;
-            this.cmbEmpleado.Location = new System.Drawing.Point(218, 173);
+            this.cmbEmpleado.Location = new System.Drawing.Point(218, 210);
             this.cmbEmpleado.MaxDropDownItems = 4;
             this.cmbEmpleado.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbEmpleado.Name = "cmbEmpleado";
@@ -181,9 +200,10 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblEstado
             // 
+            this.lblEstado.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEstado.Depth = 0;
             this.lblEstado.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblEstado.Location = new System.Drawing.Point(433, 0);
+            this.lblEstado.Location = new System.Drawing.Point(3, 5);
             this.lblEstado.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(100, 23);
@@ -200,11 +220,11 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.cmbEstado.DropDownHeight = 174;
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.DropDownWidth = 121;
-            this.cmbEstado.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbEstado.IntegralHeight = false;
             this.cmbEstado.ItemHeight = 43;
-            this.cmbEstado.Location = new System.Drawing.Point(433, 28);
+            this.cmbEstado.Location = new System.Drawing.Point(433, 43);
             this.cmbEstado.MaxDropDownItems = 4;
             this.cmbEstado.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbEstado.Name = "cmbEstado";
@@ -214,12 +234,13 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblDescuento
             // 
+            this.lblDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDescuento.Depth = 0;
             this.lblDescuento.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDescuento.Location = new System.Drawing.Point(433, 125);
+            this.lblDescuento.Location = new System.Drawing.Point(3, 7);
             this.lblDescuento.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDescuento.Name = "lblDescuento";
-            this.lblDescuento.Size = new System.Drawing.Size(100, 23);
+            this.lblDescuento.Size = new System.Drawing.Size(132, 23);
             this.lblDescuento.TabIndex = 11;
             this.lblDescuento.Text = "Descuento";
             // 
@@ -231,7 +252,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.txtDescuento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDescuento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDescuento.LeadingIcon = null;
-            this.txtDescuento.Location = new System.Drawing.Point(433, 173);
+            this.txtDescuento.Location = new System.Drawing.Point(433, 210);
             this.txtDescuento.MaxLength = 10;
             this.txtDescuento.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDescuento.Multiline = false;
@@ -243,9 +264,10 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblTotalIVA
             // 
+            this.lblTotalIVA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTotalIVA.Depth = 0;
             this.lblTotalIVA.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTotalIVA.Location = new System.Drawing.Point(648, 125);
+            this.lblTotalIVA.Location = new System.Drawing.Point(3, 6);
             this.lblTotalIVA.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTotalIVA.Name = "lblTotalIVA";
             this.lblTotalIVA.Size = new System.Drawing.Size(100, 23);
@@ -260,7 +282,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.txtTotalIVA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTotalIVA.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTotalIVA.LeadingIcon = null;
-            this.txtTotalIVA.Location = new System.Drawing.Point(648, 173);
+            this.txtTotalIVA.Location = new System.Drawing.Point(648, 210);
             this.txtTotalIVA.MaxLength = 10;
             this.txtTotalIVA.MouseState = MaterialSkin.MouseState.OUT;
             this.txtTotalIVA.Multiline = false;
@@ -272,9 +294,10 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // lblTotalFactura
             // 
+            this.lblTotalFactura.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTotalFactura.Depth = 0;
             this.lblTotalFactura.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTotalFactura.Location = new System.Drawing.Point(3, 267);
+            this.lblTotalFactura.Location = new System.Drawing.Point(3, 420);
             this.lblTotalFactura.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTotalFactura.Name = "lblTotalFactura";
             this.lblTotalFactura.Size = new System.Drawing.Size(100, 23);
@@ -289,7 +312,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.txtTotalFactura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTotalFactura.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTotalFactura.LeadingIcon = null;
-            this.txtTotalFactura.Location = new System.Drawing.Point(218, 270);
+            this.txtTotalFactura.Location = new System.Drawing.Point(218, 377);
             this.txtTotalFactura.MaxLength = 10;
             this.txtTotalFactura.MouseState = MaterialSkin.MouseState.OUT;
             this.txtTotalFactura.Multiline = false;
@@ -301,12 +324,13 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnActualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnActualizar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnActualizar.Depth = 0;
             this.btnActualizar.HighEmphasis = true;
             this.btnActualizar.Icon = null;
-            this.btnActualizar.Location = new System.Drawing.Point(4, 6);
+            this.btnActualizar.Location = new System.Drawing.Point(47, 22);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
@@ -319,12 +343,13 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             // 
             // btnSalir
             // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSalir.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSalir.Depth = 0;
             this.btnSalir.HighEmphasis = true;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(4, 6);
+            this.btnSalir.Location = new System.Drawing.Point(4, 22);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
@@ -342,11 +367,8 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpPrincipal.Controls.Add(this.lblNroFactura, 0, 0);
             this.tlpPrincipal.Controls.Add(this.txtNroFactura, 0, 1);
-            this.tlpPrincipal.Controls.Add(this.lblFecha, 1, 0);
             this.tlpPrincipal.Controls.Add(this.dtpFecha, 1, 1);
-            this.tlpPrincipal.Controls.Add(this.lblEstado, 2, 0);
             this.tlpPrincipal.Controls.Add(this.cmbEstado, 2, 1);
             this.tlpPrincipal.Controls.Add(this.cmbCliente, 0, 3);
             this.tlpPrincipal.Controls.Add(this.cmbEmpleado, 1, 3);
@@ -355,23 +377,26 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tlpPrincipal.Controls.Add(this.txtTotalFactura, 1, 4);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 3, 4);
             this.tlpPrincipal.Controls.Add(this.dgvProductos, 0, 6);
-            this.tlpPrincipal.Controls.Add(this.lblEmpleado, 1, 2);
-            this.tlpPrincipal.Controls.Add(this.lblDescuento, 2, 2);
-            this.tlpPrincipal.Controls.Add(this.lblTotalIVA, 3, 2);
             this.tlpPrincipal.Controls.Add(this.lblProductos, 0, 5);
             this.tlpPrincipal.Controls.Add(this.lblTotalFactura, 0, 4);
-            this.tlpPrincipal.Controls.Add(this.lblCliente, 0, 2);
             this.tlpPrincipal.Controls.Add(this.panel1, 2, 4);
+            this.tlpPrincipal.Controls.Add(this.panel2, 2, 0);
+            this.tlpPrincipal.Controls.Add(this.panel3, 1, 0);
+            this.tlpPrincipal.Controls.Add(this.panel4, 0, 0);
+            this.tlpPrincipal.Controls.Add(this.panel7, 2, 2);
+            this.tlpPrincipal.Controls.Add(this.panel8, 3, 2);
+            this.tlpPrincipal.Controls.Add(this.panel5, 1, 2);
+            this.tlpPrincipal.Controls.Add(this.panel6, 0, 2);
             this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 24);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 7;
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 167F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -383,23 +408,13 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnSalir, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(648, 270);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(648, 377);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 81);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 78);
             this.tableLayoutPanel1.TabIndex = 17;
-            // 
-            // lblProductos
-            // 
-            this.tlpPrincipal.SetColumnSpan(this.lblProductos, 4);
-            this.lblProductos.Depth = 0;
-            this.lblProductos.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblProductos.Location = new System.Drawing.Point(3, 354);
-            this.lblProductos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(100, 23);
-            this.lblProductos.TabIndex = 18;
-            this.lblProductos.Text = "Productos Facturados";
             // 
             // dgvProductos
             // 
@@ -407,19 +422,92 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.dgvProductos.ColumnHeadersHeight = 34;
             this.tlpPrincipal.SetColumnSpan(this.dgvProductos, 4);
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProductos.Location = new System.Drawing.Point(3, 445);
+            this.dgvProductos.Location = new System.Drawing.Point(3, 571);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 62;
-            this.dgvProductos.Size = new System.Drawing.Size(854, 128);
+            this.dgvProductos.Size = new System.Drawing.Size(854, 2);
             this.dgvProductos.TabIndex = 20;
+            // 
+            // lblProductos
+            // 
+            this.lblProductos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tlpPrincipal.SetColumnSpan(this.lblProductos, 4);
+            this.lblProductos.Depth = 0;
+            this.lblProductos.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblProductos.Location = new System.Drawing.Point(3, 517);
+            this.lblProductos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblProductos.Name = "lblProductos";
+            this.lblProductos.Size = new System.Drawing.Size(100, 23);
+            this.lblProductos.TabIndex = 18;
+            this.lblProductos.Text = "Productos Facturados";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnActualizar);
-            this.panel1.Location = new System.Drawing.Point(433, 270);
+            this.panel1.Location = new System.Drawing.Point(433, 377);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 81);
+            this.panel1.Size = new System.Drawing.Size(209, 78);
             this.panel1.TabIndex = 21;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblEstado);
+            this.panel2.Location = new System.Drawing.Point(433, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 34);
+            this.panel2.TabIndex = 22;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblFecha);
+            this.panel3.Location = new System.Drawing.Point(218, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(138, 34);
+            this.panel3.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lblNroFactura);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(191, 34);
+            this.panel4.TabIndex = 24;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel7.Controls.Add(this.lblDescuento);
+            this.panel7.Location = new System.Drawing.Point(433, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(138, 38);
+            this.panel7.TabIndex = 27;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel8.Controls.Add(this.lblTotalIVA);
+            this.panel8.Location = new System.Drawing.Point(648, 150);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(126, 32);
+            this.panel8.TabIndex = 28;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel5.Controls.Add(this.lblCliente);
+            this.panel5.Location = new System.Drawing.Point(218, 149);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(149, 33);
+            this.panel5.TabIndex = 25;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel6.Controls.Add(this.lblEmpleado);
+            this.panel6.Location = new System.Drawing.Point(3, 148);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(129, 35);
+            this.panel6.TabIndex = 26;
             // 
             // ucFacturacion
             // 
@@ -437,6 +525,13 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,5 +563,12 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
         private MaterialLabel lblProductos;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
     }
 }

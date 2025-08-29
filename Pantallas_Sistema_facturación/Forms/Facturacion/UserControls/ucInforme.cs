@@ -26,5 +26,30 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
         {
 
         }
+
+        private void tlpBotones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbPdf_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblFechaFinal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
@@ -17,19 +10,27 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        // Método manejador para el evento Load
         private void ucFacturacion_Load(object sender, EventArgs e)
         {
-
+            // Aquí va el código que quieres ejecutar al cargar el control
         }
 
+        // Método manejador para el evento SelectedIndexChanged del combo de cliente
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Aquí va el código que quieres ejecutar cuando cambie el cliente seleccionado
+        }
+
+        private void lblNroFactura_Click(object sender, EventArgs e)
         {
 
         }
+
+        // Si tienes otros eventos, así se agregan:
+        // private void btnSalir_Click(object sender, EventArgs e)
+        // {
+        //     // Código para el botón salir
+        // }
     }
 }

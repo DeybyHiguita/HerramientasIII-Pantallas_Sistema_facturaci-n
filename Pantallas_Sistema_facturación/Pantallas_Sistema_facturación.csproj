@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Facturacion\UserControls\ucFacturacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturacion\UserControls\ucFacturacion.Designer.cs">
+      <DependentUpon>ucFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturacion\UserControls\ucInforme.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturacion\UserControls\ucInforme.Designer.cs">
+      <DependentUpon>ucInforme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Facturacion\UserControls\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     <Compile Include="UserControls\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Facturacion\UserControls\ucFacturacion.resx">
+      <DependentUpon>ucFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturacion\UserControls\ucInforme.resx">
+      <DependentUpon>ucInforme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tablas\UserControls\ucCategoriasProductos.resx">
       <DependentUpon>ucCategoriasProductos.cs</DependentUpon>
     </EmbeddedResource>
