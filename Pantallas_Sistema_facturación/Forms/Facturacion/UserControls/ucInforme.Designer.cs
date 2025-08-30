@@ -299,7 +299,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(870, 420);
+            this.tlpPrincipal.Size = new System.Drawing.Size(870, 484);
             this.tlpPrincipal.TabIndex = 12;
             // 
             // panel7
@@ -333,7 +333,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tlpBotones.RowCount = 1;
             this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tlpBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpBotones.Size = new System.Drawing.Size(864, 7);
+            this.tlpBotones.Size = new System.Drawing.Size(864, 71);
             this.tlpBotones.TabIndex = 11;
             this.tlpBotones.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpBotones_Paint);
             // 
