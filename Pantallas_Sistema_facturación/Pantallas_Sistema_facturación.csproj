@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+	<Compile Include="Forms\Facturacion\UserControls\ucInforme.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Facturacion\UserControls\ucInforme.Designer.cs">
@@ -124,7 +125,6 @@
     <Compile Include="UserControls\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tablas\UserControls\ucCategoriasProductos.resx">
       <DependentUpon>ucCategoriasProductos.cs</DependentUpon>
     </EmbeddedResource>
