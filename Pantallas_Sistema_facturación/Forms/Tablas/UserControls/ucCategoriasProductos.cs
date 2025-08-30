@@ -172,7 +172,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         /// <returns>Representación en cadena de la categoría</returns>
         public override string ToString()
         {
-            return $"Categoría: {NombreCategoria} (ID: {IdentificadorCategoria})";
+            return $"Categoría: {NombreCategoria} (ID: {IdentificadorCategoria})"
         }
     }
 }

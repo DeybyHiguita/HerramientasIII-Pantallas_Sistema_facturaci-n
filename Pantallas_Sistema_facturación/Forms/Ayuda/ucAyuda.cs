@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
+namespace Pantallas_Sistema_facturación.Forms.Ayuda
 {
-    public partial class UserControl1 : UserControl
+    public partial class ucAyuda : UserControl
     {
-        public UserControl1()
+        public ucAyuda()
         {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
