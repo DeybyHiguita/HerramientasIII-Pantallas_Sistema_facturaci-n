@@ -389,7 +389,7 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tlpPrincipal.Controls.Add(this.panel5, 1, 2);
             this.tlpPrincipal.Controls.Add(this.panel6, 0, 2);
             this.tlpPrincipal.Controls.Add(this.panel4, 0, 0);
-            this.tlpPrincipal.Location = new System.Drawing.Point(0, 24);
+            this.tlpPrincipal.Location = new System.Drawing.Point(0, 39);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 7;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
