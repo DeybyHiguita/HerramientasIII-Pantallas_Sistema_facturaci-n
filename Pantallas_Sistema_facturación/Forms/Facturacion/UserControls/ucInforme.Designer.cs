@@ -289,7 +289,6 @@ namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
             this.tlpPrincipal.Controls.Add(this.grpFormato, 0, 5);
             this.tlpPrincipal.Controls.Add(this.tlpBotones, 0, 6);
             this.tlpPrincipal.Controls.Add(this.lblSeleccioneInforme, 0, 1);
-            this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 7;
