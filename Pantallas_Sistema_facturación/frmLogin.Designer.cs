@@ -307,8 +307,8 @@ namespace Pantallas_Sistema_facturación
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Facturación - Iniciar Sesión";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);
+            this.Load += new System.EventHandler(this.FormularioLogin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormularioLogin_KeyDown);
             this.panelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelRight.ResumeLayout(false);

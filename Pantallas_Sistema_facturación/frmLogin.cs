@@ -11,17 +11,17 @@ namespace Pantallas_Sistema_facturación
         public frmLogin()
         {
             InitializeComponent();
-            InitializeSkin();
-            ConfigureEvents();
-            ConfigureFullScreen();
+            InicializarApariencia();
+            ConfigurarEventos();
+            ConfigurarPantallaCompleta();
         }
 
-        void InitializeSkin()
+        void InicializarApariencia()
         {
-            MaterialSkinManager manager = MaterialSkinManager.Instance;
-            manager.AddFormToManage(this);
-            manager.Theme = MaterialSkinManager.Themes.LIGHT;
-            manager.ColorScheme = new ColorScheme(
+            MaterialSkinManager AdministradorApariencia = MaterialSkinManager.Instance;
+            AdministradorApariencia.AddFormToManage(this);
+            AdministradorApariencia.Theme = MaterialSkinManager.Themes.LIGHT;
+            AdministradorApariencia.ColorScheme = new ColorScheme(
                 Primary.Purple600, // #A587C3 - Color principal
                 Primary.Purple700, // #8E6BA8 - Color más oscuro para hover
                 Primary.Purple300, // #C8A8D8 - Color más claro para accents
@@ -30,51 +30,51 @@ namespace Pantallas_Sistema_facturación
             );
         }
 
-        void ConfigureFullScreen()
+        void ConfigurarPantallaCompleta()
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             this.TopMost = false;
             
-            Rectangle screenBounds = Screen.PrimaryScreen.Bounds;
-            this.Size = new Size(screenBounds.Width, screenBounds.Height);
+            Rectangle LimitesPantalla = Screen.PrimaryScreen.Bounds;
+            this.Size = new Size(LimitesPantalla.Width, LimitesPantalla.Height);
             this.Location = new Point(0, 0);
         }
 
-        void ConfigureEvents()
+        void ConfigurarEventos()
         {
             this.btnValidar.Click += btnValidar_Click;
             this.btnCancelar.Click += btnCancelar_Click;
             this.chkMostrar.CheckedChanged += chkMostrar_CheckedChanged;
             
-            this.txtUser.KeyPress += (s, e) => { if (e.KeyChar == '\r') txtPass.Focus(); };
-            this.txtPass.KeyPress += (s, e) => { if (e.KeyChar == '\r') btnValidar.PerformClick(); };
+            this.txtUser.KeyPress += (remitente, evento) => { if (evento.KeyChar == '\r') txtPass.Focus(); };
+            this.txtPass.KeyPress += (remitente, evento) => { if (evento.KeyChar == '\r') btnValidar.PerformClick(); };
             
             this.KeyPreview = true;
-            this.KeyDown += FrmLogin_KeyDown;
-            this.Load += FrmLogin_Load;
+            this.KeyDown += FormularioLogin_KeyDown;
+            this.Load += FormularioLogin_Load;
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void FormularioLogin_Load(object sender, EventArgs e)
         {
             txtUser.Focus();
             
             this.Opacity = 0;
-            Timer timer = new Timer { Interval = 15 };
-            timer.Tick += (s, args) =>
+            Timer TemporizadorTransparencia = new Timer { Interval = 15 };
+            TemporizadorTransparencia.Tick += (remitente, argumentos) =>
             {
                 this.Opacity += 0.03;
                 if (this.Opacity >= 1.0)
                 {
                     this.Opacity = 1.0;
-                    timer.Stop();
-                    timer.Dispose();
+                    TemporizadorTransparencia.Stop();
+                    TemporizadorTransparencia.Dispose();
                 }
             };
-            timer.Start();
+            TemporizadorTransparencia.Start();
         }
 
-        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        private void FormularioLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -82,11 +82,11 @@ namespace Pantallas_Sistema_facturación
             }
             else if (e.KeyCode == Keys.F11)
             {
-                ToggleFullScreen();
+                AlternarPantallaCompleta();
             }
         }
 
-        private void ToggleFullScreen()
+        private void AlternarPantallaCompleta()
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -103,40 +103,40 @@ namespace Pantallas_Sistema_facturación
         void btnValidar_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
-            bool ok = true;
+            bool CamposValidos = true;
             
             if (string.IsNullOrWhiteSpace(txtUser.Text)) 
             { 
                 errorProvider1.SetError(txtUser, "El usuario es requerido"); 
-                ok = false; 
+                CamposValidos = false; 
             }
             
             if (string.IsNullOrWhiteSpace(txtPass.Text)) 
             { 
                 errorProvider1.SetError(txtPass, "La contraseña es requerida"); 
-                ok = false; 
+                CamposValidos = false; 
             }
             
-            if (!ok) 
+            if (!CamposValidos) 
             {
-                ShowMessage("Por favor complete todos los campos requeridos", "Validación", MessageBoxIcon.Warning);
+                MostrarMensaje("Por favor complete todos los campos requeridos", "Validación", MessageBoxIcon.Warning);
                 return;
             }
 
             btnValidar.Enabled = false;
             btnValidar.Text = "Validando...";
             
-            Timer progressTimer = new Timer { Interval = 100 }; 
-            int progress = 0;
-            progressTimer.Tick += (s, args) =>
+            Timer TemporizadorProgreso = new Timer { Interval = 100 }; 
+            int ProgresoValidacion = 0;
+            TemporizadorProgreso.Tick += (remitente, argumentos) =>
             {
-                progress++;
-                btnValidar.Text = "Validando" + new string('.', progress % 4);
+                ProgresoValidacion++;
+                btnValidar.Text = "Validando" + new string('.', ProgresoValidacion % 4);
                 
-                if (progress >= 10)
+                if (ProgresoValidacion >= 10)
                 {
-                    progressTimer.Stop();
-                    progressTimer.Dispose();
+                    TemporizadorProgreso.Stop();
+                    TemporizadorProgreso.Dispose();
                     
                     btnValidar.Enabled = true;
                     btnValidar.Text = "INICIAR SESIÓN";
@@ -145,32 +145,32 @@ namespace Pantallas_Sistema_facturación
                     {
                         DialogResult = DialogResult.OK;
                         
-                        Timer exitTimer = new Timer { Interval = 15 };
-                        exitTimer.Tick += (s2, args2) =>
+                        Timer TemporizadorSalida = new Timer { Interval = 15 };
+                        TemporizadorSalida.Tick += (remitente2, argumentos2) =>
                         {
                             this.Opacity -= 0.05;
                             if (this.Opacity <= 0)
                             {
-                                exitTimer.Stop();
-                                exitTimer.Dispose();
+                                TemporizadorSalida.Stop();
+                                TemporizadorSalida.Dispose();
                                 Close();
                             }
                         };
-                        exitTimer.Start();
+                        TemporizadorSalida.Start();
                     }
                     else
                     {
-                        ShowErrorMessage();
+                        MostrarMensajeError();
                         txtPass.Clear();
                         txtUser.Focus();
-                        ShakePanel(panelRight);
+                        AnimarPanelSacudida(panelRight);
                     }
                 }
             };
-            progressTimer.Start();
+            TemporizadorProgreso.Start();
         }
 
-        private void ShowErrorMessage()
+        private void MostrarMensajeError()
         {
             MessageBox.Show(this, 
                 "Usuario o contraseña incorrectos.\n\nPor favor, verifique sus credenciales e intente nuevamente.", 
@@ -179,39 +179,39 @@ namespace Pantallas_Sistema_facturación
                 MessageBoxIcon.Error);
         }
 
-        private void ShakePanel(Panel panel)
+        private void AnimarPanelSacudida(Panel PanelASacudir)
         {
-            int originalX = panel.Location.X;
-            Timer shakeTimer = new Timer { Interval = 50 };
-            int shakeCount = 0;
+            int PosicionOriginalX = PanelASacudir.Location.X;
+            Timer TemporizadorSacudida = new Timer { Interval = 50 };
+            int ContadorSacudidas = 0;
             
-            shakeTimer.Tick += (s, args) =>
+            TemporizadorSacudida.Tick += (remitente, argumentos) =>
             {
-                if (shakeCount % 2 == 0)
-                    panel.Location = new Point(originalX + 5, panel.Location.Y);
+                if (ContadorSacudidas % 2 == 0)
+                    PanelASacudir.Location = new Point(PosicionOriginalX + 5, PanelASacudir.Location.Y);
                 else
-                    panel.Location = new Point(originalX - 5, panel.Location.Y);
+                    PanelASacudir.Location = new Point(PosicionOriginalX - 5, PanelASacudir.Location.Y);
                 
-                shakeCount++;
-                if (shakeCount >= 8)
+                ContadorSacudidas++;
+                if (ContadorSacudidas >= 8)
                 {
-                    panel.Location = new Point(originalX, panel.Location.Y);
-                    shakeTimer.Stop();
-                    shakeTimer.Dispose();
+                    PanelASacudir.Location = new Point(PosicionOriginalX, PanelASacudir.Location.Y);
+                    TemporizadorSacudida.Stop();
+                    TemporizadorSacudida.Dispose();
                 }
             };
-            shakeTimer.Start();
+            TemporizadorSacudida.Start();
         }
 
         void btnCancelar_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show(this,
+            var ResultadoConfirmacion = MessageBox.Show(this,
                 "¿Está seguro que desea salir del sistema?",
                 "Confirmar salida",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
                 
-            if (result == DialogResult.Yes)
+            if (ResultadoConfirmacion == DialogResult.Yes)
             {
                 DialogResult = DialogResult.Cancel;
                 Application.Exit();
@@ -223,37 +223,9 @@ namespace Pantallas_Sistema_facturación
             txtPass.UseSystemPasswordChar = !chkMostrar.Checked;
         }
 
-        private DialogResult ShowMessage(string message, string title, MessageBoxIcon icon, MessageBoxButtons buttons = MessageBoxButtons.OK)
+        private DialogResult MostrarMensaje(string MensajeTexto, string TituloVentana, MessageBoxIcon IconoMensaje, MessageBoxButtons BotonesMensaje = MessageBoxButtons.OK)
         {
-            return MessageBox.Show(this, message, title, buttons, icon);
-        }
-
-        private Image CreateDefaultLoginImage()
-        {
-            Bitmap defaultImage = new Bitmap(400, 300);
-            using (Graphics g = Graphics.FromImage(defaultImage))
-            {
-                // Fondo morado principal en lugar de azul
-                g.Clear(Color.FromArgb(165, 135, 195)); // #A587C3
-                
-                using (Brush brush = new SolidBrush(Color.White))
-                {
-                    g.FillRectangle(brush, 150, 100, 100, 80);
-                    g.FillRectangle(brush, 180, 180, 40, 20);
-                    g.FillRectangle(brush, 170, 200, 60, 10);
-                }
-                
-                using (Font font = new Font("Arial", 16, FontStyle.Bold))
-                using (Brush textBrush = new SolidBrush(Color.White))
-                {
-                    string text = "Sistema de\nFacturación";
-                    SizeF textSize = g.MeasureString(text, font);
-                    g.DrawString(text, font, textBrush, 
-                        (defaultImage.Width - textSize.Width) / 2, 
-                        defaultImage.Height - 80);
-                }
-            }
-            return defaultImage;
+            return MessageBox.Show(this, MensajeTexto, TituloVentana, BotonesMensaje, IconoMensaje);
         }
     }
 }

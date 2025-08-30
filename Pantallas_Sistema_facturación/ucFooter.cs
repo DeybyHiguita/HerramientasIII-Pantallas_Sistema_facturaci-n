@@ -9,10 +9,10 @@ namespace Pantallas_Sistema_facturación
     {
         public ucFooter()
         {
-            InitializeComponent();
+            InicializarComponentes();
         }
 
-        private void InitializeComponent()
+        private void InicializarComponentes()
         {
             this.lblDesarrolladoPor = new MaterialSkin.Controls.MaterialLabel();
             this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
@@ -78,21 +78,21 @@ namespace Pantallas_Sistema_facturación
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
             this.Name = "ucFooter";
             this.Size = new System.Drawing.Size(1502, 100);
-            this.Load += new System.EventHandler(this.UcFooter_Load);
-            this.Resize += new System.EventHandler(this.UcFooter_Resize);
+            this.Load += new System.EventHandler(this.ControlPiePagina_Load);
+            this.Resize += new System.EventHandler(this.ControlPiePagina_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
         
-        private void UcFooter_Load(object sender, EventArgs e)
+        private void ControlPiePagina_Load(object sender, EventArgs e)
         {
             // Configurar colores después de que se cargue el control
-            SetCustomColors();
-            CenterLabels();
+            EstablecerColoresPersonalizados();
+            CentrarEtiquetas();
         }
         
-        private void SetCustomColors()
+        private void EstablecerColoresPersonalizados()
         {
             // Configurar colores personalizados para MaterialLabels en tiempo de ejecución
             lblDesarrolladoPor.ForeColor = Color.White;
@@ -101,37 +101,48 @@ namespace Pantallas_Sistema_facturación
             lblCopyright.ForeColor = Color.FromArgb(220, 220, 220);
         }
         
-        private void UcFooter_Resize(object sender, EventArgs e)
+        private void ControlPiePagina_Resize(object sender, EventArgs e)
         {
-            CenterLabels();
+            CentrarEtiquetas();
         }
         
-        private void CenterLabels()
+        private void CentrarEtiquetas()
         {
             if (this.Width > 0)
             {
                 // Calcular el centro horizontal del control
-                int centerX = this.Width / 2;
+                int CentroHorizontal = this.Width / 2;
                 
                 // Centrar cada label horizontalmente
                 if (lblDesarrolladoPor != null)
-                    lblDesarrolladoPor.Left = centerX - (lblDesarrolladoPor.Width / 2);
+                    lblDesarrolladoPor.Left = CentroHorizontal - (lblDesarrolladoPor.Width / 2);
                     
                 if (lblEmail != null)
-                    lblEmail.Left = centerX - (lblEmail.Width / 2);
+                    lblEmail.Left = CentroHorizontal - (lblEmail.Width / 2);
                     
                 if (lblTelefono != null)
-                    lblTelefono.Left = centerX - (lblTelefono.Width / 2);
+                    lblTelefono.Left = CentroHorizontal - (lblTelefono.Width / 2);
                     
                 if (lblCopyright != null)
-                    lblCopyright.Left = centerX - (lblCopyright.Width / 2);
+                    lblCopyright.Left = CentroHorizontal - (lblCopyright.Width / 2);
             }
         }
         
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            CenterLabels();
+            CentrarEtiquetas();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ucFooter
+            // 
+            this.Name = "ucFooter";
+            this.ResumeLayout(false);
+
         }
     }
 }

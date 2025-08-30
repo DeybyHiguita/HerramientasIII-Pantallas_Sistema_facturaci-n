@@ -226,6 +226,7 @@
             this.btnActualizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnActualizar.UseAccentColor = false;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // ucCategoriasProductos
             // 
