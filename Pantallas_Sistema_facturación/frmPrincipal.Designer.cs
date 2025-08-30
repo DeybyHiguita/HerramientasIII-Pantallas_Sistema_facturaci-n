@@ -283,28 +283,6 @@ namespace Pantallas_Sistema_facturación
             this.lblModuloFacturacion.Visible = false;
 
             // 
-            // btnFacturacionLeft
-            // 
-            this.btnFacturacionLeft.AutoSize = false;
-            this.btnFacturacionLeft.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            this.btnFacturacionLeft.Density = MaterialButton.MaterialButtonDensity.Default;
-            this.btnFacturacionLeft.Depth = 0;
-            this.btnFacturacionLeft.HighEmphasis = true;
-            this.btnFacturacionLeft.Icon = null;
-            this.btnFacturacionLeft.Location = new Point(20, 190);
-            this.btnFacturacionLeft.Margin = new Padding(4, 6, 4, 6);
-            this.btnFacturacionLeft.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnFacturacionLeft.Name = "btnFacturacionLeft";
-            this.btnFacturacionLeft.NoAccentTextColor = Color.Empty;
-            this.btnFacturacionLeft.Size = new Size(160, 40);
-            this.btnFacturacionLeft.TabIndex = 8;
-            this.btnFacturacionLeft.Text = "FACTURACIÓN";
-            this.btnFacturacionLeft.Type = MaterialButton.MaterialButtonType.Contained;
-            this.btnFacturacionLeft.UseAccentColor = false;
-            this.btnFacturacionLeft.Visible = false;
-            this.btnFacturacionLeft.Click += new System.EventHandler(this.btnFacturacionLeft_Click);
-
-            // 
             // btnInformesLeft
             // 
             this.btnInformesLeft.AutoSize = false;
@@ -515,23 +493,23 @@ namespace Pantallas_Sistema_facturación
             this.btnAyudaLeft.Visible = false;
             this.btnAyudaLeft.Click += new System.EventHandler(this.btnAyudaLeft_Click);
             // btnAcercaDeLeft
-            this.btnAcercaDeLeft.AutoSize = false;
-            this.btnAcercaDeLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAcercaDeLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnAcercaDeLeft.Depth = 0;
-            this.btnAcercaDeLeft.HighEmphasis = true;
-            this.btnAcercaDeLeft.Icon = null;
-            this.btnAcercaDeLeft.Location = new System.Drawing.Point(20, 240);
-            this.btnAcercaDeLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAcercaDeLeft.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAcercaDeLeft.Name = "btnAcercaDeLeft";
-            this.btnAcercaDeLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAcercaDeLeft.Size = new System.Drawing.Size(160, 40);
-            this.btnAcercaDeLeft.TabIndex = 4;
-            this.btnAcercaDeLeft.Text = "ACERCA DE";
-            this.btnAcercaDeLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnAcercaDeLeft.UseAccentColor = false;
-            this.btnAcercaDeLeft.Visible = false;
+           // this.btnAcercaDeLeft.AutoSize = false;
+           // this.btnAcercaDeLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+           // this.btnAcercaDeLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+           // this.btnAcercaDeLeft.Depth = 0;
+           // this.btnAcercaDeLeft.HighEmphasis = true;
+           // this.btnAcercaDeLeft.Icon = null;
+           // this.btnAcercaDeLeft.Location = new System.Drawing.Point(20, 240);
+           // this.btnAcercaDeLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+           // this.btnAcercaDeLeft.MouseState = MaterialSkin.MouseState.HOVER;
+           // this.btnAcercaDeLeft.Name = "btnAcercaDeLeft";
+           // this.btnAcercaDeLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            //this.btnAcercaDeLeft.Size = new System.Drawing.Size(160, 40);
+            //this.btnAcercaDeLeft.TabIndex = 4;
+            //this.btnAcercaDeLeft.Text = "ACERCA DE";
+            //this.btnAcercaDeLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            //this.btnAcercaDeLeft.UseAccentColor = false;
+            //this.btnAcercaDeLeft.Visible = false;
             //this.btnAcercaDeLeft.Click += new System.EventHandler(this.btnAcercaDeLeft_Click);
             // 
             // btnSalir

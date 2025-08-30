@@ -137,6 +137,15 @@
     <EmbeddedResource Include="Forms\Facturacion\UserControls\ucInforme.resx">
       <DependentUpon>ucInforme.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucAdminSeguridad.resx">
+      <DependentUpon>ucAdminSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucEmpleado.resx">
+      <DependentUpon>ucEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\UserControls\ucRol.resx">
+      <DependentUpon>ucRol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tablas\UserControls\ucCategoriasProductos.resx">
       <DependentUpon>ucCategoriasProductos.cs</DependentUpon>
     </EmbeddedResource>

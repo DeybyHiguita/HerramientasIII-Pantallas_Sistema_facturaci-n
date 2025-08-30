@@ -1,21 +1,19 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using MaterialSkin;
 using MaterialSkin.Controls;
-using Pantallas_Sistema_facturación.Forms.Ayuda.UserControls;
+//using Pantallas_Sistema_facturación.Forms.Ayuda.UserControls;
 using Pantallas_Sistema_facturación.Forms.Seguridad.UserControls;
 using Pantallas_Sistema_facturación.Forms.Facturacion.UserControls;
 using Pantallas_Sistema_facturación.Forms.Tablas.UserControls;
+using Pantallas_Sistema_facturación.UserControls;
 
 namespace Pantallas_Sistema_facturación
 {
     public partial class frmPrincipal : Form
     {
-        // Instancias de los UserControls
-        private ucFacturacion ucFacturacion;
-        private ucInforme ucInforme;
-        private ucProducto ucProducto;
-        private ucCliente ucCliente;
-        private ucCategoriasProductos ucCategoriasProductos;
+        private readonly MaterialSkinManager skinManager;
 
         public frmPrincipal()
         {
@@ -24,17 +22,16 @@ namespace Pantallas_Sistema_facturación
             ConfigurarFormulario();
         }
 
-
         void InicializarApariencia()
         {
             MaterialSkinManager AdministradorApariencia = MaterialSkinManager.Instance;
             AdministradorApariencia.AddFormToManage(this);
             AdministradorApariencia.Theme = MaterialSkinManager.Themes.LIGHT;
             AdministradorApariencia.ColorScheme = new ColorScheme(
-                Primary.Purple600, // #A587C3 - Color principal
-                Primary.Purple700, // #8E6BA8 - Color más oscuro para hover
-                Primary.Purple300, // #C8A8D8 - Color más claro para accents
-                Accent.Purple200,  // Acento morado claro
+                Primary.Purple600,
+                Primary.Purple700,
+                Primary.Purple300,
+                Accent.Purple200,
                 TextShade.WHITE
             );
         }
@@ -53,6 +50,13 @@ namespace Pantallas_Sistema_facturación
             }
         }
 
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            OcultarBotonesTabla();
+            MostrarContenidoPrincipal();
+        }
+
+        // ---------- EVENTOS ----------
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var ResultadoOpcion = MessageBox.Show(this,
@@ -83,7 +87,6 @@ namespace Pantallas_Sistema_facturación
             }
         }
 
-
         private void menuPrincipal_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
@@ -96,23 +99,6 @@ namespace Pantallas_Sistema_facturación
         {
             MostrarBotonesTabla();
             MostrarContenidoPrincipal();
-        }
-
-        private void btnProductosLeft_Click(object sender, EventArgs e)
-        {
-            MostrarProductos();
-            MostrarModuloTablas();
-        }
-
-        // Menú superior - Facturación
-        private void menuFacturacion_Click(object sender, EventArgs e)
-        {
-            MostrarCliente();
-        }
-
-        private void btnCategoriasLeft_Click(object sender, EventArgs e)
-        {
-            MostrarCategorias();
         }
 
         private void menuFacturacion_Click(object sender, EventArgs e)
@@ -129,358 +115,19 @@ namespace Pantallas_Sistema_facturación
             MostrarContenidoPrincipal();
         }
 
-        private void btnEmpleadosLeft_Click(object sender, EventArgs e)
-        {
-            //ShowEmpleados();
-            MostrarContenidoSeguridad();
-        }
-
-        private void btnRolesLeft_Click(object sender, EventArgs e)
-        {
-            ShowRolesEmpleado();
-        }
-
-        private void btnSeguridadLeft_Click(object sender, EventArgs e)
-        {
-            ShowAdminSeguridad();
-        }
-
-        private void btnAyudaLeft_Click(object sender, EventArgs e)
-        {
-            MostrarContenidoAyuda();
-        }
-
         private void menuAyuda_Click(object sender, EventArgs e)
         {
             OcultarBotonesTabla();
             HideSeguridadButtons();
-            ShowAyudaButtons();     
+            ShowAyudaButtons();
         }
 
-        private void MostrarBotonesTabla()
-        {
-            MostrarModuloFacturacion();
-            MostrarBienvenida("Bienvenido al módulo de Facturación");
-        }
-        private void btnInformesLeft_Click(object sender, EventArgs e)
-        {
-            MostrarUserControl(new ucInforme());
-        }
-
-        private void ShowSeguridadButtons()
-        {
-            if (lblModuloSeguridad != null) lblModuloSeguridad.Visible = true;
-            if (btnEmpleadosLeft != null) btnEmpleadosLeft.Visible = true;
-            if (btnRolesLeft != null) btnRolesLeft.Visible = true;
-            if (btnSeguridadLeft != null) btnSeguridadLeft.Visible = true;
-        }
-
-        private void ShowAyudaButtons()
-        {
-            if (lblModuloAyuda != null) lblModuloAyuda.Visible = true;
-            if (btnAyudaLeft != null) btnAyudaLeft.Visible = true;
-            if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = true;
-        }
-
-        private void HideAyudaButtons()
-        {
-            if (lblModuloAyuda != null) lblModuloAyuda.Visible = false;
-            if (btnAyudaLeft != null) btnAyudaLeft.Visible = false;
-            if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = false;
-        }
-
+        // ---------- BOTONES LATERALES ----------
         private void btnProductosLeft_Click(object sender, EventArgs e)
         {
             MostrarUserControl(new ucProducto());
         }
 
-        private void HideSeguridadButtons()
-        {
-            if (lblModuloSeguridad != null) lblModuloSeguridad.Visible = false;
-            if (btnEmpleadosLeft != null) btnEmpleadosLeft.Visible = false;
-            if (btnRolesLeft != null) btnRolesLeft.Visible = false;
-            if (btnSeguridadLeft != null) btnSeguridadLeft.Visible = false;
-        }
-
-
-        private void MostrarContenidoPrincipal()
-        {
-            panelContent.Controls.Clear();
-            var PanelPrincipal = new ucDashboard();
-
-            PanelPrincipal.Location = new Point(0, 0);
-            PanelPrincipal.Size = panelContent.ClientSize;
-            PanelPrincipal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
-
-            panelContent.Controls.Add(PanelPrincipal);
-
-            panelContent.Resize += (sender, e) => {
-                if (PanelPrincipal != null && !PanelPrincipal.IsDisposed)
-                {
-                    PanelPrincipal.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-        private void MostrarProductos()
-        {
-            // Cargar el formulario de productos
-            panelContent.Controls.Clear();
-
-            // Crear un panel wrapper con scroll
-            var PanelContenedorProductos = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ControlProductos = new ucProducto();
-            ControlProductos.Location = new Point(20, 20);
-            ControlProductos.Size = new Size(820, 540);
-            PanelContenedorProductos.Controls.Add(ControlProductos);
-
-            panelContent.Controls.Add(PanelContenedorProductos);
-
-            panelContent.Resize += (sender, e) => {
-                if (PanelContenedorProductos != null && !PanelContenedorProductos.IsDisposed)
-                {
-                    PanelContenedorProductos.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-        private void MostrarCliente()
-        {
-            panelContent.Controls.Clear();
-
-            var PanelContenedorClientes = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ControlClientes = new ucCliente();
-            ControlClientes.Location = new Point(20, 20);
-            ControlClientes.Size = new Size(820, 540);
-            PanelContenedorClientes.Controls.Add(ControlClientes);
-            panelContent.Controls.Add(PanelContenedorClientes);
-
-            panelContent.Resize += (sender, e) => {
-                if (PanelContenedorClientes != null && !PanelContenedorClientes.IsDisposed)
-                {
-                    PanelContenedorClientes.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-        private void MostrarCategorias()
-        {
-            panelContent.Controls.Clear();
-
-            var PanelContenedorCategorias = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ControlCategorias = new ucCategoriasProductos();
-            ControlCategorias.Location = new Point(20, 20);
-            ControlCategorias.Size = new Size(820, 540);
-            PanelContenedorCategorias.Controls.Add(ControlCategorias);
-            panelContent.Controls.Add(PanelContenedorCategorias);
-
-            panelContent.Resize += (sender, e) => {
-                if (PanelContenedorCategorias != null && !PanelContenedorCategorias.IsDisposed)
-                {
-                    PanelContenedorCategorias.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-        private void MostrarContenidoFacturacion()
-        {
-            panelContent.Controls.Clear();
-
-            var PanelFacturacion = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                BackColor = Color.White,
-                AutoScroll = true,
-                Padding = new Padding(30),
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var EtiquetaFacturacion = new MaterialLabel
-            {
-                Text = "Módulo de Facturación",
-                Font = new Font("Roboto", 20, FontStyle.Bold),
-                Location = new Point(0, 20),
-                Size = new Size(400, 40),
-                TextAlign = ContentAlignment.MiddleLeft
-            };
-
-            var EtiquetaSubtitulo = new MaterialLabel
-            {
-                Text = "Crear Facturas, Cotizaciones y Reportes",
-                Font = new Font("Roboto", 14, FontStyle.Regular),
-                Location = new Point(0, 70),
-                Size = new Size(400, 30),
-                TextAlign = ContentAlignment.MiddleLeft
-            };
-
-            PanelFacturacion.Controls.Add(EtiquetaFacturacion);
-            PanelFacturacion.Controls.Add(EtiquetaSubtitulo);
-
-            panelContent.Controls.Add(PanelFacturacion);
-
-            panelContent.Resize += (sender, e) => {
-                if (PanelFacturacion != null && !PanelFacturacion.IsDisposed)
-                {
-                    PanelFacturacion.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-        private void MostrarContenidoSeguridad()
-        {
-            panelContent.Controls.Clear();
-
-            var PanelSeguridad = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ucEmpleados = new ucEmpleado
-            {
-                Location = new Point(20, 20),
-                Size = new Size(820, 540)
-            };
-
-            PanelSeguridad.Controls.Add(ucEmpleados);
-            panelContent.Controls.Add(PanelSeguridad);
-
-            panelContent.Resize += (sender, e) =>
-            {
-                if (PanelSeguridad != null && !PanelSeguridad.IsDisposed)
-                {
-                    PanelSeguridad.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-        private void ShowRolesEmpleado()
-        {
-            // Cargar el formulario de productos
-            panelContent.Controls.Clear();
-
-            // Crear un panel wrapper con scroll
-            var scrollPanel = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ucRoles = new ucRol();
-            ucRoles.Location = new Point(20, 20);
-            ucRoles.Size = new Size(820, 540);
-            scrollPanel.Controls.Add(ucRoles);
-
-            panelContent.Controls.Add(scrollPanel);
-
-            panelContent.Resize += (sender, e) => {
-                if (scrollPanel != null && !scrollPanel.IsDisposed)
-                {
-                    scrollPanel.Size = panelContent.ClientSize;
-                }
-            };
-
-        }
-
-        private void ShowAdminSeguridad()
-        {
-            panelContent.Controls.Clear();
-
-            var PanelSeguridad = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ucAdminsSeguridad = new ucAdminSeguridad
-            {
-                Location = new Point(20, 20),
-                Size = new Size(820, 540)
-            };
-
-            PanelSeguridad.Controls.Add(ucAdminsSeguridad);
-            panelContent.Controls.Add(PanelSeguridad);
-
-            panelContent.Resize += (sender, e) =>
-            {
-                if (PanelSeguridad != null && !PanelSeguridad.IsDisposed)
-                {
-                    PanelSeguridad.Size = panelContent.ClientSize;
-                }
-            };
-        }
-        private void MostrarContenidoAyuda()
-        {
-            panelContent.Controls.Clear();
-
-            var PanelAyuda = new Panel
-            {
-                Location = new Point(0, 0),
-                Size = panelContent.ClientSize,
-                AutoScroll = true,
-                BackColor = Color.White,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom
-            };
-
-            var ucAyudas = new ucAyuda
-            {
-                Location = new Point(20, 20),
-                Size = new Size(820, 540)
-            };
-
-            PanelAyuda.Controls.Add(ucAyudas);
-            panelContent.Controls.Add(PanelAyuda);
-
-            panelContent.Resize += (sender, e) =>
-            {
-                if (PanelAyuda != null && !PanelAyuda.IsDisposed)
-                {
-                    PanelAyuda.Size = panelContent.ClientSize;
-                }
-            };
-        }
-
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            OcultarBotonesTabla();
-            MostrarContenidoPrincipal();
-        }
-        
         private void btnClientesLeft_Click(object sender, EventArgs e)
         {
             MostrarUserControl(new ucCliente());
@@ -491,19 +138,91 @@ namespace Pantallas_Sistema_facturación
             MostrarUserControl(new ucCategoriasProductos());
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnInformesLeft_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            MostrarUserControl(new ucInforme());
         }
 
-        // Métodos para mostrar/ocultar módulos laterales
+        private void btnEmpleadosLeft_Click(object sender, EventArgs e)
+        {
+            MostrarContenidoSeguridad();
+        }
+
+        private void btnRolesLeft_Click(object sender, EventArgs e)
+        {
+            MostrarUserControl(new ucRol());
+        }
+
+        private void btnSeguridadLeft_Click(object sender, EventArgs e)
+        {
+            MostrarUserControl(new ucAdminSeguridad());
+        }
+
+        private void btnAyudaLeft_Click(object sender, EventArgs e)
+        {
+            MostrarContenidoAyuda();
+        }
+
+        // ---------- MÉTODOS AUXILIARES ----------
+        private void MostrarContenidoPrincipal()
+        {
+            MostrarUserControl(new ucDashboard());
+        }
+
+        private void MostrarContenidoFacturacion()
+        {
+            panelContent.Controls.Clear();
+
+            var lblTitulo = new MaterialLabel
+            {
+                Text = "Módulo de Facturación",
+                Font = new Font("Roboto", 20, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 50
+            };
+
+            var lblSubtitulo = new MaterialLabel
+            {
+                Text = "Crear Facturas, Cotizaciones y Reportes",
+                Font = new Font("Roboto", 14, FontStyle.Regular),
+                Dock = DockStyle.Top,
+                Height = 30
+            };
+
+            panelContent.Controls.Add(lblSubtitulo);
+            panelContent.Controls.Add(lblTitulo);
+        }
+
+        private void MostrarContenidoSeguridad()
+        {
+            MostrarUserControl(new ucEmpleado());
+        }
+
+        private void MostrarContenidoAyuda()
+        {
+            //MostrarUserControl(new ucAyuda());
+        }
+
+        private void MostrarUserControl(UserControl control)
+        {
+            panelContent.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(control);
+        }
+
+        // ---------- MOSTRAR/OCULTAR MÓDULOS ----------
+        private void MostrarBotonesTabla()
+        {
+            MostrarModuloFacturacion();
+            MostrarBienvenida("Bienvenido al módulo de Facturación");
+        }
+
         private void MostrarModuloTablas()
         {
-            // Oculta módulo facturación
             lblModuloFacturacion.Visible = false;
             btnFacturacionLeft.Visible = false;
             btnInformesLeft.Visible = false;
-            // Muestra módulo tablas
+
             lblModuloTablas.Visible = true;
             btnProductosLeft.Visible = true;
             btnClientesLeft.Visible = true;
@@ -512,18 +231,17 @@ namespace Pantallas_Sistema_facturación
 
         private void MostrarModuloFacturacion()
         {
-            // Oculta módulo tablas
             lblModuloTablas.Visible = false;
             btnProductosLeft.Visible = false;
             btnClientesLeft.Visible = false;
             btnCategoriasLeft.Visible = false;
-            // Muestra módulo facturación
+
             lblModuloFacturacion.Visible = true;
             btnFacturacionLeft.Visible = true;
             btnInformesLeft.Visible = true;
         }
 
-        private void OcultarModulosLaterales()
+        private void OcultarBotonesTabla()
         {
             lblModuloFacturacion.Visible = false;
             btnFacturacionLeft.Visible = false;
@@ -534,25 +252,46 @@ namespace Pantallas_Sistema_facturación
             btnCategoriasLeft.Visible = false;
         }
 
-        // Mostrar mensaje de bienvenida en el panel central
+        private void ShowSeguridadButtons()
+        {
+            lblModuloSeguridad.Visible = true;
+            btnEmpleadosLeft.Visible = true;
+            btnRolesLeft.Visible = true;
+            btnSeguridadLeft.Visible = true;
+        }
+
+        private void HideSeguridadButtons()
+        {
+            lblModuloSeguridad.Visible = false;
+            btnEmpleadosLeft.Visible = false;
+            btnRolesLeft.Visible = false;
+            btnSeguridadLeft.Visible = false;
+        }
+
+        private void ShowAyudaButtons()
+        {
+            lblModuloAyuda.Visible = true;
+            btnAyudaLeft.Visible = true;
+            btnAcercaDeLeft.Visible = true;
+        }
+
+        private void HideAyudaButtons()
+        {
+            lblModuloAyuda.Visible = false;
+            btnAyudaLeft.Visible = false;
+            btnAcercaDeLeft.Visible = false;
+        }
+
         private void MostrarBienvenida(string mensaje)
         {
             panelContent.Controls.Clear();
             Label lblBienvenida = new Label();
             lblBienvenida.Text = mensaje;
-            lblBienvenida.Font = new System.Drawing.Font("Roboto", 20F, System.Drawing.FontStyle.Bold);
+            lblBienvenida.Font = new Font("Roboto", 20F, FontStyle.Bold);
             lblBienvenida.AutoSize = false;
-            lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
             lblBienvenida.Dock = DockStyle.Fill;
             panelContent.Controls.Add(lblBienvenida);
-        }
-
-        // Mostrar un UserControl en el panel central
-        private void MostrarUserControl(UserControl control)
-        {
-            panelContent.Controls.Clear();
-            control.Dock = DockStyle.Fill;
-            panelContent.Controls.Add(control);
         }
     }
 }
