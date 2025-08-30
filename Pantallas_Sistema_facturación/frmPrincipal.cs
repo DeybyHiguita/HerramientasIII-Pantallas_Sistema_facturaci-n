@@ -1,22 +1,17 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using Pantallas_Sistema_facturación.Forms.Ayuda.UserControls;
 using Pantallas_Sistema_facturación.Forms.Seguridad.UserControls;
-using Pantallas_Sistema_facturación.Forms.Facturacion.UserControls;
 using Pantallas_Sistema_facturación.Forms.Tablas.UserControls;
+using Pantallas_Sistema_facturación.UserControls;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Pantallas_Sistema_facturación
 {
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipal : MaterialForm
     {
-        // Instancias de los UserControls
-        private ucFacturacion ucFacturacion;
-        private ucInforme ucInforme;
-        private ucProducto ucProducto;
-        private ucCliente ucCliente;
-        private ucCategoriasProductos ucCategoriasProductos;
-
         public frmPrincipal()
         {
             InitializeComponent();
@@ -101,11 +96,9 @@ namespace Pantallas_Sistema_facturación
         private void btnProductosLeft_Click(object sender, EventArgs e)
         {
             MostrarProductos();
-            MostrarModuloTablas();
         }
 
-        // Menú superior - Facturación
-        private void menuFacturacion_Click(object sender, EventArgs e)
+        private void btnClientesLeft_Click(object sender, EventArgs e)
         {
             MostrarCliente();
         }
@@ -159,12 +152,10 @@ namespace Pantallas_Sistema_facturación
 
         private void MostrarBotonesTabla()
         {
-            MostrarModuloFacturacion();
-            MostrarBienvenida("Bienvenido al módulo de Facturación");
-        }
-        private void btnInformesLeft_Click(object sender, EventArgs e)
-        {
-            MostrarUserControl(new ucInforme());
+            if (lblModuloTablas != null) lblModuloTablas.Visible = true;
+            if (btnProductosLeft != null) btnProductosLeft.Visible = true;
+            if (btnClientesLeft != null) btnClientesLeft.Visible = true;
+            if (btnCategoriasLeft != null) btnCategoriasLeft.Visible = true;
         }
 
         private void ShowSeguridadButtons()
@@ -189,9 +180,13 @@ namespace Pantallas_Sistema_facturación
             if (btnAcercaDeLeft != null) btnAcercaDeLeft.Visible = false;
         }
 
-        private void btnProductosLeft_Click(object sender, EventArgs e)
+
+        private void OcultarBotonesTabla()
         {
-            MostrarUserControl(new ucProducto());
+            if (lblModuloTablas != null) lblModuloTablas.Visible = false;
+            if (btnProductosLeft != null) btnProductosLeft.Visible = false;
+            if (btnClientesLeft != null) btnClientesLeft.Visible = false;
+            if (btnCategoriasLeft != null) btnCategoriasLeft.Visible = false;
         }
 
         private void HideSeguridadButtons()
@@ -479,80 +474,6 @@ namespace Pantallas_Sistema_facturación
         {
             OcultarBotonesTabla();
             MostrarContenidoPrincipal();
-        }
-        
-        private void btnClientesLeft_Click(object sender, EventArgs e)
-        {
-            MostrarUserControl(new ucCliente());
-        }
-
-        private void btnCategoriasLeft_Click(object sender, EventArgs e)
-        {
-            MostrarUserControl(new ucCategoriasProductos());
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        // Métodos para mostrar/ocultar módulos laterales
-        private void MostrarModuloTablas()
-        {
-            // Oculta módulo facturación
-            lblModuloFacturacion.Visible = false;
-            btnFacturacionLeft.Visible = false;
-            btnInformesLeft.Visible = false;
-            // Muestra módulo tablas
-            lblModuloTablas.Visible = true;
-            btnProductosLeft.Visible = true;
-            btnClientesLeft.Visible = true;
-            btnCategoriasLeft.Visible = true;
-        }
-
-        private void MostrarModuloFacturacion()
-        {
-            // Oculta módulo tablas
-            lblModuloTablas.Visible = false;
-            btnProductosLeft.Visible = false;
-            btnClientesLeft.Visible = false;
-            btnCategoriasLeft.Visible = false;
-            // Muestra módulo facturación
-            lblModuloFacturacion.Visible = true;
-            btnFacturacionLeft.Visible = true;
-            btnInformesLeft.Visible = true;
-        }
-
-        private void OcultarModulosLaterales()
-        {
-            lblModuloFacturacion.Visible = false;
-            btnFacturacionLeft.Visible = false;
-            btnInformesLeft.Visible = false;
-            lblModuloTablas.Visible = false;
-            btnProductosLeft.Visible = false;
-            btnClientesLeft.Visible = false;
-            btnCategoriasLeft.Visible = false;
-        }
-
-        // Mostrar mensaje de bienvenida en el panel central
-        private void MostrarBienvenida(string mensaje)
-        {
-            panelContent.Controls.Clear();
-            Label lblBienvenida = new Label();
-            lblBienvenida.Text = mensaje;
-            lblBienvenida.Font = new System.Drawing.Font("Roboto", 20F, System.Drawing.FontStyle.Bold);
-            lblBienvenida.AutoSize = false;
-            lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            lblBienvenida.Dock = DockStyle.Fill;
-            panelContent.Controls.Add(lblBienvenida);
-        }
-
-        // Mostrar un UserControl en el panel central
-        private void MostrarUserControl(UserControl control)
-        {
-            panelContent.Controls.Clear();
-            control.Dock = DockStyle.Fill;
-            panelContent.Controls.Add(control);
         }
     }
 }
