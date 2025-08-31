@@ -72,6 +72,9 @@ namespace Pantallas_Sistema_facturación
             this.btnPrincipal = new MaterialSkin.Controls.MaterialButton();
             this.lblSistemaFacturacion = new MaterialSkin.Controls.MaterialLabel();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.lblModuloFacturacion = new MaterialSkin.Controls.MaterialLabel();
+            this.btnFacturacionLeft = new MaterialSkin.Controls.MaterialButton();
+            this.btnInformesLeft = new MaterialSkin.Controls.MaterialButton();
             this.lblModuloTablas = new MaterialSkin.Controls.MaterialLabel();
             this.btnProductosLeft = new MaterialSkin.Controls.MaterialButton();
             this.btnClientesLeft = new MaterialSkin.Controls.MaterialButton();
@@ -101,9 +104,10 @@ namespace Pantallas_Sistema_facturación
             this.panelTop.Controls.Add(this.btnPrincipal);
             this.panelTop.Controls.Add(this.lblSistemaFacturacion);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(3, 64);
+            this.panelTop.Location = new System.Drawing.Point(4, 98);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1294, 60);
+            this.panelTop.Size = new System.Drawing.Size(1942, 92);
             this.panelTop.TabIndex = 0;
             // 
             // materialButton1
@@ -114,12 +118,12 @@ namespace Pantallas_Sistema_facturación
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = false;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1171, 15);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.Location = new System.Drawing.Point(1756, 23);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(100, 30);
+            this.materialButton1.Size = new System.Drawing.Size(150, 46);
             this.materialButton1.TabIndex = 6;
             this.materialButton1.Text = "Ayuda";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
@@ -134,12 +138,12 @@ namespace Pantallas_Sistema_facturación
             this.btnSeguridad.Depth = 0;
             this.btnSeguridad.HighEmphasis = false;
             this.btnSeguridad.Icon = null;
-            this.btnSeguridad.Location = new System.Drawing.Point(600, 15);
-            this.btnSeguridad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSeguridad.Location = new System.Drawing.Point(900, 23);
+            this.btnSeguridad.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnSeguridad.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSeguridad.Name = "btnSeguridad";
             this.btnSeguridad.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSeguridad.Size = new System.Drawing.Size(100, 30);
+            this.btnSeguridad.Size = new System.Drawing.Size(150, 46);
             this.btnSeguridad.TabIndex = 4;
             this.btnSeguridad.Text = "Seguridad";
             this.btnSeguridad.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
@@ -154,12 +158,12 @@ namespace Pantallas_Sistema_facturación
             this.btnFacturacion.Depth = 0;
             this.btnFacturacion.HighEmphasis = false;
             this.btnFacturacion.Icon = null;
-            this.btnFacturacion.Location = new System.Drawing.Point(470, 15);
-            this.btnFacturacion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFacturacion.Location = new System.Drawing.Point(705, 23);
+            this.btnFacturacion.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnFacturacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnFacturacion.Size = new System.Drawing.Size(120, 30);
+            this.btnFacturacion.Size = new System.Drawing.Size(180, 46);
             this.btnFacturacion.TabIndex = 3;
             this.btnFacturacion.Text = "Facturación";
             this.btnFacturacion.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
@@ -174,12 +178,12 @@ namespace Pantallas_Sistema_facturación
             this.btnTablas.Depth = 0;
             this.btnTablas.HighEmphasis = false;
             this.btnTablas.Icon = null;
-            this.btnTablas.Location = new System.Drawing.Point(360, 15);
-            this.btnTablas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTablas.Location = new System.Drawing.Point(540, 23);
+            this.btnTablas.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnTablas.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTablas.Name = "btnTablas";
             this.btnTablas.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTablas.Size = new System.Drawing.Size(100, 30);
+            this.btnTablas.Size = new System.Drawing.Size(150, 46);
             this.btnTablas.TabIndex = 2;
             this.btnTablas.Text = "Tablas";
             this.btnTablas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
@@ -194,12 +198,12 @@ namespace Pantallas_Sistema_facturación
             this.btnPrincipal.Depth = 0;
             this.btnPrincipal.HighEmphasis = false;
             this.btnPrincipal.Icon = null;
-            this.btnPrincipal.Location = new System.Drawing.Point(250, 15);
-            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPrincipal.Location = new System.Drawing.Point(375, 23);
+            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnPrincipal.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPrincipal.Size = new System.Drawing.Size(100, 30);
+            this.btnPrincipal.Size = new System.Drawing.Size(150, 46);
             this.btnPrincipal.TabIndex = 1;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
@@ -212,7 +216,8 @@ namespace Pantallas_Sistema_facturación
             this.lblSistemaFacturacion.Depth = 0;
             this.lblSistemaFacturacion.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblSistemaFacturacion.ForeColor = System.Drawing.Color.White;
-            this.lblSistemaFacturacion.Location = new System.Drawing.Point(20, 20);
+            this.lblSistemaFacturacion.Location = new System.Drawing.Point(30, 31);
+            this.lblSistemaFacturacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSistemaFacturacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblSistemaFacturacion.Name = "lblSistemaFacturacion";
             this.lblSistemaFacturacion.Size = new System.Drawing.Size(168, 19);
@@ -222,6 +227,9 @@ namespace Pantallas_Sistema_facturación
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.panelLeft.Controls.Add(this.lblModuloFacturacion);
+            this.panelLeft.Controls.Add(this.btnFacturacionLeft);
+            this.panelLeft.Controls.Add(this.btnInformesLeft);
             this.panelLeft.Controls.Add(this.lblModuloTablas);
             this.panelLeft.Controls.Add(this.btnProductosLeft);
             this.panelLeft.Controls.Add(this.btnClientesLeft);
@@ -236,17 +244,75 @@ namespace Pantallas_Sistema_facturación
             this.panelLeft.Controls.Add(this.btnSalir);
             this.panelLeft.Controls.Add(this.pictureBoxLogo);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(3, 124);
+            this.panelLeft.Location = new System.Drawing.Point(4, 190);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(200, 640);
+            this.panelLeft.Size = new System.Drawing.Size(300, 985);
             this.panelLeft.TabIndex = 1;
+            // 
+            // lblModuloFacturacion
+            // 
+            this.lblModuloFacturacion.AutoSize = true;
+            this.lblModuloFacturacion.Depth = 0;
+            this.lblModuloFacturacion.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblModuloFacturacion.Location = new System.Drawing.Point(30, 246);
+            this.lblModuloFacturacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModuloFacturacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblModuloFacturacion.Name = "lblModuloFacturacion";
+            this.lblModuloFacturacion.Size = new System.Drawing.Size(164, 19);
+            this.lblModuloFacturacion.TabIndex = 7;
+            this.lblModuloFacturacion.Text = "Módulo de Facturación";
+            this.lblModuloFacturacion.Visible = false;
+            // 
+            // btnFacturacionLeft
+            // 
+            this.btnFacturacionLeft.AutoSize = false;
+            this.btnFacturacionLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFacturacionLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnFacturacionLeft.Depth = 0;
+            this.btnFacturacionLeft.HighEmphasis = true;
+            this.btnFacturacionLeft.Icon = null;
+            this.btnFacturacionLeft.Location = new System.Drawing.Point(30, 292);
+            this.btnFacturacionLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFacturacionLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnFacturacionLeft.Name = "btnFacturacionLeft";
+            this.btnFacturacionLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnFacturacionLeft.Size = new System.Drawing.Size(240, 62);
+            this.btnFacturacionLeft.TabIndex = 8;
+            this.btnFacturacionLeft.Text = "FACTURACIÓN";
+            this.btnFacturacionLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnFacturacionLeft.UseAccentColor = false;
+            this.btnFacturacionLeft.Visible = false;
+            this.btnFacturacionLeft.Click += new System.EventHandler(this.btnFacturacionLeft_Click);
+            // 
+            // btnInformesLeft
+            // 
+            this.btnInformesLeft.AutoSize = false;
+            this.btnInformesLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInformesLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnInformesLeft.Depth = 0;
+            this.btnInformesLeft.HighEmphasis = true;
+            this.btnInformesLeft.Icon = null;
+            this.btnInformesLeft.Location = new System.Drawing.Point(30, 369);
+            this.btnInformesLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btnInformesLeft.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnInformesLeft.Name = "btnInformesLeft";
+            this.btnInformesLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnInformesLeft.Size = new System.Drawing.Size(240, 62);
+            this.btnInformesLeft.TabIndex = 9;
+            this.btnInformesLeft.Text = "INFORMES";
+            this.btnInformesLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnInformesLeft.UseAccentColor = false;
+            this.btnInformesLeft.Visible = false;
+            this.btnInformesLeft.Click += new System.EventHandler(this.btnInformesLeft_Click);
             // 
             // lblModuloTablas
             // 
             this.lblModuloTablas.AutoSize = true;
             this.lblModuloTablas.Depth = 0;
             this.lblModuloTablas.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblModuloTablas.Location = new System.Drawing.Point(20, 160);
+            this.lblModuloTablas.Location = new System.Drawing.Point(53, 246);
+            this.lblModuloTablas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModuloTablas.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblModuloTablas.Name = "lblModuloTablas";
             this.lblModuloTablas.Size = new System.Drawing.Size(129, 19);
@@ -262,12 +328,12 @@ namespace Pantallas_Sistema_facturación
             this.btnProductosLeft.Depth = 0;
             this.btnProductosLeft.HighEmphasis = true;
             this.btnProductosLeft.Icon = null;
-            this.btnProductosLeft.Location = new System.Drawing.Point(20, 190);
-            this.btnProductosLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnProductosLeft.Location = new System.Drawing.Point(30, 292);
+            this.btnProductosLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnProductosLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnProductosLeft.Name = "btnProductosLeft";
             this.btnProductosLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnProductosLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnProductosLeft.Size = new System.Drawing.Size(240, 62);
             this.btnProductosLeft.TabIndex = 2;
             this.btnProductosLeft.Text = "PRODUCTOS";
             this.btnProductosLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -283,12 +349,12 @@ namespace Pantallas_Sistema_facturación
             this.btnClientesLeft.Depth = 0;
             this.btnClientesLeft.HighEmphasis = true;
             this.btnClientesLeft.Icon = null;
-            this.btnClientesLeft.Location = new System.Drawing.Point(20, 240);
-            this.btnClientesLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnClientesLeft.Location = new System.Drawing.Point(30, 372);
+            this.btnClientesLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnClientesLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClientesLeft.Name = "btnClientesLeft";
-            this.btnClientesLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnClientesLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnClientesLeft.NoAccentTextColor = Color.Empty;
+            this.btnClientesLeft.Size = new Size(160, 40);
             this.btnClientesLeft.TabIndex = 3;
             this.btnClientesLeft.Text = "CLIENTES";
             this.btnClientesLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -304,12 +370,12 @@ namespace Pantallas_Sistema_facturación
             this.btnCategoriasLeft.Depth = 0;
             this.btnCategoriasLeft.HighEmphasis = true;
             this.btnCategoriasLeft.Icon = null;
-            this.btnCategoriasLeft.Location = new System.Drawing.Point(20, 290);
-            this.btnCategoriasLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCategoriasLeft.Location = new System.Drawing.Point(30, 452);
+            this.btnCategoriasLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnCategoriasLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCategoriasLeft.Name = "btnCategoriasLeft";
             this.btnCategoriasLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCategoriasLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnCategoriasLeft.Size = new System.Drawing.Size(240, 62);
             this.btnCategoriasLeft.TabIndex = 4;
             this.btnCategoriasLeft.Text = "CATEGORÍAS";
             this.btnCategoriasLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -322,10 +388,11 @@ namespace Pantallas_Sistema_facturación
             this.lblModuloSeguridad.AutoSize = true;
             this.lblModuloSeguridad.Depth = 0;
             this.lblModuloSeguridad.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblModuloSeguridad.Location = new System.Drawing.Point(20, 160);
+            this.lblModuloSeguridad.Location = new System.Drawing.Point(30, 246);
+            this.lblModuloSeguridad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModuloSeguridad.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblModuloSeguridad.Name = "lblModuloSeguridad";
-            this.lblModuloSeguridad.Size = new System.Drawing.Size(129, 19);
+            this.lblModuloSeguridad.Size = new System.Drawing.Size(152, 19);
             this.lblModuloSeguridad.TabIndex = 6;
             this.lblModuloSeguridad.Text = "Módulo de Seguridad";
             this.lblModuloSeguridad.Visible = false;
@@ -338,12 +405,12 @@ namespace Pantallas_Sistema_facturación
             this.btnEmpleadosLeft.Depth = 0;
             this.btnEmpleadosLeft.HighEmphasis = true;
             this.btnEmpleadosLeft.Icon = null;
-            this.btnEmpleadosLeft.Location = new System.Drawing.Point(20, 190);
-            this.btnEmpleadosLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEmpleadosLeft.Location = new System.Drawing.Point(30, 292);
+            this.btnEmpleadosLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnEmpleadosLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEmpleadosLeft.Name = "btnEmpleadosLeft";
             this.btnEmpleadosLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEmpleadosLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnEmpleadosLeft.Size = new System.Drawing.Size(240, 62);
             this.btnEmpleadosLeft.TabIndex = 2;
             this.btnEmpleadosLeft.Text = "EMPLEADOS";
             this.btnEmpleadosLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -359,12 +426,12 @@ namespace Pantallas_Sistema_facturación
             this.btnRolesLeft.Depth = 0;
             this.btnRolesLeft.HighEmphasis = true;
             this.btnRolesLeft.Icon = null;
-            this.btnRolesLeft.Location = new System.Drawing.Point(20, 240);
-            this.btnRolesLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRolesLeft.Location = new System.Drawing.Point(30, 369);
+            this.btnRolesLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnRolesLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRolesLeft.Name = "btnRolesLeft";
             this.btnRolesLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnRolesLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnRolesLeft.Size = new System.Drawing.Size(240, 62);
             this.btnRolesLeft.TabIndex = 3;
             this.btnRolesLeft.Text = "ROLES";
             this.btnRolesLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -380,69 +447,74 @@ namespace Pantallas_Sistema_facturación
             this.btnSeguridadLeft.Depth = 0;
             this.btnSeguridadLeft.HighEmphasis = true;
             this.btnSeguridadLeft.Icon = null;
-            this.btnSeguridadLeft.Location = new System.Drawing.Point(20, 290);
-            this.btnSeguridadLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSeguridadLeft.Location = new System.Drawing.Point(30, 446);
+            this.btnSeguridadLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnSeguridadLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSeguridadLeft.Name = "btnSeguridadLeft";
             this.btnSeguridadLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSeguridadLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnSeguridadLeft.Size = new System.Drawing.Size(240, 62);
             this.btnSeguridadLeft.TabIndex = 4;
             this.btnSeguridadLeft.Text = "SEGURIDAD";
             this.btnSeguridadLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSeguridadLeft.UseAccentColor = false;
             this.btnSeguridadLeft.Visible = false;
             this.btnSeguridadLeft.Click += new System.EventHandler(this.btnSeguridadLeft_Click);
-
+            // 
             // lblModuloAyuda
+            // 
             this.lblModuloAyuda.AutoSize = true;
             this.lblModuloAyuda.Depth = 0;
             this.lblModuloAyuda.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblModuloAyuda.Location = new System.Drawing.Point(20, 160);
+            this.lblModuloAyuda.Location = new System.Drawing.Point(30, 246);
+            this.lblModuloAyuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModuloAyuda.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblModuloAyuda.Name = "lblModuloAyuda";
-            this.lblModuloAyuda.Size = new System.Drawing.Size(114, 19);
+            this.lblModuloAyuda.Size = new System.Drawing.Size(125, 19);
             this.lblModuloAyuda.TabIndex = 7;
             this.lblModuloAyuda.Text = "Módulo de Ayuda";
             this.lblModuloAyuda.Visible = false;
-
+            // 
             // btnAyudaLeft
+            // 
             this.btnAyudaLeft.AutoSize = false;
             this.btnAyudaLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAyudaLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnAyudaLeft.Depth = 0;
             this.btnAyudaLeft.HighEmphasis = true;
             this.btnAyudaLeft.Icon = null;
-            this.btnAyudaLeft.Location = new System.Drawing.Point(20, 190);
-            this.btnAyudaLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAyudaLeft.Location = new System.Drawing.Point(30, 292);
+            this.btnAyudaLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnAyudaLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAyudaLeft.Name = "btnAyudaLeft";
             this.btnAyudaLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAyudaLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnAyudaLeft.Size = new System.Drawing.Size(240, 62);
             this.btnAyudaLeft.TabIndex = 4;
             this.btnAyudaLeft.Text = "AYUDA";
             this.btnAyudaLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAyudaLeft.UseAccentColor = false;
             this.btnAyudaLeft.Visible = false;
             this.btnAyudaLeft.Click += new System.EventHandler(this.btnAyudaLeft_Click);
+            // 
             // btnAcercaDeLeft
+            // 
             this.btnAcercaDeLeft.AutoSize = false;
             this.btnAcercaDeLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAcercaDeLeft.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnAcercaDeLeft.Depth = 0;
             this.btnAcercaDeLeft.HighEmphasis = true;
             this.btnAcercaDeLeft.Icon = null;
-            this.btnAcercaDeLeft.Location = new System.Drawing.Point(20, 240);
-            this.btnAcercaDeLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAcercaDeLeft.Location = new System.Drawing.Point(30, 369);
+            this.btnAcercaDeLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnAcercaDeLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAcercaDeLeft.Name = "btnAcercaDeLeft";
             this.btnAcercaDeLeft.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAcercaDeLeft.Size = new System.Drawing.Size(160, 40);
+            this.btnAcercaDeLeft.Size = new System.Drawing.Size(240, 62);
             this.btnAcercaDeLeft.TabIndex = 4;
             this.btnAcercaDeLeft.Text = "ACERCA DE";
             this.btnAcercaDeLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAcercaDeLeft.UseAccentColor = false;
             this.btnAcercaDeLeft.Visible = false;
-            //this.btnAcercaDeLeft.Click += new System.EventHandler(this.btnAcercaDeLeft_Click);
+            this.btnAcercaDeLeft.Click += new System.EventHandler(this.btnAcercaDeLeft_Click);
             // 
             // btnSalir
             // 
@@ -452,12 +524,12 @@ namespace Pantallas_Sistema_facturación
             this.btnSalir.Depth = 0;
             this.btnSalir.HighEmphasis = true;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(20, 485);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalir.Location = new System.Drawing.Point(30, 746);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalir.Size = new System.Drawing.Size(160, 40);
+            this.btnSalir.Size = new System.Drawing.Size(240, 62);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir del sitio";
             this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -471,9 +543,10 @@ namespace Pantallas_Sistema_facturación
             this.pictureBoxLogo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.ErrorImage")));
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.InitialImage")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(20, 20);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(30, 31);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(160, 120);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(240, 185);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -483,27 +556,29 @@ namespace Pantallas_Sistema_facturación
             this.panelContent.AutoScroll = true;
             this.panelContent.BackColor = System.Drawing.Color.White;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(203, 124);
+            this.panelContent.Location = new System.Drawing.Point(304, 190);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1094, 640);
+            this.panelContent.Size = new System.Drawing.Size(1642, 985);
             this.panelContent.TabIndex = 2;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 767);
+            this.ClientSize = new System.Drawing.Size(1950, 1180);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
+            this.Padding = new System.Windows.Forms.Padding(4, 98, 4, 5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Facturación - Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelLeft.ResumeLayout(false);
