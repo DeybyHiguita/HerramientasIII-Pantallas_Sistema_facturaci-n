@@ -114,7 +114,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.lblPreguntaDuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 8);
             this.lblPreguntaDuda.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPreguntaDuda.Name = "lblPreguntaDuda";
-            this.lblPreguntaDuda.Size = new System.Drawing.Size(145, 19);
+            this.lblPreguntaDuda.Size = new System.Drawing.Size(157, 19);
             this.lblPreguntaDuda.TabIndex = 0;
             this.lblPreguntaDuda.Text = "¿Tienes alguna duda?";
             // 
@@ -131,9 +131,8 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.txtDuda.Margin = new System.Windows.Forms.Padding(4, 8, 15, 8);
             this.txtDuda.MaxLength = 250;
             this.txtDuda.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDuda.Multiline = true;
             this.txtDuda.Name = "txtDuda";
-            this.txtDuda.Size = new System.Drawing.Size(605, 84);
+            this.txtDuda.Size = new System.Drawing.Size(605, 50);
             this.txtDuda.TabIndex = 1;
             this.txtDuda.Text = "";
             this.txtDuda.TrailingIcon = null;
@@ -171,7 +170,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tlpSeccionContenido.RowCount = 2;
             this.tlpSeccionContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpSeccionContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSeccionContenido.Size = new System.Drawing.Size(832, 310);
+            this.tlpSeccionContenido.Size = new System.Drawing.Size(832, 320);
             this.tlpSeccionContenido.TabIndex = 2;
             // 
             // lblDescripcionAyuda
@@ -186,8 +185,8 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.lblDescripcionAyuda.Name = "lblDescripcionAyuda";
             this.lblDescripcionAyuda.Size = new System.Drawing.Size(824, 45);
             this.lblDescripcionAyuda.TabIndex = 0;
-            this.lblDescripcionAyuda.Text = "Encuentra información útil sobre cómo utilizar el sistema de facturación. Haz cl" +
-    "ic en cualquiera de las opciones para obtener ayuda específica.";
+            this.lblDescripcionAyuda.Text = "Encuentra información útil sobre cómo utilizar el sistema de facturación. Haz cli" +
+    "c en cualquiera de las opciones para obtener ayuda específica.";
             this.lblDescripcionAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpOpcionesAyuda
@@ -205,7 +204,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tlpOpcionesAyuda.Name = "tlpOpcionesAyuda";
             this.tlpOpcionesAyuda.RowCount = 1;
             this.tlpOpcionesAyuda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpOpcionesAyuda.Size = new System.Drawing.Size(824, 230);
+            this.tlpOpcionesAyuda.Size = new System.Drawing.Size(824, 240);
             this.tlpOpcionesAyuda.TabIndex = 1;
             // 
             // tlpActualizarDatos
@@ -224,7 +223,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tlpActualizarDatos.RowCount = 2;
             this.tlpActualizarDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tlpActualizarDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tlpActualizarDatos.Size = new System.Drawing.Size(258, 214);
+            this.tlpActualizarDatos.Size = new System.Drawing.Size(258, 224);
             this.tlpActualizarDatos.TabIndex = 0;
             // 
             // pnlIconoActualizar
@@ -233,7 +232,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.pnlIconoActualizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlIconoActualizar.Location = new System.Drawing.Point(18, 18);
             this.pnlIconoActualizar.Name = "pnlIconoActualizar";
-            this.pnlIconoActualizar.Size = new System.Drawing.Size(222, 113);
+            this.pnlIconoActualizar.Size = new System.Drawing.Size(222, 120);
             this.pnlIconoActualizar.TabIndex = 0;
             // 
             // lblComoActualizarDatos
@@ -241,10 +240,11 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.lblComoActualizarDatos.AutoSize = true;
             this.lblComoActualizarDatos.Depth = 0;
             this.lblComoActualizarDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblComoActualizarDatos.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblComoActualizarDatos.Location = new System.Drawing.Point(18, 134);
+            this.lblComoActualizarDatos.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblComoActualizarDatos.Location = new System.Drawing.Point(18, 141);
+            this.lblComoActualizarDatos.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblComoActualizarDatos.Name = "lblComoActualizarDatos";
-            this.lblComoActualizarDatos.Size = new System.Drawing.Size(222, 65);
+            this.lblComoActualizarDatos.Size = new System.Drawing.Size(222, 68);
             this.lblComoActualizarDatos.TabIndex = 1;
             this.lblComoActualizarDatos.Text = "¿Cómo actualizar mis datos?";
             this.lblComoActualizarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,7 +265,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tlpGenerarReporte.RowCount = 2;
             this.tlpGenerarReporte.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tlpGenerarReporte.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tlpGenerarReporte.Size = new System.Drawing.Size(258, 214);
+            this.tlpGenerarReporte.Size = new System.Drawing.Size(258, 224);
             this.tlpGenerarReporte.TabIndex = 1;
             // 
             // pnlIconoReporte
@@ -274,7 +274,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.pnlIconoReporte.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlIconoReporte.Location = new System.Drawing.Point(18, 18);
             this.pnlIconoReporte.Name = "pnlIconoReporte";
-            this.pnlIconoReporte.Size = new System.Drawing.Size(222, 113);
+            this.pnlIconoReporte.Size = new System.Drawing.Size(222, 120);
             this.pnlIconoReporte.TabIndex = 0;
             // 
             // lblGenerarReporte
@@ -282,10 +282,11 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.lblGenerarReporte.AutoSize = true;
             this.lblGenerarReporte.Depth = 0;
             this.lblGenerarReporte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGenerarReporte.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblGenerarReporte.Location = new System.Drawing.Point(18, 134);
+            this.lblGenerarReporte.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblGenerarReporte.Location = new System.Drawing.Point(18, 141);
+            this.lblGenerarReporte.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblGenerarReporte.Name = "lblGenerarReporte";
-            this.lblGenerarReporte.Size = new System.Drawing.Size(222, 65);
+            this.lblGenerarReporte.Size = new System.Drawing.Size(222, 68);
             this.lblGenerarReporte.TabIndex = 1;
             this.lblGenerarReporte.Text = "¿Cómo generar un reporte?";
             this.lblGenerarReporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,7 +307,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tlpOlvidoContrasena.RowCount = 2;
             this.tlpOlvidoContrasena.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tlpOlvidoContrasena.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tlpOlvidoContrasena.Size = new System.Drawing.Size(260, 214);
+            this.tlpOlvidoContrasena.Size = new System.Drawing.Size(260, 224);
             this.tlpOlvidoContrasena.TabIndex = 2;
             // 
             // pnlIconoContrasena
@@ -315,7 +316,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.pnlIconoContrasena.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlIconoContrasena.Location = new System.Drawing.Point(18, 18);
             this.pnlIconoContrasena.Name = "pnlIconoContrasena";
-            this.pnlIconoContrasena.Size = new System.Drawing.Size(224, 113);
+            this.pnlIconoContrasena.Size = new System.Drawing.Size(224, 120);
             this.pnlIconoContrasena.TabIndex = 0;
             // 
             // lblOlvidoContraseña
@@ -323,10 +324,11 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.lblOlvidoContraseña.AutoSize = true;
             this.lblOlvidoContraseña.Depth = 0;
             this.lblOlvidoContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOlvidoContraseña.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblOlvidoContraseña.Location = new System.Drawing.Point(18, 134);
+            this.lblOlvidoContraseña.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblOlvidoContraseña.Location = new System.Drawing.Point(18, 141);
+            this.lblOlvidoContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblOlvidoContraseña.Name = "lblOlvidoContraseña";
-            this.lblOlvidoContraseña.Size = new System.Drawing.Size(224, 65);
+            this.lblOlvidoContraseña.Size = new System.Drawing.Size(224, 68);
             this.lblOlvidoContraseña.TabIndex = 1;
             this.lblOlvidoContraseña.Text = "¿Qué hacer si olvido mi contraseña?";
             this.lblOlvidoContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,7 +341,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tlpSeccionBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpSeccionBotones.Controls.Add(this.btnSalir, 1, 0);
             this.tlpSeccionBotones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSeccionBotones.Location = new System.Drawing.Point(34, 585);
+            this.tlpSeccionBotones.Location = new System.Drawing.Point(34, 595);
             this.tlpSeccionBotones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tlpSeccionBotones.Name = "tlpSeccionBotones";
             this.tlpSeccionBotones.RowCount = 1;

@@ -61,10 +61,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.tableLayoutPanel4);
-            this.panel1.Location = new System.Drawing.Point(29, 25);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(44, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(397, 349);
+            this.panel1.Size = new System.Drawing.Size(594, 536);
             this.panel1.TabIndex = 0;
             // 
             // lblAdministracionEmpleados
@@ -74,9 +73,8 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblAdministracionEmpleados.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblAdministracionEmpleados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblAdministracionEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.lblAdministracionEmpleados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdministracionEmpleados.Name = "lblAdministracionEmpleados";
-            this.lblAdministracionEmpleados.Size = new System.Drawing.Size(249, 21);
+            this.lblAdministracionEmpleados.Size = new System.Drawing.Size(376, 32);
             this.lblAdministracionEmpleados.TabIndex = 6;
             this.lblAdministracionEmpleados.Text = "ADMINISTRACION EMPLEADOS\r\n";
             this.lblAdministracionEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,10 +82,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pantallas_Sistema_facturación.Properties.Resources.HERRAMIENTAS_III;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 98);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -105,15 +102,14 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel1.Controls.Add(this.txtDocumento, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblFechaIngreso, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.dtpFechaIngreso, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(121, 44);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(182, 68);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 92);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(390, 142);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblNombreEmpleado
@@ -121,20 +117,18 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblNombreEmpleado.AutoSize = true;
             this.lblNombreEmpleado.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblNombreEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblNombreEmpleado.Location = new System.Drawing.Point(2, 0);
-            this.lblNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreEmpleado.Location = new System.Drawing.Point(3, 0);
             this.lblNombreEmpleado.Name = "lblNombreEmpleado";
-            this.lblNombreEmpleado.Size = new System.Drawing.Size(123, 19);
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(178, 28);
             this.lblNombreEmpleado.TabIndex = 1;
             this.lblNombreEmpleado.Text = "Nombre Empleado";
             // 
             // txtNombreEmpleado
             // 
             this.txtNombreEmpleado.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(2, 25);
-            this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(3, 38);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(125, 25);
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(186, 34);
             this.txtNombreEmpleado.TabIndex = 6;
             // 
             // lblRolEmpleado
@@ -142,10 +136,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblRolEmpleado.AutoSize = true;
             this.lblRolEmpleado.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblRolEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblRolEmpleado.Location = new System.Drawing.Point(132, 0);
-            this.lblRolEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRolEmpleado.Location = new System.Drawing.Point(198, 0);
             this.lblRolEmpleado.Name = "lblRolEmpleado";
-            this.lblRolEmpleado.Size = new System.Drawing.Size(92, 19);
+            this.lblRolEmpleado.Size = new System.Drawing.Size(133, 28);
             this.lblRolEmpleado.TabIndex = 2;
             this.lblRolEmpleado.Text = "Rol Empleado";
             // 
@@ -153,10 +146,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             // 
             this.cmbRolEmleado.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbRolEmleado.FormattingEnabled = true;
-            this.cmbRolEmleado.Location = new System.Drawing.Point(132, 25);
-            this.cmbRolEmleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRolEmleado.Location = new System.Drawing.Point(198, 38);
             this.cmbRolEmleado.Name = "cmbRolEmleado";
-            this.cmbRolEmleado.Size = new System.Drawing.Size(125, 25);
+            this.cmbRolEmleado.Size = new System.Drawing.Size(186, 36);
             this.cmbRolEmleado.TabIndex = 10;
             // 
             // lblDocumento
@@ -164,20 +156,18 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblDocumento.AutoSize = true;
             this.lblDocumento.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDocumento.Location = new System.Drawing.Point(2, 46);
-            this.lblDocumento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDocumento.Location = new System.Drawing.Point(3, 70);
             this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(81, 19);
+            this.lblDocumento.Size = new System.Drawing.Size(115, 28);
             this.lblDocumento.TabIndex = 3;
             this.lblDocumento.Text = "Documento";
             // 
             // txtDocumento
             // 
             this.txtDocumento.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDocumento.Location = new System.Drawing.Point(2, 71);
-            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDocumento.Location = new System.Drawing.Point(3, 108);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(125, 25);
+            this.txtDocumento.Size = new System.Drawing.Size(186, 34);
             this.txtDocumento.TabIndex = 8;
             // 
             // lblFechaIngreso
@@ -185,10 +175,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblFechaIngreso.AutoSize = true;
             this.lblFechaIngreso.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblFechaIngreso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblFechaIngreso.Location = new System.Drawing.Point(132, 46);
-            this.lblFechaIngreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaIngreso.Location = new System.Drawing.Point(198, 70);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(94, 19);
+            this.lblFechaIngreso.Size = new System.Drawing.Size(132, 28);
             this.lblFechaIngreso.TabIndex = 5;
             this.lblFechaIngreso.Text = "Fecha Ingreso";
             // 
@@ -196,10 +185,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             // 
             this.dtpFechaIngreso.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(132, 71);
-            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(198, 108);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(125, 25);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(186, 34);
             this.dtpFechaIngreso.TabIndex = 9;
             // 
             // tableLayoutPanel2
@@ -215,15 +203,14 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel2.Controls.Add(this.lblFechaRetiro, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtTelefono, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.dtpFechaRetiro, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(121, 148);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(182, 228);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 99);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(390, 152);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // lblDireccion
@@ -231,20 +218,18 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDireccion.Location = new System.Drawing.Point(2, 0);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(3, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(65, 19);
+            this.lblDireccion.Size = new System.Drawing.Size(94, 28);
             this.lblDireccion.TabIndex = 0;
             this.lblDireccion.Text = "Dirección";
             // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDireccion.Location = new System.Drawing.Point(2, 26);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Location = new System.Drawing.Point(3, 41);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(125, 25);
+            this.txtDireccion.Size = new System.Drawing.Size(186, 34);
             this.txtDireccion.TabIndex = 7;
             // 
             // lblDatosAdicionales
@@ -252,20 +237,18 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblDatosAdicionales.AutoSize = true;
             this.lblDatosAdicionales.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblDatosAdicionales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDatosAdicionales.Location = new System.Drawing.Point(132, 48);
-            this.lblDatosAdicionales.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDatosAdicionales.Location = new System.Drawing.Point(198, 76);
             this.lblDatosAdicionales.Name = "lblDatosAdicionales";
-            this.lblDatosAdicionales.Size = new System.Drawing.Size(115, 19);
+            this.lblDatosAdicionales.Size = new System.Drawing.Size(165, 28);
             this.lblDatosAdicionales.TabIndex = 11;
             this.lblDatosAdicionales.Text = "Datos adicionales";
             // 
             // txtDatosAdicionales
             // 
             this.txtDatosAdicionales.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDatosAdicionales.Location = new System.Drawing.Point(132, 74);
-            this.txtDatosAdicionales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDatosAdicionales.Location = new System.Drawing.Point(198, 117);
             this.txtDatosAdicionales.Name = "txtDatosAdicionales";
-            this.txtDatosAdicionales.Size = new System.Drawing.Size(125, 25);
+            this.txtDatosAdicionales.Size = new System.Drawing.Size(186, 34);
             this.txtDatosAdicionales.TabIndex = 12;
             // 
             // label1
@@ -273,10 +256,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label1.Location = new System.Drawing.Point(2, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 19);
+            this.label1.Size = new System.Drawing.Size(86, 28);
             this.label1.TabIndex = 9;
             this.label1.Text = "Teléfono";
             // 
@@ -285,30 +267,27 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblFechaRetiro.AutoSize = true;
             this.lblFechaRetiro.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblFechaRetiro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblFechaRetiro.Location = new System.Drawing.Point(132, 0);
-            this.lblFechaRetiro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaRetiro.Location = new System.Drawing.Point(198, 0);
             this.lblFechaRetiro.Name = "lblFechaRetiro";
-            this.lblFechaRetiro.Size = new System.Drawing.Size(84, 19);
+            this.lblFechaRetiro.Size = new System.Drawing.Size(119, 28);
             this.lblFechaRetiro.TabIndex = 8;
             this.lblFechaRetiro.Text = "Fecha Retiro";
             // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTelefono.Location = new System.Drawing.Point(2, 74);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Location = new System.Drawing.Point(3, 117);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(125, 25);
+            this.txtTelefono.Size = new System.Drawing.Size(186, 34);
             this.txtTelefono.TabIndex = 10;
             // 
             // dtpFechaRetiro
             // 
             this.dtpFechaRetiro.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dtpFechaRetiro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRetiro.Location = new System.Drawing.Point(132, 26);
-            this.dtpFechaRetiro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaRetiro.Location = new System.Drawing.Point(198, 41);
             this.dtpFechaRetiro.Name = "dtpFechaRetiro";
-            this.dtpFechaRetiro.Size = new System.Drawing.Size(125, 25);
+            this.dtpFechaRetiro.Size = new System.Drawing.Size(186, 34);
             this.dtpFechaRetiro.TabIndex = 11;
             // 
             // tableLayoutPanel3
@@ -318,13 +297,12 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.92308F));
             this.tableLayoutPanel3.Controls.Add(this.lblEmail, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtEmail, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(121, 257);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(182, 395);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 23);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(390, 35);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // lblEmail
@@ -333,10 +311,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblEmail.Location = new System.Drawing.Point(2, 0);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Location = new System.Drawing.Point(3, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(55, 23);
+            this.lblEmail.Size = new System.Drawing.Size(83, 35);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email";
             // 
@@ -344,10 +321,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtEmail.Location = new System.Drawing.Point(61, 2);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(92, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(197, 25);
+            this.txtEmail.Size = new System.Drawing.Size(295, 34);
             this.txtEmail.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -357,12 +333,11 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnActualizar, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnSalir, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(121, 295);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(182, 454);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(260, 34);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(390, 52);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // btnActualizar
@@ -371,10 +346,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(2, 2);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(3, 3);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(123, 30);
+            this.btnActualizar.Size = new System.Drawing.Size(184, 46);
             this.btnActualizar.TabIndex = 0;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -385,10 +359,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(132, 2);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Location = new System.Drawing.Point(198, 3);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(123, 30);
+            this.btnSalir.Size = new System.Drawing.Size(184, 46);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -396,12 +369,11 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             // 
             // ucEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucEmpleado";
-            this.Size = new System.Drawing.Size(451, 393);
+            this.Size = new System.Drawing.Size(676, 605);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

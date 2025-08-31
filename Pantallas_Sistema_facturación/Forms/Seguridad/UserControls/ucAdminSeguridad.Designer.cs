@@ -36,10 +36,9 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.lblRolEmpleado);
-            this.panel1.Location = new System.Drawing.Point(50, 39);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(75, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 213);
+            this.panel1.Size = new System.Drawing.Size(566, 328);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -53,14 +52,13 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel3.Controls.Add(this.txtNombreRol, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblDescripcionRol, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblNombreRol, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(75, 69);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(112, 106);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(233, 90);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(350, 138);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // btnSalir
@@ -71,12 +69,11 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalir.HighEmphasis = true;
             this.btnSalir.Icon = null;
-            this.btnSalir.Location = new System.Drawing.Point(118, 62);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Location = new System.Drawing.Point(178, 95);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalir.Size = new System.Drawing.Size(113, 26);
+            this.btnSalir.Size = new System.Drawing.Size(169, 40);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -92,12 +89,11 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnActualizar.HighEmphasis = true;
             this.btnActualizar.Icon = null;
-            this.btnActualizar.Location = new System.Drawing.Point(2, 62);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(3, 95);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnActualizar.Size = new System.Drawing.Size(112, 26);
+            this.btnActualizar.Size = new System.Drawing.Size(169, 40);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -113,13 +109,12 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.txtDescripcionRol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDescripcionRol.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDescripcionRol.LeadingIcon = null;
-            this.txtDescripcionRol.Location = new System.Drawing.Point(118, 32);
-            this.txtDescripcionRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcionRol.Location = new System.Drawing.Point(178, 49);
             this.txtDescripcionRol.MaxLength = 200;
             this.txtDescripcionRol.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDescripcionRol.Multiline = false;
             this.txtDescripcionRol.Name = "txtDescripcionRol";
-            this.txtDescripcionRol.Size = new System.Drawing.Size(113, 50);
+            this.txtDescripcionRol.Size = new System.Drawing.Size(169, 50);
             this.txtDescripcionRol.TabIndex = 5;
             this.txtDescripcionRol.Text = "";
             this.txtDescripcionRol.TrailingIcon = null;
@@ -132,13 +127,12 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.txtNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombreRol.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombreRol.LeadingIcon = null;
-            this.txtNombreRol.Location = new System.Drawing.Point(118, 2);
-            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreRol.Location = new System.Drawing.Point(178, 3);
             this.txtNombreRol.MaxLength = 50;
             this.txtNombreRol.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombreRol.Multiline = false;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(113, 50);
+            this.txtNombreRol.Size = new System.Drawing.Size(169, 50);
             this.txtNombreRol.TabIndex = 3;
             this.txtNombreRol.Text = "";
             this.txtNombreRol.TrailingIcon = null;
@@ -149,11 +143,10 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblDescripcionRol.Depth = 0;
             this.lblDescripcionRol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDescripcionRol.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDescripcionRol.Location = new System.Drawing.Point(2, 30);
-            this.lblDescripcionRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcionRol.Location = new System.Drawing.Point(3, 46);
             this.lblDescripcionRol.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDescripcionRol.Name = "lblDescripcionRol";
-            this.lblDescripcionRol.Size = new System.Drawing.Size(112, 30);
+            this.lblDescripcionRol.Size = new System.Drawing.Size(169, 46);
             this.lblDescripcionRol.TabIndex = 4;
             this.lblDescripcionRol.Text = "Descripción Rol";
             // 
@@ -163,11 +156,10 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblNombreRol.Depth = 0;
             this.lblNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreRol.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNombreRol.Location = new System.Drawing.Point(2, 0);
-            this.lblNombreRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreRol.Location = new System.Drawing.Point(3, 0);
             this.lblNombreRol.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNombreRol.Name = "lblNombreRol";
-            this.lblNombreRol.Size = new System.Drawing.Size(112, 30);
+            this.lblNombreRol.Size = new System.Drawing.Size(169, 46);
             this.lblNombreRol.TabIndex = 0;
             this.lblNombreRol.Text = "Nombre de Rol";
             // 
@@ -179,22 +171,20 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblRolEmpleado.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblRolEmpleado.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblRolEmpleado.Location = new System.Drawing.Point(0, 0);
-            this.lblRolEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRolEmpleado.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblRolEmpleado.Name = "lblRolEmpleado";
-            this.lblRolEmpleado.Size = new System.Drawing.Size(130, 24);
+            this.lblRolEmpleado.Size = new System.Drawing.Size(147, 24);
             this.lblRolEmpleado.TabIndex = 1;
             this.lblRolEmpleado.Text = "ROL EMPLEADO";
             // 
             // ucAdminSeguridad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ucAdminSeguridad";
-            this.Size = new System.Drawing.Size(510, 300);
+            this.Size = new System.Drawing.Size(765, 462);
             this.Load += new System.EventHandler(this.ucAdminSeguridad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
