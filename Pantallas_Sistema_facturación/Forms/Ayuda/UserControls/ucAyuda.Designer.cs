@@ -29,24 +29,24 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanelItems = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelItem1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblComoActualizarDatos = new System.Windows.Forms.Label();
             this.tableLayoutPanelItem2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblGenerarReporte = new System.Windows.Forms.Label();
             this.tableLayoutPanelItem3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblOlvidoContraseña = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelBusqueda.SuspendLayout();
             this.tableLayoutPanelContenido.SuspendLayout();
             this.tableLayoutPanelItems.SuspendLayout();
             this.tableLayoutPanelItem1.SuspendLayout();
-            this.tableLayoutPanelItem2.SuspendLayout();
-            this.tableLayoutPanelItem3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanelItem2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanelItem3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,14 +58,14 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelBusqueda, 0, 1);
             this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelContenido, 0, 2);
             this.tableLayoutPanelMain.Controls.Add(this.btnSalir, 0, 3);
-            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 3);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             this.tableLayoutPanelMain.RowCount = 4;
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelMain.Size = new System.Drawing.Size(760, 534);
+            this.tableLayoutPanelMain.Size = new System.Drawing.Size(760, 531);
             this.tableLayoutPanelMain.TabIndex = 0;
             // 
             // lblAyuda
@@ -94,7 +94,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelBusqueda.RowCount = 2;
             this.tableLayoutPanelBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelBusqueda.Size = new System.Drawing.Size(754, 127);
+            this.tableLayoutPanelBusqueda.Size = new System.Drawing.Size(754, 126);
             this.tableLayoutPanelBusqueda.TabIndex = 1;
             // 
             // lblNombreRol
@@ -137,12 +137,12 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelContenido.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelContenido.Controls.Add(this.tableLayoutPanelItems, 0, 1);
             this.tableLayoutPanelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelContenido.Location = new System.Drawing.Point(3, 189);
+            this.tableLayoutPanelContenido.Location = new System.Drawing.Point(3, 188);
             this.tableLayoutPanelContenido.Name = "tableLayoutPanelContenido";
             this.tableLayoutPanelContenido.RowCount = 2;
             this.tableLayoutPanelContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanelContenido.Size = new System.Drawing.Size(754, 287);
+            this.tableLayoutPanelContenido.Size = new System.Drawing.Size(754, 286);
             this.tableLayoutPanelContenido.TabIndex = 2;
             // 
             // label1
@@ -170,7 +170,7 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelItems.Name = "tableLayoutPanelItems";
             this.tableLayoutPanelItems.RowCount = 1;
             this.tableLayoutPanelItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelItems.Size = new System.Drawing.Size(748, 210);
+            this.tableLayoutPanelItems.Size = new System.Drawing.Size(748, 209);
             this.tableLayoutPanelItems.TabIndex = 1;
             // 
             // tableLayoutPanelItem1
@@ -185,13 +185,25 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelItem1.RowCount = 2;
             this.tableLayoutPanelItem1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanelItem1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelItem1.Size = new System.Drawing.Size(243, 204);
+            this.tableLayoutPanelItem1.Size = new System.Drawing.Size(243, 203);
             this.tableLayoutPanelItem1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources.customer_data_icon_flat_vector;
+            this.pictureBox1.Image = global::Pantallas_Sistema_facturación.Properties.Resources.customer_data_icon_flat_vector;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblComoActualizarDatos
             // 
             this.lblComoActualizarDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblComoActualizarDatos.Location = new System.Drawing.Point(3, 122);
+            this.lblComoActualizarDatos.Location = new System.Drawing.Point(3, 121);
             this.lblComoActualizarDatos.Name = "lblComoActualizarDatos";
             this.lblComoActualizarDatos.Size = new System.Drawing.Size(237, 82);
             this.lblComoActualizarDatos.TabIndex = 1;
@@ -210,13 +222,25 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelItem2.RowCount = 2;
             this.tableLayoutPanelItem2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanelItem2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelItem2.Size = new System.Drawing.Size(243, 204);
+            this.tableLayoutPanelItem2.Size = new System.Drawing.Size(243, 203);
             this.tableLayoutPanelItem2.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources._2278946;
+            this.pictureBox2.Image = global::Pantallas_Sistema_facturación.Properties.Resources._2278946;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(237, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // lblGenerarReporte
             // 
             this.lblGenerarReporte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGenerarReporte.Location = new System.Drawing.Point(3, 122);
+            this.lblGenerarReporte.Location = new System.Drawing.Point(3, 121);
             this.lblGenerarReporte.Name = "lblGenerarReporte";
             this.lblGenerarReporte.Size = new System.Drawing.Size(237, 82);
             this.lblGenerarReporte.TabIndex = 1;
@@ -235,13 +259,25 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelItem3.RowCount = 2;
             this.tableLayoutPanelItem3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanelItem3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelItem3.Size = new System.Drawing.Size(244, 204);
+            this.tableLayoutPanelItem3.Size = new System.Drawing.Size(244, 203);
             this.tableLayoutPanelItem3.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources.images;
+            this.pictureBox3.Image = global::Pantallas_Sistema_facturación.Properties.Resources.images;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(238, 115);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // lblOlvidoContraseña
             // 
             this.lblOlvidoContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOlvidoContraseña.Location = new System.Drawing.Point(3, 122);
+            this.lblOlvidoContraseña.Location = new System.Drawing.Point(3, 121);
             this.lblOlvidoContraseña.Name = "lblOlvidoContraseña";
             this.lblOlvidoContraseña.Size = new System.Drawing.Size(238, 82);
             this.lblOlvidoContraseña.TabIndex = 1;
@@ -255,48 +291,12 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(663, 482);
+            this.btnSalir.Location = new System.Drawing.Point(663, 480);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(94, 49);
+            this.btnSalir.Size = new System.Drawing.Size(94, 48);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources.customer_data_icon_flat_vector;
-            this.pictureBox1.Image = global::Pantallas_Sistema_facturación.Properties.Resources.customer_data_icon_flat_vector;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources._2278946;
-            this.pictureBox2.Image = global::Pantallas_Sistema_facturación.Properties.Resources._2278946;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources.images;
-            this.pictureBox3.Image = global::Pantallas_Sistema_facturación.Properties.Resources.images;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(238, 116);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // ucAyuda
             // 
@@ -309,10 +309,10 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
             this.tableLayoutPanelContenido.ResumeLayout(false);
             this.tableLayoutPanelItems.ResumeLayout(false);
             this.tableLayoutPanelItem1.ResumeLayout(false);
-            this.tableLayoutPanelItem2.ResumeLayout(false);
-            this.tableLayoutPanelItem3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanelItem2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanelItem3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
