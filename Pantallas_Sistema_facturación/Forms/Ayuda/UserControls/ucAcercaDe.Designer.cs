@@ -468,11 +468,11 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda
             this.panel5.Size = new System.Drawing.Size(817, 594);
             this.panel5.TabIndex = 23;
             // 
-            // ucAyuda
+            // ucAcercaDe
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel5);
-            this.Name = "ucAyuda";
+            this.Name = "ucAcercaDe";
             this.Size = new System.Drawing.Size(827, 622);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
