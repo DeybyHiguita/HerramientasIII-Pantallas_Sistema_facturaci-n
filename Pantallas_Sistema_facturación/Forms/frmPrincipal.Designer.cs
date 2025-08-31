@@ -21,19 +21,16 @@ namespace Pantallas_Sistema_facturación
         private MaterialButton btnFacturacion;
         private MaterialButton btnSeguridad;
 
-        // Nuevos botones para el panel izquierdo de tablas
         private MaterialLabel lblModuloTablas;
         private MaterialButton btnProductosLeft;
         private MaterialButton btnClientesLeft;
         private MaterialButton btnCategoriasLeft;
 
-        // Nuevos botones para el panel izquierdo de Seguridad
         private MaterialLabel lblModuloSeguridad;
         private MaterialButton btnEmpleadosLeft;
         private MaterialButton btnRolesLeft;
         private MaterialButton btnSeguridadLeft;
 
-        // Nuevos botones para el panel izquierdo de Ayuda
         private MaterialLabel lblModuloAyuda;
         private MaterialButton btnAyudaLeft;
         private MaterialButton btnAcercaDeLeft;
