@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
 {
@@ -15,56 +10,117 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
         public ucAdminSeguridad()
         {
             InitializeComponent();
+            ConfigurarContenidoFormulario();
+        }
+
+        private void ucAdminSeguridad_Load(object sender, EventArgs e)
+        {
+            ConfigurarValidacion();
+        }
+
+        private void ConfigurarContenidoFormulario()
+        {
+            this.BackColor = Color.White;
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new Size(20, 20);
+        }
+
+        private void ConfigurarValidacion()
+        {
+            if (txtNombreRol != null)
+            {
+                txtNombreRol.KeyPress += ValidarTextoAlfanumerico_KeyPress;
+            }
+        }
+
+        private void ValidarTextoAlfanumerico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                string Mensaje = $"Configuración de seguridad actualizada:\n\n" +
+                                $"Rol: {txtNombreRol.Text}\n" +
+                                $"Descripción: {txtDescripcionRol.Text}";
+                
+                MessageBox.Show(Mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show(
+            var Resultado = MessageBox.Show(
                 "¿Está seguro que desea salir sin guardar?",
-                "Confirmar salida",
+                "Confirmar Salida",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
+            if (Resultado == DialogResult.Yes)
             {
-                ClearFields();       
+                LimpiarCampos();       
                 this.Visible = false;
             }
         }
 
-        private void ClearFields()
+        private bool ValidarCampos()
         {
-            void Clear(Control c)
+            if (string.IsNullOrWhiteSpace(txtNombreRol.Text))
             {
-                switch (c)
+                MessageBox.Show("El nombre del rol es requerido", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreRol.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDescripcionRol.Text))
+            {
+                MessageBox.Show("La descripción del rol es requerida", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDescripcionRol.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        private void LimpiarCampos()
+        {
+            void Limpiar(Control Control)
+            {
+                switch (Control)
                 {
-                    case TextBoxBase tb:
-                        tb.Clear();
+                    case TextBoxBase CuadroTexto:
+                        CuadroTexto.Clear();
                         break;
-                    case ComboBox cb:
-                        cb.SelectedIndex = -1;
-                        cb.Text = string.Empty;
+                    case ComboBox ComboBox:
+                        ComboBox.SelectedIndex = -1;
+                        ComboBox.Text = string.Empty;
                         break;
-                    case CheckBox chk:
-                        chk.Checked = false;
+                    case CheckBox CasillaVerificacion:
+                        CasillaVerificacion.Checked = false;
                         break;
-                    case RadioButton rb:
-                        rb.Checked = false;
+                    case RadioButton BotonRadio:
+                        BotonRadio.Checked = false;
                         break;
-                    case NumericUpDown nud:
-                        nud.Value = nud.Minimum;
+                    case NumericUpDown ControlNumerico:
+                        ControlNumerico.Value = ControlNumerico.Minimum;
                         break;
-                    case DateTimePicker dtp:
-                        dtp.Value = DateTime.Now;
+                    case DateTimePicker SelectorFecha:
+                        SelectorFecha.Value = DateTime.Now;
                         break;
                 }
 
-                foreach (Control child in c.Controls)
-                    Clear(child);
+                foreach (Control ControlHijo in Control.Controls)
+                    Limpiar(ControlHijo);
             }
 
-            Clear(this);
+            Limpiar(this);
         }
-
     }
 }

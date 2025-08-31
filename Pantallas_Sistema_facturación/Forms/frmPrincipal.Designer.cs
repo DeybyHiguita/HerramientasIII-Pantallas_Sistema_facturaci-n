@@ -1,5 +1,4 @@
-﻿
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 
@@ -353,8 +352,8 @@ namespace Pantallas_Sistema_facturación
             this.btnClientesLeft.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnClientesLeft.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClientesLeft.Name = "btnClientesLeft";
-            this.btnClientesLeft.NoAccentTextColor = Color.Empty;
-            this.btnClientesLeft.Size = new Size(160, 40);
+            this.btnClientesLeft.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnClientesLeft.Size = new System.Drawing.Size(240, 62);
             this.btnClientesLeft.TabIndex = 3;
             this.btnClientesLeft.Text = "CLIENTES";
             this.btnClientesLeft.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;

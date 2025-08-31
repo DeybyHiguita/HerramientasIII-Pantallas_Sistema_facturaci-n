@@ -1,12 +1,7 @@
 ﻿using Pantallas_Sistema_facturación.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
@@ -16,6 +11,14 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         public ucCategoriasProductos()
         {
             InitializeComponent();
+            ConfigurarContenidoFormulario();
+        }
+
+        private void ConfigurarContenidoFormulario()
+        {
+            this.BackColor = Color.White;
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new Size(20, 20);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -30,7 +33,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var ResultadoConfirmacion = MessageBox.Show("¿Está seguro que desea salir sin guardar?",
-                "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "Confirmar Salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (ResultadoConfirmacion == DialogResult.Yes)
             {
@@ -92,20 +95,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             txtId.Focus();
         }
 
-        private void lblNombreProducto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
-        /// Obtiene los datos de la categoría ingresados en el formulario
-        /// </summary>
-        /// <returns>Datos de la categoría o null si hay errores de validación</returns>
         public DatosCategoria ObtenerDatosCategoria()
         {
             if (!ValidarCampos()) return null;
@@ -117,48 +106,30 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             };
         }
 
-        /// <summary>
-        /// Carga los datos de una categoría en el formulario
-        /// </summary>
-        /// <param name="categoriaCarga">Datos de la categoría a cargar</param>
-        public void CargarCategoria(DatosCategoria categoriaCarga)
+        public void CargarCategoria(DatosCategoria CategoriaCarga)
         {
-            if (categoriaCarga != null)
+            if (CategoriaCarga != null)
             {
-                txtId.Text = categoriaCarga.IdentificadorCategoria.ToString();
-                txtNombrecategoria.Text = categoriaCarga.NombreCategoria;
+                txtId.Text = CategoriaCarga.IdentificadorCategoria.ToString();
+                txtNombrecategoria.Text = CategoriaCarga.NombreCategoria;
             }
         }
+
+        private void lblNombreProducto_Click(object sender, EventArgs e) { }
+        private void lblTitulo_Click(object sender, EventArgs e) { }
     }
 
-    /// <summary>
-    /// Representa los datos de una categoría de producto
-    /// </summary>
     public class DatosCategoria
     {
-        /// <summary>
-        /// Identificador único de la categoría
-        /// </summary>
         public int IdentificadorCategoria { get; set; }
-
-        /// <summary>
-        /// Nombre descriptivo de la categoría
-        /// </summary>
         public string NombreCategoria { get; set; }
 
-        /// <summary>
-        /// Constructor por defecto
-        /// </summary>
         public DatosCategoria()
         {
             IdentificadorCategoria = 0;
             NombreCategoria = string.Empty;
         }
 
-        /// <summary>
-        /// Valida que los datos de la categoría sean correctos
-        /// </summary>
-        /// <returns>Verdadero si los datos son válidos</returns>
         public bool ValidarDatos()
         {
             return IdentificadorCategoria > 0 && 
@@ -166,10 +137,6 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                    NombreCategoria.Length >= 3;
         }
 
-        /// <summary>
-        /// Obtiene una representación en cadena de la categoría
-        /// </summary>
-        /// <returns>Representación en cadena de la categoría</returns>
         public override string ToString()
         {
             return $"Categoría: {NombreCategoria} (ID: {IdentificadorCategoria})";

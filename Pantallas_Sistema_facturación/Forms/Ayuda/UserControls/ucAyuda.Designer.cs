@@ -19,325 +19,401 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
 
         private void InitializeComponent()
         {
-            this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
-            this.lblAyuda = new System.Windows.Forms.Label();
-            this.tableLayoutPanelBusqueda = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNombreRol = new System.Windows.Forms.Label();
-            this.txtDuda = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.tableLayoutPanelContenido = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanelItems = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanelItem1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblComoActualizarDatos = new System.Windows.Forms.Label();
-            this.tableLayoutPanelItem2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblGenerarReporte = new System.Windows.Forms.Label();
-            this.tableLayoutPanelItem3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblOlvidoContraseña = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.tableLayoutPanelMain.SuspendLayout();
-            this.tableLayoutPanelBusqueda.SuspendLayout();
-            this.tableLayoutPanelContenido.SuspendLayout();
-            this.tableLayoutPanelItems.SuspendLayout();
-            this.tableLayoutPanelItem1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanelItem2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tableLayoutPanelItem3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTituloAyuda = new MaterialSkin.Controls.MaterialLabel();
+            this.tlpSeccionBusqueda = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPreguntaDuda = new MaterialSkin.Controls.MaterialLabel();
+            this.txtDuda = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
+            this.tlpSeccionContenido = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDescripcionAyuda = new MaterialSkin.Controls.MaterialLabel();
+            this.tlpOpcionesAyuda = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpActualizarDatos = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlIconoActualizar = new System.Windows.Forms.Panel();
+            this.lblComoActualizarDatos = new MaterialSkin.Controls.MaterialLabel();
+            this.tlpGenerarReporte = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlIconoReporte = new System.Windows.Forms.Panel();
+            this.lblGenerarReporte = new MaterialSkin.Controls.MaterialLabel();
+            this.tlpOlvidoContrasena = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlIconoContrasena = new System.Windows.Forms.Panel();
+            this.lblOlvidoContraseña = new MaterialSkin.Controls.MaterialLabel();
+            this.tlpSeccionBotones = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSalir = new MaterialSkin.Controls.MaterialButton();
+            this.tlpPrincipal.SuspendLayout();
+            this.tlpSeccionBusqueda.SuspendLayout();
+            this.tlpSeccionContenido.SuspendLayout();
+            this.tlpOpcionesAyuda.SuspendLayout();
+            this.tlpActualizarDatos.SuspendLayout();
+            this.tlpGenerarReporte.SuspendLayout();
+            this.tlpOlvidoContrasena.SuspendLayout();
+            this.tlpSeccionBotones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanelMain
+            // tlpPrincipal
             // 
-            this.tableLayoutPanelMain.ColumnCount = 1;
-            this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelMain.Controls.Add(this.lblAyuda, 0, 0);
-            this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelBusqueda, 0, 1);
-            this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelContenido, 0, 2);
-            this.tableLayoutPanelMain.Controls.Add(this.btnSalir, 0, 3);
-            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 3);
-            this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
-            this.tableLayoutPanelMain.RowCount = 4;
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelMain.Size = new System.Drawing.Size(760, 531);
-            this.tableLayoutPanelMain.TabIndex = 0;
+            this.tlpPrincipal.BackColor = System.Drawing.Color.White;
+            this.tlpPrincipal.ColumnCount = 1;
+            this.tlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrincipal.Controls.Add(this.lblTituloAyuda, 0, 0);
+            this.tlpPrincipal.Controls.Add(this.tlpSeccionBusqueda, 0, 1);
+            this.tlpPrincipal.Controls.Add(this.tlpSeccionContenido, 0, 2);
+            this.tlpPrincipal.Controls.Add(this.tlpSeccionBotones, 0, 3);
+            this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpPrincipal.Name = "tlpPrincipal";
+            this.tlpPrincipal.Padding = new System.Windows.Forms.Padding(30);
+            this.tlpPrincipal.RowCount = 4;
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpPrincipal.Size = new System.Drawing.Size(900, 700);
+            this.tlpPrincipal.TabIndex = 0;
             // 
-            // lblAyuda
+            // lblTituloAyuda
             // 
-            this.lblAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAyuda.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblAyuda.Location = new System.Drawing.Point(3, 0);
-            this.lblAyuda.Name = "lblAyuda";
-            this.lblAyuda.Size = new System.Drawing.Size(754, 53);
-            this.lblAyuda.TabIndex = 0;
-            this.lblAyuda.Text = "AYUDA";
-            this.lblAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTituloAyuda.AutoSize = true;
+            this.lblTituloAyuda.Depth = 0;
+            this.lblTituloAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTituloAyuda.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblTituloAyuda.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            this.lblTituloAyuda.Location = new System.Drawing.Point(34, 30);
+            this.lblTituloAyuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 15);
+            this.lblTituloAyuda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTituloAyuda.Name = "lblTituloAyuda";
+            this.lblTituloAyuda.Size = new System.Drawing.Size(832, 65);
+            this.lblTituloAyuda.TabIndex = 0;
+            this.lblTituloAyuda.Text = "CENTRO DE AYUDA";
+            this.lblTituloAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanelBusqueda
+            // tlpSeccionBusqueda
             // 
-            this.tableLayoutPanelBusqueda.ColumnCount = 2;
-            this.tableLayoutPanelBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanelBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanelBusqueda.Controls.Add(this.lblNombreRol, 0, 0);
-            this.tableLayoutPanelBusqueda.Controls.Add(this.txtDuda, 0, 1);
-            this.tableLayoutPanelBusqueda.Controls.Add(this.btnBuscar, 1, 1);
-            this.tableLayoutPanelBusqueda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelBusqueda.Location = new System.Drawing.Point(3, 56);
-            this.tableLayoutPanelBusqueda.Name = "tableLayoutPanelBusqueda";
-            this.tableLayoutPanelBusqueda.RowCount = 2;
-            this.tableLayoutPanelBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelBusqueda.Size = new System.Drawing.Size(754, 126);
-            this.tableLayoutPanelBusqueda.TabIndex = 1;
+            this.tlpSeccionBusqueda.ColumnCount = 2;
+            this.tlpSeccionBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlpSeccionBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpSeccionBusqueda.Controls.Add(this.lblPreguntaDuda, 0, 0);
+            this.tlpSeccionBusqueda.Controls.Add(this.txtDuda, 0, 1);
+            this.tlpSeccionBusqueda.Controls.Add(this.btnBuscar, 1, 1);
+            this.tlpSeccionBusqueda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpSeccionBusqueda.Location = new System.Drawing.Point(34, 115);
+            this.tlpSeccionBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpSeccionBusqueda.Name = "tlpSeccionBusqueda";
+            this.tlpSeccionBusqueda.RowCount = 2;
+            this.tlpSeccionBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlpSeccionBusqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSeccionBusqueda.Size = new System.Drawing.Size(832, 140);
+            this.tlpSeccionBusqueda.TabIndex = 1;
             // 
-            // lblNombreRol
+            // lblPreguntaDuda
             // 
-            this.lblNombreRol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNombreRol.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblNombreRol.Location = new System.Drawing.Point(3, 0);
-            this.lblNombreRol.Name = "lblNombreRol";
-            this.lblNombreRol.Size = new System.Drawing.Size(521, 20);
-            this.lblNombreRol.TabIndex = 0;
-            this.lblNombreRol.Text = "¿Tienes alguna duda?";
-            this.lblNombreRol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPreguntaDuda.AutoSize = true;
+            this.lblPreguntaDuda.Depth = 0;
+            this.lblPreguntaDuda.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPreguntaDuda.Location = new System.Drawing.Point(4, 0);
+            this.lblPreguntaDuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 8);
+            this.lblPreguntaDuda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPreguntaDuda.Name = "lblPreguntaDuda";
+            this.lblPreguntaDuda.Size = new System.Drawing.Size(145, 19);
+            this.lblPreguntaDuda.TabIndex = 0;
+            this.lblPreguntaDuda.Text = "¿Tienes alguna duda?";
             // 
             // txtDuda
             // 
+            this.txtDuda.AnimateReadOnly = false;
+            this.txtDuda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDuda.Depth = 0;
             this.txtDuda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDuda.Location = new System.Drawing.Point(3, 23);
+            this.txtDuda.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDuda.Hint = "Escribe tu pregunta aquí...";
+            this.txtDuda.LeadingIcon = null;
+            this.txtDuda.Location = new System.Drawing.Point(4, 48);
+            this.txtDuda.Margin = new System.Windows.Forms.Padding(4, 8, 15, 8);
+            this.txtDuda.MaxLength = 250;
+            this.txtDuda.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDuda.Multiline = true;
             this.txtDuda.Name = "txtDuda";
-            this.txtDuda.Size = new System.Drawing.Size(521, 26);
+            this.txtDuda.Size = new System.Drawing.Size(605, 84);
             this.txtDuda.TabIndex = 1;
+            this.txtDuda.Text = "";
+            this.txtDuda.TrailingIcon = null;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscar.BackColor = System.Drawing.Color.Purple;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(592, 23);
+            this.btnBuscar.AutoSize = false;
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscar.HighEmphasis = true;
+            this.btnBuscar.Icon = null;
+            this.btnBuscar.Location = new System.Drawing.Point(628, 48);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(96, 54);
+            this.btnBuscar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Size = new System.Drawing.Size(200, 84);
             this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscar.UseAccentColor = false;
             // 
-            // tableLayoutPanelContenido
+            // tlpSeccionContenido
             // 
-            this.tableLayoutPanelContenido.ColumnCount = 1;
-            this.tableLayoutPanelContenido.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelContenido.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanelContenido.Controls.Add(this.tableLayoutPanelItems, 0, 1);
-            this.tableLayoutPanelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelContenido.Location = new System.Drawing.Point(3, 188);
-            this.tableLayoutPanelContenido.Name = "tableLayoutPanelContenido";
-            this.tableLayoutPanelContenido.RowCount = 2;
-            this.tableLayoutPanelContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanelContenido.Size = new System.Drawing.Size(754, 286);
-            this.tableLayoutPanelContenido.TabIndex = 2;
+            this.tlpSeccionContenido.ColumnCount = 1;
+            this.tlpSeccionContenido.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSeccionContenido.Controls.Add(this.lblDescripcionAyuda, 0, 0);
+            this.tlpSeccionContenido.Controls.Add(this.tlpOpcionesAyuda, 0, 1);
+            this.tlpSeccionContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpSeccionContenido.Location = new System.Drawing.Point(34, 265);
+            this.tlpSeccionContenido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpSeccionContenido.Name = "tlpSeccionContenido";
+            this.tlpSeccionContenido.RowCount = 2;
+            this.tlpSeccionContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpSeccionContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSeccionContenido.Size = new System.Drawing.Size(832, 310);
+            this.tlpSeccionContenido.TabIndex = 2;
             // 
-            // label1
+            // lblDescripcionAyuda
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(748, 71);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Aquí puedes encontrar información útil sobre cómo utilizar el sistema.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDescripcionAyuda.AutoSize = true;
+            this.lblDescripcionAyuda.Depth = 0;
+            this.lblDescripcionAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDescripcionAyuda.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblDescripcionAyuda.Location = new System.Drawing.Point(4, 0);
+            this.lblDescripcionAyuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 15);
+            this.lblDescripcionAyuda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblDescripcionAyuda.Name = "lblDescripcionAyuda";
+            this.lblDescripcionAyuda.Size = new System.Drawing.Size(824, 45);
+            this.lblDescripcionAyuda.TabIndex = 0;
+            this.lblDescripcionAyuda.Text = "Encuentra información útil sobre cómo utilizar el sistema de facturación. Haz cl" +
+    "ic en cualquiera de las opciones para obtener ayuda específica.";
+            this.lblDescripcionAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tableLayoutPanelItems
+            // tlpOpcionesAyuda
             // 
-            this.tableLayoutPanelItems.ColumnCount = 3;
-            this.tableLayoutPanelItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanelItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanelItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanelItems.Controls.Add(this.tableLayoutPanelItem1, 0, 0);
-            this.tableLayoutPanelItems.Controls.Add(this.tableLayoutPanelItem2, 1, 0);
-            this.tableLayoutPanelItems.Controls.Add(this.tableLayoutPanelItem3, 2, 0);
-            this.tableLayoutPanelItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelItems.Location = new System.Drawing.Point(3, 74);
-            this.tableLayoutPanelItems.Name = "tableLayoutPanelItems";
-            this.tableLayoutPanelItems.RowCount = 1;
-            this.tableLayoutPanelItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelItems.Size = new System.Drawing.Size(748, 209);
-            this.tableLayoutPanelItems.TabIndex = 1;
+            this.tlpOpcionesAyuda.ColumnCount = 3;
+            this.tlpOpcionesAyuda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpOpcionesAyuda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpOpcionesAyuda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tlpOpcionesAyuda.Controls.Add(this.tlpActualizarDatos, 0, 0);
+            this.tlpOpcionesAyuda.Controls.Add(this.tlpGenerarReporte, 1, 0);
+            this.tlpOpcionesAyuda.Controls.Add(this.tlpOlvidoContrasena, 2, 0);
+            this.tlpOpcionesAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpOpcionesAyuda.Location = new System.Drawing.Point(4, 75);
+            this.tlpOpcionesAyuda.Margin = new System.Windows.Forms.Padding(4, 15, 4, 5);
+            this.tlpOpcionesAyuda.Name = "tlpOpcionesAyuda";
+            this.tlpOpcionesAyuda.RowCount = 1;
+            this.tlpOpcionesAyuda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpOpcionesAyuda.Size = new System.Drawing.Size(824, 230);
+            this.tlpOpcionesAyuda.TabIndex = 1;
             // 
-            // tableLayoutPanelItem1
+            // tlpActualizarDatos
             // 
-            this.tableLayoutPanelItem1.ColumnCount = 1;
-            this.tableLayoutPanelItem1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelItem1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanelItem1.Controls.Add(this.lblComoActualizarDatos, 0, 1);
-            this.tableLayoutPanelItem1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelItem1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanelItem1.Name = "tableLayoutPanelItem1";
-            this.tableLayoutPanelItem1.RowCount = 2;
-            this.tableLayoutPanelItem1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanelItem1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelItem1.Size = new System.Drawing.Size(243, 203);
-            this.tableLayoutPanelItem1.TabIndex = 0;
+            this.tlpActualizarDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.tlpActualizarDatos.ColumnCount = 1;
+            this.tlpActualizarDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpActualizarDatos.Controls.Add(this.pnlIconoActualizar, 0, 0);
+            this.tlpActualizarDatos.Controls.Add(this.lblComoActualizarDatos, 0, 1);
+            this.tlpActualizarDatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpActualizarDatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpActualizarDatos.Location = new System.Drawing.Point(8, 8);
+            this.tlpActualizarDatos.Margin = new System.Windows.Forms.Padding(8);
+            this.tlpActualizarDatos.Name = "tlpActualizarDatos";
+            this.tlpActualizarDatos.Padding = new System.Windows.Forms.Padding(15);
+            this.tlpActualizarDatos.RowCount = 2;
+            this.tlpActualizarDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tlpActualizarDatos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tlpActualizarDatos.Size = new System.Drawing.Size(258, 214);
+            this.tlpActualizarDatos.TabIndex = 0;
             // 
-            // pictureBox1
+            // pnlIconoActualizar
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources.customer_data_icon_flat_vector;
-            this.pictureBox1.Image = global::Pantallas_Sistema_facturación.Properties.Resources.customer_data_icon_flat_vector;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pnlIconoActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(135)))), ((int)(((byte)(195)))));
+            this.pnlIconoActualizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlIconoActualizar.Location = new System.Drawing.Point(18, 18);
+            this.pnlIconoActualizar.Name = "pnlIconoActualizar";
+            this.pnlIconoActualizar.Size = new System.Drawing.Size(222, 113);
+            this.pnlIconoActualizar.TabIndex = 0;
             // 
             // lblComoActualizarDatos
             // 
+            this.lblComoActualizarDatos.AutoSize = true;
+            this.lblComoActualizarDatos.Depth = 0;
             this.lblComoActualizarDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblComoActualizarDatos.Location = new System.Drawing.Point(3, 121);
+            this.lblComoActualizarDatos.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblComoActualizarDatos.Location = new System.Drawing.Point(18, 134);
             this.lblComoActualizarDatos.Name = "lblComoActualizarDatos";
-            this.lblComoActualizarDatos.Size = new System.Drawing.Size(237, 82);
+            this.lblComoActualizarDatos.Size = new System.Drawing.Size(222, 65);
             this.lblComoActualizarDatos.TabIndex = 1;
-            this.lblComoActualizarDatos.Text = "¿Cómo actualizo mis datos?";
+            this.lblComoActualizarDatos.Text = "¿Cómo actualizar mis datos?";
             this.lblComoActualizarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanelItem2
+            // tlpGenerarReporte
             // 
-            this.tableLayoutPanelItem2.ColumnCount = 1;
-            this.tableLayoutPanelItem2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelItem2.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanelItem2.Controls.Add(this.lblGenerarReporte, 0, 1);
-            this.tableLayoutPanelItem2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelItem2.Location = new System.Drawing.Point(252, 3);
-            this.tableLayoutPanelItem2.Name = "tableLayoutPanelItem2";
-            this.tableLayoutPanelItem2.RowCount = 2;
-            this.tableLayoutPanelItem2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanelItem2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelItem2.Size = new System.Drawing.Size(243, 203);
-            this.tableLayoutPanelItem2.TabIndex = 1;
+            this.tlpGenerarReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.tlpGenerarReporte.ColumnCount = 1;
+            this.tlpGenerarReporte.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGenerarReporte.Controls.Add(this.pnlIconoReporte, 0, 0);
+            this.tlpGenerarReporte.Controls.Add(this.lblGenerarReporte, 0, 1);
+            this.tlpGenerarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpGenerarReporte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpGenerarReporte.Location = new System.Drawing.Point(282, 8);
+            this.tlpGenerarReporte.Margin = new System.Windows.Forms.Padding(8);
+            this.tlpGenerarReporte.Name = "tlpGenerarReporte";
+            this.tlpGenerarReporte.Padding = new System.Windows.Forms.Padding(15);
+            this.tlpGenerarReporte.RowCount = 2;
+            this.tlpGenerarReporte.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tlpGenerarReporte.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tlpGenerarReporte.Size = new System.Drawing.Size(258, 214);
+            this.tlpGenerarReporte.TabIndex = 1;
             // 
-            // pictureBox2
+            // pnlIconoReporte
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources._2278946;
-            this.pictureBox2.Image = global::Pantallas_Sistema_facturación.Properties.Resources._2278946;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 115);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pnlIconoReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(107)))), ((int)(((byte)(168)))));
+            this.pnlIconoReporte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlIconoReporte.Location = new System.Drawing.Point(18, 18);
+            this.pnlIconoReporte.Name = "pnlIconoReporte";
+            this.pnlIconoReporte.Size = new System.Drawing.Size(222, 113);
+            this.pnlIconoReporte.TabIndex = 0;
             // 
             // lblGenerarReporte
             // 
+            this.lblGenerarReporte.AutoSize = true;
+            this.lblGenerarReporte.Depth = 0;
             this.lblGenerarReporte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGenerarReporte.Location = new System.Drawing.Point(3, 121);
+            this.lblGenerarReporte.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblGenerarReporte.Location = new System.Drawing.Point(18, 134);
             this.lblGenerarReporte.Name = "lblGenerarReporte";
-            this.lblGenerarReporte.Size = new System.Drawing.Size(237, 82);
+            this.lblGenerarReporte.Size = new System.Drawing.Size(222, 65);
             this.lblGenerarReporte.TabIndex = 1;
-            this.lblGenerarReporte.Text = "¿Cómo genero un reporte?";
+            this.lblGenerarReporte.Text = "¿Cómo generar un reporte?";
             this.lblGenerarReporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanelItem3
+            // tlpOlvidoContrasena
             // 
-            this.tableLayoutPanelItem3.ColumnCount = 1;
-            this.tableLayoutPanelItem3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelItem3.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanelItem3.Controls.Add(this.lblOlvidoContraseña, 0, 1);
-            this.tableLayoutPanelItem3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelItem3.Location = new System.Drawing.Point(501, 3);
-            this.tableLayoutPanelItem3.Name = "tableLayoutPanelItem3";
-            this.tableLayoutPanelItem3.RowCount = 2;
-            this.tableLayoutPanelItem3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanelItem3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelItem3.Size = new System.Drawing.Size(244, 203);
-            this.tableLayoutPanelItem3.TabIndex = 2;
+            this.tlpOlvidoContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.tlpOlvidoContrasena.ColumnCount = 1;
+            this.tlpOlvidoContrasena.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpOlvidoContrasena.Controls.Add(this.pnlIconoContrasena, 0, 0);
+            this.tlpOlvidoContrasena.Controls.Add(this.lblOlvidoContraseña, 0, 1);
+            this.tlpOlvidoContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpOlvidoContrasena.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpOlvidoContrasena.Location = new System.Drawing.Point(556, 8);
+            this.tlpOlvidoContrasena.Margin = new System.Windows.Forms.Padding(8);
+            this.tlpOlvidoContrasena.Name = "tlpOlvidoContrasena";
+            this.tlpOlvidoContrasena.Padding = new System.Windows.Forms.Padding(15);
+            this.tlpOlvidoContrasena.RowCount = 2;
+            this.tlpOlvidoContrasena.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tlpOlvidoContrasena.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tlpOlvidoContrasena.Size = new System.Drawing.Size(260, 214);
+            this.tlpOlvidoContrasena.TabIndex = 2;
             // 
-            // pictureBox3
+            // pnlIconoContrasena
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.ErrorImage = global::Pantallas_Sistema_facturación.Properties.Resources.images;
-            this.pictureBox3.Image = global::Pantallas_Sistema_facturación.Properties.Resources.images;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(238, 115);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.pnlIconoContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(168)))), ((int)(((byte)(216)))));
+            this.pnlIconoContrasena.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlIconoContrasena.Location = new System.Drawing.Point(18, 18);
+            this.pnlIconoContrasena.Name = "pnlIconoContrasena";
+            this.pnlIconoContrasena.Size = new System.Drawing.Size(224, 113);
+            this.pnlIconoContrasena.TabIndex = 0;
             // 
             // lblOlvidoContraseña
             // 
+            this.lblOlvidoContraseña.AutoSize = true;
+            this.lblOlvidoContraseña.Depth = 0;
             this.lblOlvidoContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOlvidoContraseña.Location = new System.Drawing.Point(3, 121);
+            this.lblOlvidoContraseña.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblOlvidoContraseña.Location = new System.Drawing.Point(18, 134);
             this.lblOlvidoContraseña.Name = "lblOlvidoContraseña";
-            this.lblOlvidoContraseña.Size = new System.Drawing.Size(238, 82);
+            this.lblOlvidoContraseña.Size = new System.Drawing.Size(224, 65);
             this.lblOlvidoContraseña.TabIndex = 1;
             this.lblOlvidoContraseña.Text = "¿Qué hacer si olvido mi contraseña?";
             this.lblOlvidoContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tlpSeccionBotones
+            // 
+            this.tlpSeccionBotones.ColumnCount = 3;
+            this.tlpSeccionBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSeccionBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tlpSeccionBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpSeccionBotones.Controls.Add(this.btnSalir, 1, 0);
+            this.tlpSeccionBotones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpSeccionBotones.Location = new System.Drawing.Point(34, 585);
+            this.tlpSeccionBotones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpSeccionBotones.Name = "tlpSeccionBotones";
+            this.tlpSeccionBotones.RowCount = 1;
+            this.tlpSeccionBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSeccionBotones.Size = new System.Drawing.Size(832, 70);
+            this.tlpSeccionBotones.TabIndex = 3;
+            // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Purple;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(663, 480);
+            this.btnSalir.AutoSize = false;
+            this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalir.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSalir.Depth = 0;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSalir.HighEmphasis = true;
+            this.btnSalir.Icon = null;
+            this.btnSalir.Location = new System.Drawing.Point(636, 8);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(94, 48);
-            this.btnSalir.TabIndex = 3;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSalir.Size = new System.Drawing.Size(172, 54);
+            this.btnSalir.TabIndex = 0;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            this.btnSalir.UseAccentColor = false;
             // 
             // ucAyuda
             // 
-            this.Controls.Add(this.tableLayoutPanelMain);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.tlpPrincipal);
             this.Name = "ucAyuda";
-            this.Size = new System.Drawing.Size(763, 646);
-            this.tableLayoutPanelMain.ResumeLayout(false);
-            this.tableLayoutPanelBusqueda.ResumeLayout(false);
-            this.tableLayoutPanelBusqueda.PerformLayout();
-            this.tableLayoutPanelContenido.ResumeLayout(false);
-            this.tableLayoutPanelItems.ResumeLayout(false);
-            this.tableLayoutPanelItem1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanelItem2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tableLayoutPanelItem3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Size = new System.Drawing.Size(900, 700);
+            this.tlpPrincipal.ResumeLayout(false);
+            this.tlpPrincipal.PerformLayout();
+            this.tlpSeccionBusqueda.ResumeLayout(false);
+            this.tlpSeccionBusqueda.PerformLayout();
+            this.tlpSeccionContenido.ResumeLayout(false);
+            this.tlpSeccionContenido.PerformLayout();
+            this.tlpOpcionesAyuda.ResumeLayout(false);
+            this.tlpActualizarDatos.ResumeLayout(false);
+            this.tlpActualizarDatos.PerformLayout();
+            this.tlpGenerarReporte.ResumeLayout(false);
+            this.tlpGenerarReporte.PerformLayout();
+            this.tlpOlvidoContrasena.ResumeLayout(false);
+            this.tlpOlvidoContrasena.PerformLayout();
+            this.tlpSeccionBotones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
-        private System.Windows.Forms.Label lblAyuda;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelBusqueda;
-        private System.Windows.Forms.Label lblNombreRol;
-        private System.Windows.Forms.TextBox txtDuda;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelContenido;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItems;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblComoActualizarDatos;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblGenerarReporte;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblOlvidoContraseña;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
+        private MaterialLabel lblTituloAyuda;
+        private System.Windows.Forms.TableLayoutPanel tlpSeccionBusqueda;
+        private MaterialLabel lblPreguntaDuda;
+        private MaterialTextBox txtDuda;
+        private MaterialButton btnBuscar;
+        private System.Windows.Forms.TableLayoutPanel tlpSeccionContenido;
+        private MaterialLabel lblDescripcionAyuda;
+        private System.Windows.Forms.TableLayoutPanel tlpOpcionesAyuda;
+        private System.Windows.Forms.TableLayoutPanel tlpActualizarDatos;
+        private System.Windows.Forms.Panel pnlIconoActualizar;
+        private MaterialLabel lblComoActualizarDatos;
+        private System.Windows.Forms.TableLayoutPanel tlpGenerarReporte;
+        private System.Windows.Forms.Panel pnlIconoReporte;
+        private MaterialLabel lblGenerarReporte;
+        private System.Windows.Forms.TableLayoutPanel tlpOlvidoContrasena;
+        private System.Windows.Forms.Panel pnlIconoContrasena;
+        private MaterialLabel lblOlvidoContraseña;
+        private System.Windows.Forms.TableLayoutPanel tlpSeccionBotones;
+        private MaterialButton btnSalir;
     }
 }

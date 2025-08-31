@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
@@ -15,55 +9,63 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
         public ucEmpleado()
         {
             InitializeComponent();
+            ConfigurarContenidoFormulario();
+        }
+
+        private void ConfigurarContenidoFormulario()
+        {
+            this.BackColor = Color.White;
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new Size(20, 20);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show(
+            var Resultado = MessageBox.Show(
                 "¿Está seguro que desea salir sin guardar?",
-                "Confirmar salida",
+                "Confirmar Salida",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
+            if (Resultado == DialogResult.Yes)
             {
-                ClearFields();
+                LimpiarCampos();
                 this.Visible = false;
             }
         }
 
-        private void ClearFields()
+        private void LimpiarCampos()
         {
-            void Clear(Control c)
+            void Limpiar(Control Control)
             {
-                switch (c)
+                switch (Control)
                 {
-                    case TextBoxBase tb:
-                        tb.Clear();
+                    case TextBoxBase CuadroTexto:
+                        CuadroTexto.Clear();
                         break;
-                    case ComboBox cb:
-                        cb.SelectedIndex = -1;
-                        cb.Text = string.Empty;
+                    case ComboBox ComboBox:
+                        ComboBox.SelectedIndex = -1;
+                        ComboBox.Text = string.Empty;
                         break;
-                    case CheckBox chk:
-                        chk.Checked = false;
+                    case CheckBox CasillaVerificacion:
+                        CasillaVerificacion.Checked = false;
                         break;
-                    case RadioButton rb:
-                        rb.Checked = false;
+                    case RadioButton BotonRadio:
+                        BotonRadio.Checked = false;
                         break;
-                    case NumericUpDown nud:
-                        nud.Value = nud.Minimum;
+                    case NumericUpDown ControlNumerico:
+                        ControlNumerico.Value = ControlNumerico.Minimum;
                         break;
-                    case DateTimePicker dtp:
-                        dtp.Value = DateTime.Now;
+                    case DateTimePicker SelectorFecha:
+                        SelectorFecha.Value = DateTime.Now;
                         break;
                 }
 
-                foreach (Control child in c.Controls)
-                    Clear(child);
+                foreach (Control ControlHijo in Control.Controls)
+                    Limpiar(ControlHijo);
             }
 
-            Clear(this);
+            Limpiar(this);
         }
     }
 }

@@ -151,7 +151,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var ResultadoConfirmacion = MessageBox.Show("¿Está seguro que desea salir sin guardar?", 
-                "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "Confirmar Salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 
             if (ResultadoConfirmacion == DialogResult.Yes)
             {
@@ -326,10 +326,5 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
 
         private void lblNombreProducto_Click(object sender, EventArgs e) { }
         private void lblTitulo_Click(object sender, EventArgs e) { }
-
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

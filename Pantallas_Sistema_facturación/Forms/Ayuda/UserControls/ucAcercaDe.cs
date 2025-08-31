@@ -8,19 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pantallas_Sistema_facturación.Forms.Facturacion.UserControls
+namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
 {
-<<<<<<<< HEAD:Pantallas_Sistema_facturación/Forms/Facturacion/UserControls/UserControl1.cs
-    public partial class UserControl1 : UserControl
-    {
-        public UserControl1()
-========
     public partial class ucAcercaDe : UserControl
     {
         public ucAcercaDe()
->>>>>>>> feature/Jeffer:Pantallas_Sistema_facturación/Forms/Ayuda/UserControls/ucAcercaDe.cs
         {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            var ResultadoConfirmacion = MessageBox.Show("¿Está seguro que desea salir?",
+                "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ResultadoConfirmacion == DialogResult.Yes)
+            {
+                this.Visible = false;
+            }
         }
     }
 }
