@@ -18,7 +18,6 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAdministracionEmpleados = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNombreEmpleado = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
@@ -43,12 +42,13 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,16 +78,6 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.lblAdministracionEmpleados.TabIndex = 6;
             this.lblAdministracionEmpleados.Text = "ADMINISTRACION EMPLEADOS\r\n";
             this.lblAdministracionEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Pantallas_Sistema_facturación.Properties.Resources.HERRAMIENTAS_III;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 99);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 136);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -367,6 +357,16 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_Sistema_facturación.Properties.Resources.HERRAMIENTAS_III;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 136);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // ucEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -376,7 +376,6 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.Size = new System.Drawing.Size(676, 605);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -384,6 +383,7 @@ namespace Pantallas_Sistema_facturación.Forms.Seguridad.UserControls
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

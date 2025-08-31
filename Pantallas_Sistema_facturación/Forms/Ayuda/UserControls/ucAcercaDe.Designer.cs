@@ -1,6 +1,8 @@
-﻿namespace Pantallas_Sistema_facturación.Forms.Ayuda
+﻿using MaterialSkin.Controls;
+
+namespace Pantallas_Sistema_facturación.Forms.Ayuda
 {
-    partial class ucAyuda
+    partial class ucAcercaDe
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -36,7 +38,7 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAyuda));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAcercaDe));
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.lblVersion = new MaterialSkin.Controls.MaterialLabel();
             this.lblFramework = new MaterialSkin.Controls.MaterialLabel();

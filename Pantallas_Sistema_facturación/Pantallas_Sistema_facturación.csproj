@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Ayuda\UserControls\ucAcercaDe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Ayuda\UserControls\ucAcercaDe.Designer.cs">
+      <DependentUpon>ucAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ayuda\UserControls\ucAyuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Ayuda\UserControls\ucAyuda.Designer.cs">
+      <DependentUpon>ucAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Facturacion\UserControls\ucFacturacion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +126,8 @@
     </Compile>
     <Compile Include="Models\DatosCliente.cs" />
     <Compile Include="Models\DatosProducto.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucFooter.cs">
@@ -131,6 +145,12 @@
     <Compile Include="UserControls\ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Ayuda\UserControls\ucAcercaDe.resx">
+      <DependentUpon>ucAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ayuda\UserControls\ucAyuda.resx">
+      <DependentUpon>ucAyuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Facturacion\UserControls\ucFacturacion.resx">
       <DependentUpon>ucFacturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +181,19 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Facturacion.UserControls.ucFacturacion.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Facturacion.UserControls.ucInforme.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Seguridad.UserControls.ucAdminSeguridad.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Seguridad.UserControls.ucEmpleado.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Seguridad.UserControls.ucRol.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Tablas.UserControls.ucCategoriasProductos.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Tablas.UserControls.ucCliente.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Forms.Tablas.UserControls.ucProducto.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.frmLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.frmPrincipal.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.ucFooter.resources" />
+    <EmbeddedResource Include="obj\Debug\Pantallas_Sistema_facturación.UserControls.ucDashboard.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -169,6 +202,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ucFooter.resx">
       <DependentUpon>ucFooter.cs</DependentUpon>
@@ -177,6 +211,13 @@
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Documentation\ColorPalette.md" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Pantalla.9BFB567A.Up2Date" />
+    <None Include="obj\Debug\Pantallas_Sistema_facturación.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Pantallas_Sistema_facturación.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Pantallas_Sistema_facturación.csproj.GenerateResource.cache" />
+    <None Include="obj\Release\Pantallas_Sistema_facturación.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -187,13 +228,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\cuerpo_1.webp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Resources\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\Pantallas_Sistema_facturación.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Pantallas_Sistema_facturación.exe" />
+    <Content Include="obj\Debug\Pantallas_Sistema_facturación.pdb" />
+    <None Include="Resources\2278946.png" />
+    <Content Include="Resources\customer-data-icon-flat-vector.jpg" />
+    <Content Include="Resources\HERRAMIENTAS III.png" />
+    <Content Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

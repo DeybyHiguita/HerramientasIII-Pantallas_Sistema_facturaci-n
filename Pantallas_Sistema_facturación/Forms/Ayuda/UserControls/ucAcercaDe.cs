@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pantallas_Sistema_facturación.Forms.Ayuda
 {
-    public partial class ucAyuda : UserControl
+    public partial class ucAcercaDe : UserControl
     {
-        public ucAyuda()
+        public ucAcercaDe()
         {
             InitializeComponent();
         }
