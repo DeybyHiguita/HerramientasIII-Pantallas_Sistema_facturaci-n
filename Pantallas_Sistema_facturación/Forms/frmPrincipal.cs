@@ -260,5 +260,15 @@ namespace Pantallas_Sistema_facturación
         {
             MostrarUserControl(new ucProducto());
         }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblModuloFacturacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

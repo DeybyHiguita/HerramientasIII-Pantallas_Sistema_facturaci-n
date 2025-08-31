@@ -245,6 +245,7 @@ namespace Pantallas_Sistema_facturación
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(300, 985);
             this.panelLeft.TabIndex = 1;
+            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
             // lblModuloFacturacion
             // 
@@ -259,6 +260,7 @@ namespace Pantallas_Sistema_facturación
             this.lblModuloFacturacion.TabIndex = 7;
             this.lblModuloFacturacion.Text = "Módulo de Facturación";
             this.lblModuloFacturacion.Visible = false;
+            this.lblModuloFacturacion.Click += new System.EventHandler(this.lblModuloFacturacion_Click);
             // 
             // btnFacturacionLeft
             // 
