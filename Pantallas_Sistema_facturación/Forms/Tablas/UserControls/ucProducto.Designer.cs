@@ -669,5 +669,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         private System.Windows.Forms.TableLayoutPanel tlpDetallesProducto;
         private System.Windows.Forms.TableLayoutPanel tlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MaterialButton materialButton1;
+        private MaterialButton materialButton4;
     }
 }
