@@ -116,7 +116,7 @@ namespace Pantallas_Sistema_facturación
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
-            this.btnCancelar.Location = new System.Drawing.Point(270, 480);
+            this.btnCancelar.Location = new System.Drawing.Point(273, 399);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
@@ -136,7 +136,7 @@ namespace Pantallas_Sistema_facturación
             this.btnValidar.Depth = 0;
             this.btnValidar.HighEmphasis = true;
             this.btnValidar.Icon = null;
-            this.btnValidar.Location = new System.Drawing.Point(50, 480);
+            this.btnValidar.Location = new System.Drawing.Point(53, 399);
             this.btnValidar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnValidar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnValidar.Name = "btnValidar";
@@ -151,7 +151,7 @@ namespace Pantallas_Sistema_facturación
             // chkMostrar
             // 
             this.chkMostrar.Depth = 0;
-            this.chkMostrar.Location = new System.Drawing.Point(50, 420);
+            this.chkMostrar.Location = new System.Drawing.Point(53, 339);
             this.chkMostrar.Margin = new System.Windows.Forms.Padding(0);
             this.chkMostrar.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkMostrar.MouseState = MaterialSkin.MouseState.HOVER;
@@ -174,7 +174,7 @@ namespace Pantallas_Sistema_facturación
             this.txtPass.HideSelection = true;
             this.txtPass.Hint = "Ingrese su contraseña";
             this.txtPass.LeadingIcon = null;
-            this.txtPass.Location = new System.Drawing.Point(50, 350);
+            this.txtPass.Location = new System.Drawing.Point(53, 269);
             this.txtPass.MaxLength = 32767;
             this.txtPass.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPass.Name = "txtPass";
@@ -197,7 +197,7 @@ namespace Pantallas_Sistema_facturación
             // 
             this.lblPass.Depth = 0;
             this.lblPass.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblPass.Location = new System.Drawing.Point(50, 320);
+            this.lblPass.Location = new System.Drawing.Point(53, 239);
             this.lblPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(100, 23);
@@ -216,7 +216,7 @@ namespace Pantallas_Sistema_facturación
             this.txtUser.HideSelection = true;
             this.txtUser.Hint = "Ingrese su nombre de usuario";
             this.txtUser.LeadingIcon = null;
-            this.txtUser.Location = new System.Drawing.Point(50, 250);
+            this.txtUser.Location = new System.Drawing.Point(53, 169);
             this.txtUser.MaxLength = 32767;
             this.txtUser.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUser.Name = "txtUser";
@@ -239,7 +239,7 @@ namespace Pantallas_Sistema_facturación
             // 
             this.lblUser.Depth = 0;
             this.lblUser.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblUser.Location = new System.Drawing.Point(50, 220);
+            this.lblUser.Location = new System.Drawing.Point(53, 139);
             this.lblUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(100, 23);
@@ -253,7 +253,7 @@ namespace Pantallas_Sistema_facturación
             this.lblSubtitle.Depth = 0;
             this.lblSubtitle.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.lblSubtitle.Location = new System.Drawing.Point(50, 160);
+            this.lblSubtitle.Location = new System.Drawing.Point(53, 79);
             this.lblSubtitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblSubtitle.Name = "lblSubtitle";
             this.lblSubtitle.Size = new System.Drawing.Size(538, 30);
@@ -268,7 +268,7 @@ namespace Pantallas_Sistema_facturación
             this.lblTitle.Depth = 0;
             this.lblTitle.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            this.lblTitle.Location = new System.Drawing.Point(50, 100);
+            this.lblTitle.Location = new System.Drawing.Point(53, 19);
             this.lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(538, 50);
