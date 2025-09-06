@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Facturacion.Data\Core\Core.csproj" />
+    <ProjectReference Include="..\..\Facturacion.Data\Data\Data.csproj" />
+    <ProjectReference Include="..\..\Facturacion.Trasversal\Modelo\Modelo.csproj" />
+  </ItemGroup>
+
+</Project>

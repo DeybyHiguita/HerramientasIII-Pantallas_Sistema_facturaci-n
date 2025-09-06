@@ -1,14 +1,18 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using Modelo;
+using Negocio;
+using Pantallas_Sistema_facturación.Models;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using MaterialSkin.Controls;
-using Pantallas_Sistema_facturación.Models;
 
 namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
 {
     public partial class ucProducto : UserControl
     {
         private OpenFileDialog DialogoSeleccionArchivo;
+        public List<ModeloProducto> listaProductos;
 
         public ucProducto()
         {
@@ -20,6 +24,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         {
             InicializarCategorias();
             ConfigurarValidacion();
+            ConsultarListaProductos();
         }
 
         private void ConfigurarContenidoFormulario()
@@ -65,6 +70,27 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             {
                 MessageBox.Show("Producto guardado exitosamente", "Éxito", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var Resultado = MessageBox.Show("¿Está seguro que desea eliminar este producto?", 
+                "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                
+            if (Resultado == DialogResult.Yes)
+            {
+                NegocioEliminarProducto negocio = new NegocioEliminarProducto(int.Parse(txtIdProducto.Text));
+                bool exito = negocio.Ejecutar();
+                if (!exito)
+                {
+                    MessageBox.Show("Error al eliminar el producto", "Error", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                LimpiarCampos();
+                ConsultarListaProductos();
             }
         }
 
@@ -175,6 +201,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
 
         private void LimpiarCampos()
         {
+            txtIdProducto.Clear();
             txtNombreProducto.Clear();
             txtCodigoReferencia.Clear();
             txtPrecioCompra.Clear();
@@ -227,43 +254,183 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             }
         }
 
-        public void CargarProducto(DatosProducto ProductoCarga)
+        public ModeloProductoForm ObtenerDatosProducto()
         {
-            if (ProductoCarga != null)
+            if (!ValidarCampos()) return null;
+
+            return new ModeloProductoForm
             {
-                chkActivo.Checked = ProductoCarga.EstaActivo;
-                txtNombreProducto.Text = ProductoCarga.NombreProducto;
-                txtCodigoReferencia.Text = ProductoCarga.CodigoReferencia;
-                txtPrecioCompra.Text = ProductoCarga.PrecioCompra.ToString("F2");
-                txtPrecioVenta.Text = ProductoCarga.PrecioVenta.ToString("F2");
-                txtCantidadStock.Text = ProductoCarga.CantidadStock.ToString();
-                txtRutaImagen.Text = ProductoCarga.RutaImagenProducto;
-                txtDetallesProducto.Text = ProductoCarga.DetallesAdicionales;
-                
-                int IndiceCategoria = cmbCategoria.Items.IndexOf(ProductoCarga.CategoriaProducto);
-                if (IndiceCategoria >= 0)
+                IdProducto = txtIdProducto.Text.Trim() == "" ? 0 : int.Parse(txtIdProducto.Text.Trim()),
+                StrNombre = txtNombreProducto.Text.Trim(),
+                StrCodigo = txtCodigoReferencia.Text.Trim(),
+                NumPrecioCompra = decimal.Parse(txtPrecioCompra.Text.Trim()),
+                NumPrecioVenta = decimal.Parse(txtPrecioVenta.Text.Trim()),
+                IdCategoria = cmbCategoria.SelectedIndex + 1,
+                StrDetalle = txtDetallesProducto.Text.Trim(),
+                strFoto = txtRutaImagen.Text.Trim(),
+                NumStock = int.Parse(txtCantidadStock.Text.Trim()),
+                DtmFechaModifica = DateTime.Now,
+                StrUsuarioModifica = Environment.UserName
+            };
+        }
+
+        private void ConsultarListaProductos()
+        {
+            try
+            {
+                NegocioConsultaProductos negocio = new NegocioConsultaProductos();
+                this.listaProductos = negocio.Ejecutar();
+
+                List<object> listaParaGrid = new List<object>();
+
+                if (this.listaProductos != null)
                 {
-                    cmbCategoria.SelectedIndex = IndiceCategoria;
+                    foreach (var producto in this.listaProductos)
+                    {
+                        listaParaGrid.Add(new
+                        {
+                            Id = producto.IdProducto,
+                            Nombre = producto.StrNombre,
+                            Codigo = producto.StrCodigo,
+                            PrecioCompra = producto.NumPrecioCompra,
+                            PrecioVenta = producto.NumPrecioVenta,
+                            Categoria = producto.IdCategoria.ToString(),
+                            Detalle = producto.StrDetalle,
+                            Stock = producto.NumStock,
+                            FechaModifica = producto.DtmFechaModifica.ToString("g")
+                        });
+                    }
+                }
+
+                dataGridViewListaProductos.DataSource = listaParaGrid;
+
+                ConfigurarDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al consultar productos: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ConfigurarDataGridView()
+        {
+            if (dataGridViewListaProductos.Columns.Count > 0)
+            {
+                dataGridViewListaProductos.Columns["Id"].HeaderText = "ID";
+                dataGridViewListaProductos.Columns["Nombre"].HeaderText = "Nombre";
+                dataGridViewListaProductos.Columns["Codigo"].HeaderText = "Código";
+                dataGridViewListaProductos.Columns["PrecioCompra"].HeaderText = "Precio Compra";
+                dataGridViewListaProductos.Columns["PrecioVenta"].HeaderText = "Precio Venta";
+                dataGridViewListaProductos.Columns["Stock"].HeaderText = "Stock";
+                dataGridViewListaProductos.Columns["Categoria"].HeaderText = "Categoría";
+                dataGridViewListaProductos.Columns["FechaModifica"].HeaderText = "Fecha Modificación";
+                dataGridViewListaProductos.AutoResizeColumns();
+                dataGridViewListaProductos.ReadOnly = true;
+                dataGridViewListaProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                
+                // Agregar evento de clic para seleccionar producto
+                dataGridViewListaProductos.CellClick += DataGridViewListaProductos_CellClick;
+            }
+        }
+
+        private void DataGridViewListaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && dataGridViewListaProductos.Rows[e.RowIndex].DataBoundItem != null)
+                {
+                    var filaSeleccionada = dataGridViewListaProductos.Rows[e.RowIndex];
+                    var idProducto = Convert.ToInt32(filaSeleccionada.Cells["Id"].Value);
+                    var productoSeleccionado = this.listaProductos.Find(p => p.IdProducto == idProducto);
+                    
+                    if (productoSeleccionado != null)
+                    {
+                        LlenarFormularioConProducto(productoSeleccionado);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al seleccionar el producto: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LlenarFormularioConProducto(ModeloProducto producto)
+        {
+            try
+            {
+                txtIdProducto.Text = producto.IdProducto.ToString();
+                txtNombreProducto.Text = producto.StrNombre ?? "";
+                txtCodigoReferencia.Text = producto.StrCodigo ?? "";
+                txtPrecioCompra.Text = producto.NumPrecioCompra.ToString("F2");
+                txtPrecioVenta.Text = producto.NumPrecioVenta.ToString("F2");
+                txtCantidadStock.Text = producto.NumStock.ToString();
+               
+                if (producto.IdCategoria > 0 && producto.IdCategoria <= cmbCategoria.Items.Count)
+                {
+                    cmbCategoria.SelectedIndex = producto.IdCategoria - 1;
+                }
+                else
+                {
+                    cmbCategoria.SelectedIndex = 0;
+                }
+                txtDetallesProducto.Text = producto.StrDetalle ?? "";
+                txtRutaImagen.Text = producto.strFoto ?? "";
+                chkActivo.Checked = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al llenar el formulario: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+
+            ModeloProductoForm producto = ObtenerDatosProducto();
+
+            if (producto != null)
+            {
+                ModeloProducto modeloProducto = new ModeloProducto
+                {
+                    IdProducto = producto.IdProducto,
+                    StrNombre = producto.StrNombre,
+                    StrCodigo = producto.StrCodigo,
+                    NumPrecioCompra = producto.NumPrecioCompra,
+                    NumPrecioVenta = producto.NumPrecioVenta,
+                    IdCategoria = producto.IdCategoria,
+                    StrDetalle = producto.StrDetalle,
+                    strFoto = producto.strFoto,
+                    NumStock = producto.NumStock,
+                    DtmFechaModifica = producto.DtmFechaModifica,
+                    StrUsuarioModifica = producto.StrUsuarioModifica
+                };
+
+                NegocioCrearActualizarProducto negocio = new NegocioCrearActualizarProducto(modeloProducto);
+                bool exito = negocio.Ejecutar();
+
+                if (exito)
+                {
+                    MessageBox.Show("Producto guardado exitosamente", "Éxito", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    ConsultarListaProductos();
+                    LimpiarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el producto", "Error", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        public DatosProducto ObtenerDatosProducto()
+        private void materialButton4_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos()) return null;
-
-            return new DatosProducto
-            {
-                EstaActivo = chkActivo.Checked,
-                NombreProducto = txtNombreProducto.Text.Trim(),
-                CodigoReferencia = txtCodigoReferencia.Text.Trim(),
-                PrecioCompra = decimal.Parse(txtPrecioCompra.Text),
-                PrecioVenta = decimal.Parse(txtPrecioVenta.Text),
-                CantidadStock = int.Parse(txtCantidadStock.Text),
-                CategoriaProducto = cmbCategoria.SelectedItem?.ToString() ?? "",
-                RutaImagenProducto = txtRutaImagen.Text.Trim(),
-                DetallesAdicionales = txtDetallesProducto.Text.Trim()
-            };
+            LimpiarCampos();
         }
     }
 }

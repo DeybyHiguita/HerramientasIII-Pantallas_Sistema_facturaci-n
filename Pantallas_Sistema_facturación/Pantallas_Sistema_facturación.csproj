@@ -257,5 +257,15 @@
     <Content Include="Resources\HERRAMIENTAS III.png" />
     <Content Include="Resources\images.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Facturacion.Negocio\Negocio\Negocio.csproj">
+      <Project>{c5fce373-7d2d-409d-9bc6-293b87899d93}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facturacion.Trasversal\Modelo\Modelo.csproj">
+      <Project>{8488e5c1-67aa-4eda-8b7f-0bc2413a7f00}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
