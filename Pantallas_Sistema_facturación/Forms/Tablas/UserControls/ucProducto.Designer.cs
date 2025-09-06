@@ -379,7 +379,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.txtDetallesProducto.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDetallesProducto.Name = "txtDetallesProducto";
             this.txtDetallesProducto.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txtDetallesProducto.Size = new System.Drawing.Size(485, 28);
+            this.txtDetallesProducto.Size = new System.Drawing.Size(485, 91);
             this.txtDetallesProducto.TabIndex = 1;
             this.txtDetallesProducto.TabStop = false;
             this.txtDetallesProducto.Text = "Escribe...";
@@ -544,7 +544,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tlpDetallesProducto.RowCount = 2;
             this.tlpDetallesProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tlpDetallesProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDetallesProducto.Size = new System.Drawing.Size(489, 48);
+            this.tlpDetallesProducto.Size = new System.Drawing.Size(489, 111);
             this.tlpDetallesProducto.TabIndex = 9;
             // 
             // tlpPrincipal
@@ -564,16 +564,17 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tlpPrincipal.Controls.Add(this.tlpDetallesProducto, 0, 3);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel2, 0, 4);
             this.tlpPrincipal.Controls.Add(this.tableLayoutPanel1, 1, 4);
-            this.tlpPrincipal.Location = new System.Drawing.Point(2, 58);
+            this.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPrincipal.Location = new System.Drawing.Point(2, 59);
             this.tlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.tlpPrincipal.Name = "tlpPrincipal";
             this.tlpPrincipal.RowCount = 5;
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpPrincipal.Size = new System.Drawing.Size(493, 265);
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tlpPrincipal.Size = new System.Drawing.Size(493, 552);
             this.tlpPrincipal.TabIndex = 10;
             // 
             // tableLayoutPanel3
@@ -584,7 +585,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.materialButton3, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnLimpiar, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(330, 219);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(330, 394);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -642,7 +643,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.materialButton2, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 219);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 394);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -680,7 +681,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.materialButton1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnActualizar, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(166, 219);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(166, 394);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -733,9 +734,9 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             // 
             this.dataGridViewListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListaProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewListaProductos.Location = new System.Drawing.Point(506, 72);
+            this.dataGridViewListaProductos.Location = new System.Drawing.Point(506, 56);
             this.dataGridViewListaProductos.Name = "dataGridViewListaProductos";
-            this.dataGridViewListaProductos.Size = new System.Drawing.Size(498, 597);
+            this.dataGridViewListaProductos.Size = new System.Drawing.Size(498, 613);
             this.dataGridViewListaProductos.TabIndex = 12;
             // 
             // tableLayoutPanel4
@@ -751,8 +752,8 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.28571F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.71429F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.886905F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.1131F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1007, 672);
             this.tableLayoutPanel4.TabIndex = 13;
             // 
@@ -763,12 +764,12 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             this.tableLayoutPanel5.Controls.Add(this.tlpPrincipal, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.chkActivo, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 72);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 56);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.380235F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.61977F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(497, 597);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(497, 613);
             this.tableLayoutPanel5.TabIndex = 13;
             // 
             // ucProducto
