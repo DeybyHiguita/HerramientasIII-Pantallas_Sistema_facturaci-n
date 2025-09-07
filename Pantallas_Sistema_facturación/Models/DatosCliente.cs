@@ -6,7 +6,7 @@ namespace Pantallas_Sistema_facturación.Models
     /// <summary>
     /// Representa los datos de un cliente en el sistema de facturación.
     /// </summary>
-    public class DatosCliente
+    public class ModeloClienteForm
     {
         /// <summary>
         /// Indica si el cliente está activo o no
@@ -16,57 +16,65 @@ namespace Pantallas_Sistema_facturación.Models
         /// <summary>
         /// Nombre completo del cliente
         /// </summary>
-        public string NombreCompleto { get; set; }
+        public string StrNombre { get; set; }
 
         /// <summary>
         /// Número de documento de identidad del cliente
         /// </summary>
-        public string NumeroDocumento { get; set; }
+        public int NumDocumento { get; set; }
 
         /// <summary>
         /// Dirección del cliente
         /// </summary>
-        public string DireccionResidencia { get; set; }
+        public string StrDireccion { get; set; }
 
         /// <summary>
         /// Número telefónico del cliente
         /// </summary>
-        public string NumeroTelefono { get; set; }
+        public string StrTelefono { get; set; }
 
         /// <summary>
         /// Correo electrónico del cliente
         /// </summary>
-        public string CorreoElectronico { get; set; }
+        public string StrEmail { get; set; }
 
         /// <summary>
         /// Tipo de cliente (no utilizado en esta aplicación)
         /// </summary>
+
+        public int  IdCliente { get; set; }
+
+        /// <summary>
+        /// Indica si el cliente está activo o no
+        /// </summary>
+        
         [Obsolete("Esta propiedad no se utiliza en la aplicación actual, pero se mantiene por compatibilidad")]
         public string TipoCliente { get; set; } = "General";
 
         /// <summary>
         /// Observaciones o notas adicionales sobre el cliente
         /// </summary>
-        public string ObservacionesAdicionales { get; set; }
+        public string StrUsuarioModifica { get; set; }
 
         /// <summary>
         /// Fecha de registro del cliente
         /// </summary>
-        public DateTime FechaRegistro { get; set; }
+        public DateTime DtmFechaModifica { get; set; }
 
         /// <summary>
         /// Constructor por defecto
         /// </summary>
-        public DatosCliente()
+        public ModeloClienteForm()
         {
+            IdCliente = int.MinValue;
             EstaActivo = true;
-            NombreCompleto = string.Empty;
-            NumeroDocumento = string.Empty;
-            DireccionResidencia = string.Empty;
-            NumeroTelefono = string.Empty;
-            CorreoElectronico = string.Empty;
-            ObservacionesAdicionales = string.Empty;
-            FechaRegistro = DateTime.Now;
+            StrNombre = string.Empty;
+            NumDocumento = int.MinValue;
+            StrDireccion =string.Empty;
+            StrTelefono = string.Empty;
+            StrEmail = string.Empty;
+            StrUsuarioModifica = string.Empty;
+            DtmFechaModifica = DateTime.Now;
         }
 
         /// <summary>
@@ -75,12 +83,11 @@ namespace Pantallas_Sistema_facturación.Models
         /// <returns>Verdadero si el email tiene un formato válido</returns>
         public bool ValidarFormatoEmail()
         {
-            if (string.IsNullOrWhiteSpace(CorreoElectronico))
-                return true; // Un email vacío es válido ya que podría ser opcional
+            if (string.IsNullOrWhiteSpace(StrEmail))
+                return true; 
 
-            // Patrón básico de validación de correo electrónico
             string PatronValidacion = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            return Regex.IsMatch(CorreoElectronico, PatronValidacion);
+            return Regex.IsMatch(StrEmail, PatronValidacion);
         }
 
         /// <summary>
@@ -89,17 +96,12 @@ namespace Pantallas_Sistema_facturación.Models
         /// <returns>Representación en cadena del cliente</returns>
         public override string ToString()
         {
-            return $"Cliente: {NombreCompleto} - Documento: {NumeroDocumento}";
+            return $"Cliente: {StrNombre} , Documento: {NumDocumento}, Teléfono: {StrTelefono}, Email: {StrEmail}";
         }
 
         /// <summary>
         /// Valida que todos los campos requeridos estén completos
         /// </summary>
         /// <returns>Verdadero si todos los campos requeridos están completos</returns>
-        public bool ValidarCamposRequeridos()
-        {
-            return !string.IsNullOrWhiteSpace(NombreCompleto) && 
-                   !string.IsNullOrWhiteSpace(NumeroDocumento);
-        }
     }
 }
