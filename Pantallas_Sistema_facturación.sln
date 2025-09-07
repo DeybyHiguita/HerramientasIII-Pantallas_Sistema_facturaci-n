@@ -5,22 +5,28 @@ VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantallas_Sistema_facturación", "Pantallas_Sistema_facturación\Pantallas_Sistema_facturación.csproj", "{82A1338F-8034-46A8-A37E-7CD6F917D0E1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturacion.Negocio", "Facturacion.Negocio", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturacion", "Facturacion", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Facturacion.Negocio\Negocio\Negocio.csproj", "{C5FCE373-7D2D-409D-9BC6-293B87899D93}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturacion.Data", "Facturacion.Data", "{42330B1C-52C2-4329-998B-BBA56CC71E06}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}"
+	ProjectSection(SolutionItems) = preProject
+		ClassLibrary1\Class1.cs = ClassLibrary1\Class1.cs
+		Negocio\Class1.cs = Negocio\Class1.cs
+		ClassLibrary1\ClassLibrary1.csproj = ClassLibrary1\ClassLibrary1.csproj
+		DataBase\DBFACTURAS.sql = DataBase\DBFACTURAS.sql
+		Modelos\Modelo.csproj = Modelos\Modelo.csproj
+		Negocio.Trasversal\Modelo\ModeloProducto.cs = Negocio.Trasversal\Modelo\ModeloProducto.cs
+		Negocio\Negocio.csproj = Negocio\Negocio.csproj
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Facturacion.Data\Data\Data.csproj", "{11F38681-6AD1-40F6-B9E1-17D59E702B7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Facturacion.Data\Core\Core.csproj", "{C730BF83-5FA2-4858-9FD7-8BD840298966}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{D107F4C8-89CC-BEA8-D3D7-CA6B7733353D}"
-	ProjectSection(SolutionItems) = preProject
-		DataBase\DBFACTURAS.sql = DataBase\DBFACTURAS.sql
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturacion", "Facturacion", "{42330B1C-52C2-4329-998B-BBA56CC71E06}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturacion.Transversal", "Facturacion.Transversal", "{04E8D662-E835-423A-8BFB-EEFCFC33A4CC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturacion", "Facturacion", "{04E8D662-E835-423A-8BFB-EEFCFC33A4CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Facturacion.Trasversal\Modelo\Modelo.csproj", "{8488E5C1-67AA-4EDA-8B7F-0BC2413A7F00}"
 EndProject
