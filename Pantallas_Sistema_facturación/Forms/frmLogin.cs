@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using System.Linq;
 
 namespace Pantallas_Sistema_facturación
 {
@@ -140,11 +141,14 @@ namespace Pantallas_Sistema_facturación
                     
                     btnValidar.Enabled = true;
                     btnValidar.Text = "INICIAR SESIÓN";
-                    
-                    if (txtUser.Text.Trim().Equals("admin", StringComparison.OrdinalIgnoreCase) && txtPass.Text == "admin")
+
+                    Negocio.NegocioLoginSeguridad negocio = new Negocio.NegocioLoginSeguridad(txtUser.Text.Trim(), txtPass.Text.Trim());
+                    var resultado = negocio.Ejecutar();
+
+                    if (resultado != null && resultado.Any())
                     {
                         DialogResult = DialogResult.OK;
-                        
+
                         Timer TemporizadorSalida = new Timer { Interval = 15 };
                         TemporizadorSalida.Tick += (remitente2, argumentos2) =>
                         {
@@ -165,6 +169,7 @@ namespace Pantallas_Sistema_facturación
                         txtUser.Focus();
                         AnimarPanelSacudida(panelRight);
                     }
+
                 }
             };
             TemporizadorProgreso.Start();

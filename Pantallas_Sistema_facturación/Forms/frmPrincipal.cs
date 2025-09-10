@@ -160,12 +160,12 @@ namespace Pantallas_Sistema_facturación
 
         private void btnRolesLeft_Click(object sender, EventArgs e)
         {
-            MostrarUserControl(new ucRol());
+            MostrarUserControl(new ucAdminSeguridad());
         }
 
         private void btnSeguridadLeft_Click(object sender, EventArgs e)
         {
-            MostrarUserControl(new ucAdminSeguridad());
+            MostrarUserControl(new ucRol());
         }
 
         private void btnAyudaLeft_Click(object sender, EventArgs e)

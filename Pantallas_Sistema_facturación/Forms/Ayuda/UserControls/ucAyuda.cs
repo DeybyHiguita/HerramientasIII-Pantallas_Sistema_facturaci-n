@@ -342,5 +342,22 @@ namespace Pantallas_Sistema_facturación.Forms.Ayuda.UserControls
                 txtDuda.Focus();
             }
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            var Resultado = MessageBox.Show("¿Está seguro que desea salir sin guardar?",
+                "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Resultado == DialogResult.Yes)
+            {
+                LimpiarBusqueda();
+                this.Visible = false;
+            }
+        }
+
+        private void tlpPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
