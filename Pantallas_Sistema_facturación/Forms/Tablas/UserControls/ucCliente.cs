@@ -197,6 +197,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
                     MessageBox.Show("Cliente guardado exitosamente", "Éxito",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    ConsultarListaClientes();
                     LimpiarCampos();
                 }
                 else
@@ -453,6 +454,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
         {
             try
             {
+                idClienteSeleccionado = cliente.IdCliente;
                 materialTextBox2.Text = cliente.IdCliente.ToString();
                 txtNombreProducto.Text = cliente.StrNombre ?? "";
                 txtCodigoReferencia.Text = cliente.NumDocumento.ToString();
