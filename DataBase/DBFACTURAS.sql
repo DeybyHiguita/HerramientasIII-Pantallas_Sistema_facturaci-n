@@ -679,7 +679,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE dbo.ConsultaClientes
+CREATE OR ALTER  PROCEDURE dbo.ConsultaClientes
 AS
 BEGIN
     SELECT
@@ -703,7 +703,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER   PROCEDURE [dbo].[ConsultaAdministracionSeguridad]
+CREATE OR ALTER    PROCEDURE [dbo].[ConsultaAdministracionSeguridad]
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -727,7 +727,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER   PROCEDURE [dbo].[ConsultaEmpleado]
+CREATE OR ALTER    PROCEDURE [dbo].[ConsultaEmpleado]
 AS
 BEGIN
     SET NOCOUNT ON;
