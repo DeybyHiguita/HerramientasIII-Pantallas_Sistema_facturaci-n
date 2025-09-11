@@ -80,7 +80,7 @@ namespace Core
             foreach (KeyValuePair<string, object> kv in parameters)
             {
                 object v = kv.Value ?? DBNull.Value;
-                cmd.Parameters.AddWithValue(kv.Key.StartsWith("@") ? kv.Key : "@" + kv.Key, v);
+                cmd.Parameters.AddWithValue("@" + kv.Key, v);
             }
         }
     }
