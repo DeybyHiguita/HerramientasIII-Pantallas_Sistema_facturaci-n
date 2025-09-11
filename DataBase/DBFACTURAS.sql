@@ -782,4 +782,26 @@ END
 --    END
 --END
 --GO
+/****** Object:  StoredProcedure [dbo].[LoginSeguridad]    Script Date: 10/09/2025 6:53:45 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE OR ALTER   PROCEDURE [dbo].[LoginSeguridad]
+    @StrUsuario VARCHAR(50),
+    @StrClave VARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        s.IdEmpleado,
+        e.StrNombre AS Empleado,
+        s.StrUsuario AS Usuario,
+        s.StrClave AS Contrasena
+    FROM TBLSEGURIDAD s
+    INNER JOIN TBLEMPLEADO e ON s.IdEmpleado = e.IdEmpleado
+    WHERE s.StrUsuario = @StrUsuario 
+      AND s.StrClave = @StrClave;
+END
 
