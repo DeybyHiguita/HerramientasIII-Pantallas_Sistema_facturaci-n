@@ -272,6 +272,7 @@ namespace Pantallas_Sistema_facturación.Forms.Tablas.UserControls
             txtPrecioCompra.Clear();
             txtPrecioVenta.Clear();
             materialTextBox1.Clear();
+            materialTextBox2.Clear();
 
             idClienteSeleccionado = 0;
 
