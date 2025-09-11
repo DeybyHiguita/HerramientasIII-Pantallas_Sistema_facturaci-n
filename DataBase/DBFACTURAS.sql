@@ -738,55 +738,59 @@ BEGIN
     FROM TBLEMPLEADO
     ORDER BY StrNombre;
 END
---jeffer
---CREATE OR ALTER PROCEDURE [dbo].[actualizar_Seguridad]
---    @IdSeguridad INT = 0,
---    @IdEmpleado INT,
---    @StrUsuario VARCHAR(50),
---    @StrClave VARCHAR(50),
---    @DtmFechaModifica DATETIME,
---    @StrUsuarioModifico VARCHAR(50)
---AS
---BEGIN
---    SET NOCOUNT ON;
+GO
 
---    IF EXISTS (SELECT 1 FROM TBLSEGURIDAD WHERE IdSeguridad = @IdSeguridad AND @IdSeguridad > 0)
---    BEGIN
---        UPDATE TBLSEGURIDAD
---        SET 
---            IdEmpleado = @IdEmpleado,
---            StrUsuario = @StrUsuario,
---            StrClave = @StrClave,
---            DtmFechaModifica = @DtmFechaModifica,
---            StrUsuarioModifico = @StrUsuarioModifico
---        WHERE IdSeguridad = @IdSeguridad;
---    END
---    ELSE
---    BEGIN
---        INSERT INTO TBLSEGURIDAD
---        (
---            IdEmpleado,
---            StrUsuario,
---            StrClave,
---            DtmFechaModifica,
---            StrUsuarioModifico
---        )
---        VALUES
---        (
---            @IdEmpleado,
---            @StrUsuario,
---            @StrClave,
---            @DtmFechaModifica,
---            @StrUsuarioModifico
---        );
---    END
---END
---GO
+
+CREATE OR ALTER PROCEDURE [dbo].[actualizar_Seguridad]
+    @IdSeguridad INT = 0,
+    @IdEmpleado INT,
+    @StrUsuario VARCHAR(50),
+    @StrClave VARCHAR(50),
+    @DtmFechaModifica DATETIME,
+    @StrUsuarioModifico VARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM TBLSEGURIDAD WHERE IdSeguridad = @IdSeguridad AND @IdSeguridad > 0)
+    BEGIN
+        UPDATE TBLSEGURIDAD
+        SET 
+            IdEmpleado = @IdEmpleado,
+            StrUsuario = @StrUsuario,
+            StrClave = @StrClave,
+            DtmFechaModifica = @DtmFechaModifica,
+            StrUsuarioModifico = @StrUsuarioModifico
+        WHERE IdSeguridad = @IdSeguridad;
+    END
+    ELSE
+    BEGIN
+        INSERT INTO TBLSEGURIDAD
+        (
+            IdEmpleado,
+            StrUsuario,
+            StrClave,
+            DtmFechaModifica,
+            StrUsuarioModifico
+        )
+        VALUES
+        (
+            @IdEmpleado,
+            @StrUsuario,
+            @StrClave,
+            @DtmFechaModifica,
+            @StrUsuarioModifico
+        );
+    END
+END
+GO
 /****** Object:  StoredProcedure [dbo].[LoginSeguridad]    Script Date: 10/09/2025 6:53:45 p. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
+
 CREATE OR ALTER   PROCEDURE [dbo].[LoginSeguridad]
     @StrUsuario VARCHAR(50),
     @StrClave VARCHAR(50)
